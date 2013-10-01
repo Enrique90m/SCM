@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtLibro = new System.Windows.Forms.TextBox();
             this.txtNumLibro = new System.Windows.Forms.TextBox();
-            this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label9
@@ -53,11 +53,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 94);
+            this.label3.Location = new System.Drawing.Point(30, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 26);
+            this.label3.Size = new System.Drawing.Size(60, 26);
             this.label3.TabIndex = 63;
-            this.label3.Text = "Nombre:";
+            this.label3.Text = "Falla:";
             // 
             // label2
             // 
@@ -66,14 +66,14 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(29, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 26);
+            this.label2.Size = new System.Drawing.Size(160, 26);
             this.label2.TabIndex = 62;
-            this.label2.Text = "Num de Libro:";
+            this.label2.Text = "Num Del equipo:";
             // 
             // txtLibro
             // 
             this.txtLibro.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLibro.Location = new System.Drawing.Point(124, 99);
+            this.txtLibro.Location = new System.Drawing.Point(90, 94);
             this.txtLibro.Multiline = true;
             this.txtLibro.Name = "txtLibro";
             this.txtLibro.Size = new System.Drawing.Size(379, 166);
@@ -82,35 +82,35 @@
             // txtNumLibro
             // 
             this.txtNumLibro.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumLibro.Location = new System.Drawing.Point(171, 57);
+            this.txtNumLibro.Location = new System.Drawing.Point(194, 52);
             this.txtNumLibro.Name = "txtNumLibro";
             this.txtNumLibro.Size = new System.Drawing.Size(90, 21);
             this.txtNumLibro.TabIndex = 60;
             // 
-            // btnEntrar
+            // btnAgregar
             // 
-            this.btnEntrar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEntrar.Location = new System.Drawing.Point(219, 271);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(132, 60);
-            this.btnEntrar.TabIndex = 65;
-            this.btnEntrar.Text = "Agregar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(219, 271);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(132, 60);
+            this.btnAgregar.TabIndex = 65;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // AgregarFalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(563, 341);
+            this.ClientSize = new System.Drawing.Size(784, 494);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtLibro);
             this.Controls.Add(this.txtNumLibro);
-            this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.btnAgregar);
             this.Name = "AgregarFalla";
             this.Text = "AgregarFalla";
             this.ResumeLayout(false);
@@ -125,7 +125,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLibro;
         private System.Windows.Forms.TextBox txtNumLibro;
-        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Button btnAgregar;
 
     }
 }

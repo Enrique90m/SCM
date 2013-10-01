@@ -1,1 +1,9 @@
 C:\SCM\SCM\bin\Debug\SCM.exe.config
+C:\SCM\SCM\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\SCM\SCM\obj\x86\Debug\SCM.AgregarFalla.resources
+C:\SCM\SCM\obj\x86\Debug\SCM.Fallas.resources
+C:\SCM\SCM\obj\x86\Debug\SCM.Form1.resources
+C:\SCM\SCM\obj\x86\Debug\SCM.ModificarEquipos.resources
+C:\SCM\SCM\obj\x86\Debug\SCM.Properties.Resources.resources
+C:\SCM\SCM\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\SCM\SCM\obj\x86\Debug\GenerateResource.write.1.tlog

@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.SqlClient;
-using System.Data;
-using System.Windows.Forms;
-using System.Data.SqlServerCe;
 
-namespace Biblioteca
+namespace SCM
 {
-    class ConexionBD
+    class DataConections
     {
         //OBJETO DE CONEXION
         public SqlCeConnection conexionSQL;

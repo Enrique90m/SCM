@@ -1,0 +1,8 @@
+C:\SCM\SCM\obj\x86\Release\ResolveAssemblyReference.cache
+C:\SCM\SCM\obj\x86\Release\SCM.AgregarFalla.resources
+C:\SCM\SCM\obj\x86\Release\SCM.Fallas.resources
+C:\SCM\SCM\obj\x86\Release\SCM.Form1.resources
+C:\SCM\SCM\obj\x86\Release\SCM.ModificarEquipos.resources
+C:\SCM\SCM\obj\x86\Release\SCM.Properties.Resources.resources
+C:\SCM\SCM\obj\x86\Release\GenerateResource.read.1.tlog
+C:\SCM\SCM\obj\x86\Release\GenerateResource.write.1.tlog

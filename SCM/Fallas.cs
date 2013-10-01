@@ -9,17 +9,18 @@ using System.Windows.Forms;
 
 namespace SCM
 {
-    public partial class AgregarFalla : Form
+    public partial class Fallas : Form
     {
-        public AgregarFalla()
+        public Fallas()
         {
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AgregarFalla falla = new AgregarFalla();
+            falla.Show();
         }
-        
     }
 }
