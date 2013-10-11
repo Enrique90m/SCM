@@ -76,8 +76,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Falla.cs" />
     <Compile Include="DataConections.cs" />
+    <Compile Include="Falla.cs" />
     <Compile Include="Fallas.cs">
       <SubType>Form</SubType>
     </Compile>

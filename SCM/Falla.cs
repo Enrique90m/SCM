@@ -21,9 +21,9 @@ namespace SCM
             SqlCeConnection conexion = bd.conectaConBD();
             try
             {
-                SqlCeCommand comando = new SqlCeCommand("INSERT INTO FAllAS VALUES('" + objetoFalla.numFalla + "','" + objetoFalla.NumComputadora + "','" + objetoFalla.descripcionFalla + "','" + objetoFalla.fechaAlta + "','" + objetoFalla.fechaBaja + "')", conexion);
+                SqlCeCommand comando = new SqlCeCommand("INSERT INTO FALLAS VALUES('" + objetoFalla.numFalla + "','" + objetoFalla.NumComputadora + "','" + objetoFalla.descripcionFalla + "','" + objetoFalla.fechaAlta + "','" + objetoFalla.fechaBaja + "')", conexion);
                 comando.ExecuteNonQuery();                
-                // MessageBox.Show("Falla agregada correctamente!");
+                MessageBox.Show("Falla agregada correctamente!");
                                                                                         
             }
             catch (Exception e)
