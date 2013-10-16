@@ -31,8 +31,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtLibro = new System.Windows.Forms.TextBox();
-            this.txtNumLibro = new System.Windows.Forms.TextBox();
+            this.txtDescripFalla = new System.Windows.Forms.TextBox();
+            this.txtNumEqui = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -70,22 +70,22 @@
             this.label2.TabIndex = 62;
             this.label2.Text = "Num Del equipo:";
             // 
-            // txtLibro
+            // txtDescripFalla
             // 
-            this.txtLibro.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLibro.Location = new System.Drawing.Point(90, 94);
-            this.txtLibro.Multiline = true;
-            this.txtLibro.Name = "txtLibro";
-            this.txtLibro.Size = new System.Drawing.Size(379, 166);
-            this.txtLibro.TabIndex = 61;
+            this.txtDescripFalla.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripFalla.Location = new System.Drawing.Point(90, 94);
+            this.txtDescripFalla.Multiline = true;
+            this.txtDescripFalla.Name = "txtDescripFalla";
+            this.txtDescripFalla.Size = new System.Drawing.Size(379, 166);
+            this.txtDescripFalla.TabIndex = 61;
             // 
-            // txtNumLibro
+            // txtNumEqui
             // 
-            this.txtNumLibro.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumLibro.Location = new System.Drawing.Point(194, 52);
-            this.txtNumLibro.Name = "txtNumLibro";
-            this.txtNumLibro.Size = new System.Drawing.Size(90, 21);
-            this.txtNumLibro.TabIndex = 60;
+            this.txtNumEqui.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumEqui.Location = new System.Drawing.Point(194, 52);
+            this.txtNumEqui.Name = "txtNumEqui";
+            this.txtNumEqui.Size = new System.Drawing.Size(90, 21);
+            this.txtNumEqui.TabIndex = 60;
             // 
             // btnAgregar
             // 
@@ -108,8 +108,8 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtLibro);
-            this.Controls.Add(this.txtNumLibro);
+            this.Controls.Add(this.txtDescripFalla);
+            this.Controls.Add(this.txtNumEqui);
             this.Controls.Add(this.btnAgregar);
             this.Name = "AgregarFalla";
             this.Text = "AgregarFalla";
@@ -123,8 +123,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtLibro;
-        private System.Windows.Forms.TextBox txtNumLibro;
+        private System.Windows.Forms.TextBox txtDescripFalla;
+        private System.Windows.Forms.TextBox txtNumEqui;
         private System.Windows.Forms.Button btnAgregar;
 
     }

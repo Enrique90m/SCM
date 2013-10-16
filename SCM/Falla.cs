@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlServerCe;
 using System.Windows.Forms;
+using System.Data;
 
 namespace SCM
 {
     class Falla
     {
-        public int numFalla;
+        public long numFalla;
         public string NumComputadora;
         public string descripcionFalla;
         public DateTime fechaAlta;
@@ -17,6 +18,7 @@ namespace SCM
 
         public void AgregaFalla(Falla objetoFalla)
         {
+
             DataConections bd = new DataConections();
             SqlCeConnection conexion = bd.conectaConBD();
             try
@@ -35,6 +37,23 @@ namespace SCM
             {
                 conexion.Close();
             }
+        }
+        public long obtieneTotalDeFallas()
+        {
+            DataTable dt = new DataTable();
+            DataConections bd = new DataConections();
+            SqlCeConnection conexion = bd.conectaConBD();
+            try
+            {
+                SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM FALLAS", conexion);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("", "Error - No se pudo contar el total de Libros \n \n" + e.ToString());
+            }
+            long totalRegistros = dt.Rows.Count;
+            return totalRegistros;
         }
     }
 }

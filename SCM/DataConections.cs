@@ -13,7 +13,7 @@ namespace SCM
         //OBJETO DE CONEXION
         public SqlCeConnection conexionSQL;
         //RUTA DE LA BASE DE DATOS
-        public string path = @"Data Source=C:\SCB\SCB\BDLibros.sdf";
+        public string path = @"Data Source=C:\SCM\SCM\BD.sdf";
         public DataTable dt;
         public SqlCeDataAdapter da;
 
