@@ -22,5 +22,12 @@ namespace SCM
             AgregarFalla falla = new AgregarFalla();
             falla.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TodasFallas tf = new TodasFallas();
+            tf.Show();
+        }
     }
 }

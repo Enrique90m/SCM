@@ -62,5 +62,20 @@ namespace SCM
             long totalRegistros = dt.Rows.Count;
             return totalRegistros;
         }
+        public DataTable obtieneTodasLasFallas(DataTable dt)
+        {
+            DataConections bd = new DataConections();
+            SqlCeConnection conexion = bd.conectaConBD();
+            try
+            {
+                SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM FALLAS", conexion);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("", "Error - No se pudo contar el total de Libros \n \n" + e.ToString());
+            }
+            return dt;
+        }
     }
 }

@@ -98,6 +98,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TodasFallas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TodasFallas.Designer.cs">
+      <DependentUpon>TodasFallas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarFalla.resx">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +125,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TodasFallas.resx">
+      <DependentUpon>TodasFallas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="BDDataSet.xsc">
       <DependentUpon>BDDataSet.xsd</DependentUpon>

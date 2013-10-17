@@ -12,3 +12,4 @@ C:\SCM\SCM\bin\Debug\SCM.exe
 C:\SCM\SCM\bin\Debug\SCM.pdb
 C:\SCM\SCM\obj\x86\Debug\SCM.exe
 C:\SCM\SCM\obj\x86\Debug\SCM.pdb
+C:\SCM\SCM\obj\x86\Debug\SCM.TodasFallas.resources
