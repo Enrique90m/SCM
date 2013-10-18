@@ -24,16 +24,16 @@ namespace SCM
             try
             {
                 string query = "INSERT INTO FALLAS VALUES(@numfalla,@numcompu,@desc,@fechaAlta,@fechaBaja)";
-                SqlCeCommand comando = new SqlCeCommand(query,conexion);
+                SqlCeCommand comando = new SqlCeCommand(query, conexion);
                 comando.Parameters.AddWithValue("@numfalla", objetoFalla.numFalla);
                 comando.Parameters.AddWithValue("@numcompu", objetoFalla.NumComputadora);
                 comando.Parameters.AddWithValue("@desc", objetoFalla.descripcionFalla);
                 comando.Parameters.AddWithValue("@fechaAlta", objetoFalla.fechaAlta);
-                comando.Parameters.AddWithValue("@fechaBaja",DBNull.Value);
+                comando.Parameters.AddWithValue("@fechaBaja", DBNull.Value);
 
-                comando.ExecuteNonQuery();                
+                comando.ExecuteNonQuery();
                 MessageBox.Show("Falla agregada correctamente!");
-                                                                                        
+
             }
             catch (Exception e)
             {
@@ -92,6 +92,14 @@ namespace SCM
                 return dt;
             }
             return dt;
+        }
+        public string BuscaRegistroDeFalla()
+        {
+            DataConections dc = new DataConections();
+            SqlCeConnection cn = new SqlCeConnection();
+            cn = dc.conectaConBD();
+            string algo = "";
+            return algo;
         }
     }
 }

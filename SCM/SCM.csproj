@@ -90,6 +90,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificaFalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificaFalla.Designer.cs">
+      <DependentUpon>ModificaFalla.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarEquipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificaFalla.resx">
+      <DependentUpon>ModificaFalla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarEquipos.resx">
       <DependentUpon>ModificarEquipos.cs</DependentUpon>
