@@ -26,6 +26,13 @@ namespace SCM
           
             objetoFalla.AgregaFalla(objetoFalla);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Fallas fl = new Fallas();
+            fl.Show();
+            this.Dispose();
+        }
         
     }
 }

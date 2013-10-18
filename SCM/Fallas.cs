@@ -29,5 +29,10 @@ namespace SCM
             TodasFallas tf = new TodasFallas();
             tf.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
