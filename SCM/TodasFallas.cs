@@ -27,10 +27,16 @@ namespace SCM
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if ((string.IsNullOrEmpty(textBox1.Text)) || (string.IsNullOrWhiteSpace(textBox1.Text)))
+            {
+                MessageBox.Show("No ingreso ningun dato a buscar, porfavor verifique!");
+                return;
+            }
+
             Falla lb = new Falla();
             DataTable dt = new DataTable();
             string texto = textBox1.Text;
-            if (id_RADIOBUTTON.Checked)
+            if (NumFalla_Radiobtn.Checked)
             {
                 try
                 {
@@ -41,17 +47,32 @@ namespace SCM
                     MessageBox.Show("Ingreso algun dato que no es un numero, porfavor verifique!");
                     return;
                 }
-                lb.buscalibro(dt, "SELECT * FROM LIBROS WHERE ID_LIBRO = " + textBox1.Text);
+                lb.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumFalla = " + textBox1.Text);
             }
             else
-                if (libro_RADIOBUTTON.Checked)
-                    lb.buscalibro(dt, "SELECT * FROM LIBROS WHERE NOMBRE = '" + textBox1.Text + "'");
-                else
-                    lb.buscalibro(dt, "SELECT * FROM LIBROS WHERE AUTOR = '" + textBox1.Text + "'");
+                    lb.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumComputadora = " + textBox1.Text);
+              
+            //else
+                  //  lb.buscaFalla(dt, "SELECT * FROM LIBROS WHERE AUTOR = '" + textBox1.Text + "'");
 
 
 
             dataGridView1.DataSource = dt;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Falla fl = new Falla();
+            DataTable dt = new DataTable();
+            fl.buscaFalla(dt, "SELECT * FROM Fallas");
+            dataGridView1.DataSource = dt;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Fallas fl = new Fallas();
+            fl.Show();
+            this.Dispose();
         }
 
        

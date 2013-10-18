@@ -77,5 +77,21 @@ namespace SCM
             }
             return dt;
         }
+        public DataTable buscaFalla(DataTable dt, string comando)
+        {
+            DataConections conexion = new DataConections();
+            SqlCeConnection cn = conexion.conectaConBD();
+            try
+            {
+                SqlCeDataAdapter da = new SqlCeDataAdapter(comando, cn);
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ocurrio un error en el sistema: \n\n + " + e.ToString());
+                return dt;
+            }
+            return dt;
+        }
     }
 }

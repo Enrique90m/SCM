@@ -34,9 +34,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.autor_RADIOBUTTON = new System.Windows.Forms.RadioButton();
-            this.libro_RADIOBUTTON = new System.Windows.Forms.RadioButton();
-            this.id_RADIOBUTTON = new System.Windows.Forms.RadioButton();
+            this.NumComp_Radiobtn = new System.Windows.Forms.RadioButton();
+            this.NumFalla_Radiobtn = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -45,23 +44,25 @@
             // 
             this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(657, 48);
+            this.button3.Location = new System.Drawing.Point(534, 48);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(145, 37);
             this.button3.TabIndex = 17;
             this.button3.Text = "Ver todos";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(534, 48);
+            this.button2.Location = new System.Drawing.Point(709, 48);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 37);
             this.button2.TabIndex = 16;
             this.button2.Text = "Regresar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -94,45 +95,32 @@
             this.textBox1.Size = new System.Drawing.Size(385, 20);
             this.textBox1.TabIndex = 13;
             // 
-            // autor_RADIOBUTTON
+            // NumComp_Radiobtn
             // 
-            this.autor_RADIOBUTTON.AutoSize = true;
-            this.autor_RADIOBUTTON.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autor_RADIOBUTTON.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.autor_RADIOBUTTON.Location = new System.Drawing.Point(227, 33);
-            this.autor_RADIOBUTTON.Name = "autor_RADIOBUTTON";
-            this.autor_RADIOBUTTON.Size = new System.Drawing.Size(67, 23);
-            this.autor_RADIOBUTTON.TabIndex = 12;
-            this.autor_RADIOBUTTON.TabStop = true;
-            this.autor_RADIOBUTTON.Text = "Autor";
-            this.autor_RADIOBUTTON.UseVisualStyleBackColor = true;
+            this.NumComp_Radiobtn.AutoSize = true;
+            this.NumComp_Radiobtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumComp_Radiobtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NumComp_Radiobtn.Location = new System.Drawing.Point(88, 33);
+            this.NumComp_Radiobtn.Name = "NumComp_Radiobtn";
+            this.NumComp_Radiobtn.Size = new System.Drawing.Size(133, 23);
+            this.NumComp_Radiobtn.TabIndex = 11;
+            this.NumComp_Radiobtn.TabStop = true;
+            this.NumComp_Radiobtn.Text = "# Computadora";
+            this.NumComp_Radiobtn.UseVisualStyleBackColor = true;
             // 
-            // libro_RADIOBUTTON
+            // NumFalla_Radiobtn
             // 
-            this.libro_RADIOBUTTON.AutoSize = true;
-            this.libro_RADIOBUTTON.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.libro_RADIOBUTTON.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.libro_RADIOBUTTON.Location = new System.Drawing.Point(88, 33);
-            this.libro_RADIOBUTTON.Name = "libro_RADIOBUTTON";
-            this.libro_RADIOBUTTON.Size = new System.Drawing.Size(133, 23);
-            this.libro_RADIOBUTTON.TabIndex = 11;
-            this.libro_RADIOBUTTON.TabStop = true;
-            this.libro_RADIOBUTTON.Text = "# Computadora";
-            this.libro_RADIOBUTTON.UseVisualStyleBackColor = true;
-            // 
-            // id_RADIOBUTTON
-            // 
-            this.id_RADIOBUTTON.AutoSize = true;
-            this.id_RADIOBUTTON.Checked = true;
-            this.id_RADIOBUTTON.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_RADIOBUTTON.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.id_RADIOBUTTON.Location = new System.Drawing.Point(12, 33);
-            this.id_RADIOBUTTON.Name = "id_RADIOBUTTON";
-            this.id_RADIOBUTTON.Size = new System.Drawing.Size(70, 23);
-            this.id_RADIOBUTTON.TabIndex = 10;
-            this.id_RADIOBUTTON.TabStop = true;
-            this.id_RADIOBUTTON.Text = "# Falla";
-            this.id_RADIOBUTTON.UseVisualStyleBackColor = true;
+            this.NumFalla_Radiobtn.AutoSize = true;
+            this.NumFalla_Radiobtn.Checked = true;
+            this.NumFalla_Radiobtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumFalla_Radiobtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NumFalla_Radiobtn.Location = new System.Drawing.Point(12, 33);
+            this.NumFalla_Radiobtn.Name = "NumFalla_Radiobtn";
+            this.NumFalla_Radiobtn.Size = new System.Drawing.Size(70, 23);
+            this.NumFalla_Radiobtn.TabIndex = 10;
+            this.NumFalla_Radiobtn.TabStop = true;
+            this.NumFalla_Radiobtn.Text = "# Falla";
+            this.NumFalla_Radiobtn.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -157,9 +145,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.autor_RADIOBUTTON);
-            this.Controls.Add(this.libro_RADIOBUTTON);
-            this.Controls.Add(this.id_RADIOBUTTON);
+            this.Controls.Add(this.NumComp_Radiobtn);
+            this.Controls.Add(this.NumFalla_Radiobtn);
             this.Controls.Add(this.dataGridView1);
             this.Name = "TodasFallas";
             this.Text = "TodasFallas";
@@ -177,9 +164,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton autor_RADIOBUTTON;
-        private System.Windows.Forms.RadioButton libro_RADIOBUTTON;
-        private System.Windows.Forms.RadioButton id_RADIOBUTTON;
+        private System.Windows.Forms.RadioButton NumComp_Radiobtn;
+        private System.Windows.Forms.RadioButton NumFalla_Radiobtn;
         private System.Windows.Forms.DataGridView dataGridView1;
 
     }
