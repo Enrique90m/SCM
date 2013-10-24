@@ -23,13 +23,14 @@ namespace SCM
             SqlCeConnection conexion = bd.conectaConBD();
             try
             {
-                string query = "INSERT INTO FALLAS VALUES(@numfalla,@numcompu,@desc,@fechaAlta,@fechaBaja)";
+                string query = "INSERT INTO FALLAS VALUES(@numfalla,@numcompu,@desc,@fechaAlta,@fechaBaja,@solucionada)";
                 SqlCeCommand comando = new SqlCeCommand(query, conexion);
                 comando.Parameters.AddWithValue("@numfalla", objetoFalla.numFalla);
                 comando.Parameters.AddWithValue("@numcompu", objetoFalla.NumComputadora);
                 comando.Parameters.AddWithValue("@desc", objetoFalla.descripcionFalla);
                 comando.Parameters.AddWithValue("@fechaAlta", objetoFalla.fechaAlta);
                 comando.Parameters.AddWithValue("@fechaBaja", DBNull.Value);
+                comando.Parameters.AddWithValue("@solucionada", 0);
 
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Falla agregada correctamente!");
