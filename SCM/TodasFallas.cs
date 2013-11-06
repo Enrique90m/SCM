@@ -18,7 +18,7 @@ namespace SCM
 
         private void TodasFallas_Load(object sender, EventArgs e)
         {
-            Falla lb = new Falla();
+            FallasDAL lb = new FallasDAL();
             DataTable dt = new DataTable();
             lb.obtieneTodasLasFallas(dt);
             dataGridView1.DataSource = dt;
@@ -33,7 +33,7 @@ namespace SCM
                 return;
             }
 
-            Falla lb = new Falla();
+            FallasDAL lb = new FallasDAL();
             DataTable dt = new DataTable();
             string texto = textBox1.Text;
             if (NumFalla_Radiobtn.Checked)
@@ -62,7 +62,7 @@ namespace SCM
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Falla fl = new Falla();
+            FallasDAL fl = new FallasDAL();
             DataTable dt = new DataTable();
             fl.buscaFalla(dt, "SELECT * FROM Fallas");
             dataGridView1.DataSource = dt;

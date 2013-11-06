@@ -84,6 +84,7 @@
     <Compile Include="Fallas.Designer.cs">
       <DependentUpon>Fallas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FallasDAL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

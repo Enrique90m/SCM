@@ -14,16 +14,23 @@ namespace SCM
         public ModificaFalla()
         {
             InitializeComponent();
+            DataTable dt = new DataTable();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string datoAbuscar;
+        }
 
-            if (string.IsNullOrEmpty(NumComp_txt.Text) || string.IsNullOrWhiteSpace(NumComp_txt.Text))
+        private void NumFalla_txt_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(NumFalla_txt.Text) || string.IsNullOrWhiteSpace(NumFalla_txt.Text))
+            {
+                MessageBox.Show("Debe capturar el numero de falla");
                 return;
+            }
 
-
+            Falla ObjetoFalla = new Falla();
         }
     }
 }

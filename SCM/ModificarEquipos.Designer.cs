@@ -75,7 +75,7 @@
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(132, 60);
             this.btnEntrar.TabIndex = 69;
-            this.btnEntrar.Text = "Agregar";
+            this.btnEntrar.Text = "Modificar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1

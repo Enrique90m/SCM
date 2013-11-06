@@ -54,7 +54,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(30, 94);
+            this.label3.Location = new System.Drawing.Point(15, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 26);
             this.label3.TabIndex = 63;
@@ -65,7 +65,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(29, 52);
+            this.label2.Location = new System.Drawing.Point(15, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 26);
             this.label2.TabIndex = 62;
@@ -74,7 +74,7 @@
             // txtDescripFalla
             // 
             this.txtDescripFalla.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripFalla.Location = new System.Drawing.Point(90, 94);
+            this.txtDescripFalla.Location = new System.Drawing.Point(75, 111);
             this.txtDescripFalla.Multiline = true;
             this.txtDescripFalla.Name = "txtDescripFalla";
             this.txtDescripFalla.Size = new System.Drawing.Size(379, 166);
@@ -83,7 +83,7 @@
             // txtNumEqui
             // 
             this.txtNumEqui.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumEqui.Location = new System.Drawing.Point(194, 52);
+            this.txtNumEqui.Location = new System.Drawing.Point(180, 59);
             this.txtNumEqui.Name = "txtNumEqui";
             this.txtNumEqui.Size = new System.Drawing.Size(90, 21);
             this.txtNumEqui.TabIndex = 60;
@@ -92,7 +92,7 @@
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(152, 266);
+            this.btnAgregar.Location = new System.Drawing.Point(128, 283);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(132, 60);
             this.btnAgregar.TabIndex = 65;
@@ -104,7 +104,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(299, 266);
+            this.button1.Location = new System.Drawing.Point(275, 283);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 60);
             this.button1.TabIndex = 66;
@@ -117,14 +117,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(589, 383);
+            this.ClientSize = new System.Drawing.Size(596, 406);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtNumEqui);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDescripFalla);
-            this.Controls.Add(this.txtNumEqui);
             this.Controls.Add(this.btnAgregar);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
             this.Name = "AgregarFalla";
             this.Text = "AgregarFalla";
             this.ResumeLayout(false);

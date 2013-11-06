@@ -19,12 +19,13 @@ namespace SCM
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Falla objetoFalla = new Falla();
-            objetoFalla.numFalla = objetoFalla.obtieneTotalDeFallas() + 1;
+            FallasDAL dl = new FallasDAL();
+            objetoFalla.numFalla = dl.obtieneTotalDeFallas() + 1;
             objetoFalla.NumComputadora = txtNumEqui.Text;
             objetoFalla.descripcionFalla = txtDescripFalla.Text;
             objetoFalla.fechaAlta = DateTime.Today.Date;
           
-            objetoFalla.AgregaFalla(objetoFalla);
+             dl.AgregaFalla(objetoFalla);
         }
 
         private void button1_Click(object sender, EventArgs e)
