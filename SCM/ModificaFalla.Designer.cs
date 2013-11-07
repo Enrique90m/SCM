@@ -28,34 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Descrip_txt = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            System.Windows.Forms.Label numFallaLabel;
+            System.Windows.Forms.Label numComputadoraLabel;
+            System.Windows.Forms.Label descripcionFallaLabel;
+            System.Windows.Forms.Label solucionadaLabel;
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.NumFalla_txt = new System.Windows.Forms.TextBox();
-            this.btnEntrar = new System.Windows.Forms.Button();
+            this.ActualizarTextbox = new System.Windows.Forms.Button();
+            this.numFallaTextBox = new System.Windows.Forms.TextBox();
+            this.numComputadoraTextBox = new System.Windows.Forms.TextBox();
+            this.descripcionFallaTextBox = new System.Windows.Forms.TextBox();
+            this.solucionadaCheckBox = new System.Windows.Forms.CheckBox();
+            numFallaLabel = new System.Windows.Forms.Label();
+            numComputadoraLabel = new System.Windows.Forms.Label();
+            descripcionFallaLabel = new System.Windows.Forms.Label();
+            solucionadaLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // Descrip_txt
-            // 
-            this.Descrip_txt.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descrip_txt.Location = new System.Drawing.Point(158, 96);
-            this.Descrip_txt.Multiline = true;
-            this.Descrip_txt.Name = "Descrip_txt";
-            this.Descrip_txt.Size = new System.Drawing.Size(374, 149);
-            this.Descrip_txt.TabIndex = 338;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(40, 93);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 26);
-            this.label10.TabIndex = 337;
-            this.label10.Text = "Descripcion:";
             // 
             // label9
             // 
@@ -63,7 +51,7 @@
             this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Location = new System.Drawing.Point(226, 9);
+            this.label9.Location = new System.Drawing.Point(145, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(202, 37);
             this.label9.TabIndex = 336;
@@ -73,60 +61,124 @@
             // 
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(279, 287);
+            this.button1.Location = new System.Drawing.Point(198, 287);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 60);
             this.button1.TabIndex = 340;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // ActualizarTextbox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 26);
-            this.label2.TabIndex = 335;
-            this.label2.Text = "# Falla:";
+            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarTextbox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ActualizarTextbox.Location = new System.Drawing.Point(40, 287);
+            this.ActualizarTextbox.Name = "ActualizarTextbox";
+            this.ActualizarTextbox.Size = new System.Drawing.Size(132, 60);
+            this.ActualizarTextbox.TabIndex = 339;
+            this.ActualizarTextbox.Text = "Actualizar informacion";
+            this.ActualizarTextbox.UseVisualStyleBackColor = true;
+            this.ActualizarTextbox.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // NumFalla_txt
+            // numFallaLabel
             // 
-            this.NumFalla_txt.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumFalla_txt.Location = new System.Drawing.Point(121, 56);
-            this.NumFalla_txt.Name = "NumFalla_txt";
-            this.NumFalla_txt.Size = new System.Drawing.Size(90, 21);
-            this.NumFalla_txt.TabIndex = 50;
-            this.NumFalla_txt.Leave += new System.EventHandler(this.NumFalla_txt_Leave);
+            numFallaLabel.AutoSize = true;
+            numFallaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numFallaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            numFallaLabel.Location = new System.Drawing.Point(49, 67);
+            numFallaLabel.Name = "numFallaLabel";
+            numFallaLabel.Size = new System.Drawing.Size(94, 20);
+            numFallaLabel.TabIndex = 340;
+            numFallaLabel.Text = "Num Falla:";
             // 
-            // btnEntrar
+            // numFallaTextBox
             // 
-            this.btnEntrar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEntrar.Location = new System.Drawing.Point(121, 287);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(132, 60);
-            this.btnEntrar.TabIndex = 339;
-            this.btnEntrar.Text = "Actualizar informacion";
-            this.btnEntrar.UseVisualStyleBackColor = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.numFallaTextBox.Location = new System.Drawing.Point(149, 64);
+            this.numFallaTextBox.Name = "numFallaTextBox";
+            this.numFallaTextBox.ReadOnly = true;
+            this.numFallaTextBox.Size = new System.Drawing.Size(200, 20);
+            this.numFallaTextBox.TabIndex = 341;
+            // 
+            // numComputadoraLabel
+            // 
+            numComputadoraLabel.AutoSize = true;
+            numComputadoraLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numComputadoraLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            numComputadoraLabel.Location = new System.Drawing.Point(49, 93);
+            numComputadoraLabel.Name = "numComputadoraLabel";
+            numComputadoraLabel.Size = new System.Drawing.Size(163, 20);
+            numComputadoraLabel.TabIndex = 342;
+            numComputadoraLabel.Text = "Num Computadora:";
+            // 
+            // numComputadoraTextBox
+            // 
+            this.numComputadoraTextBox.Location = new System.Drawing.Point(218, 90);
+            this.numComputadoraTextBox.Name = "numComputadoraTextBox";
+            this.numComputadoraTextBox.Size = new System.Drawing.Size(200, 20);
+            this.numComputadoraTextBox.TabIndex = 343;
+            // 
+            // descripcionFallaLabel
+            // 
+            descripcionFallaLabel.AutoSize = true;
+            descripcionFallaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            descripcionFallaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            descripcionFallaLabel.Location = new System.Drawing.Point(49, 119);
+            descripcionFallaLabel.Name = "descripcionFallaLabel";
+            descripcionFallaLabel.Size = new System.Drawing.Size(149, 20);
+            descripcionFallaLabel.TabIndex = 344;
+            descripcionFallaLabel.Text = "descripcion Falla:";
+            // 
+            // descripcionFallaTextBox
+            // 
+            this.descripcionFallaTextBox.Location = new System.Drawing.Point(218, 116);
+            this.descripcionFallaTextBox.Multiline = true;
+            this.descripcionFallaTextBox.Name = "descripcionFallaTextBox";
+            this.descripcionFallaTextBox.Size = new System.Drawing.Size(392, 141);
+            this.descripcionFallaTextBox.TabIndex = 345;
+            // 
+            // solucionadaLabel
+            // 
+            solucionadaLabel.AutoSize = true;
+            solucionadaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            solucionadaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            solucionadaLabel.Location = new System.Drawing.Point(49, 264);
+            solucionadaLabel.Name = "solucionadaLabel";
+            solucionadaLabel.Size = new System.Drawing.Size(113, 20);
+            solucionadaLabel.TabIndex = 350;
+            solucionadaLabel.Text = "Solucionada:";
+            // 
+            // solucionadaCheckBox
+            // 
+            this.solucionadaCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solucionadaCheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.solucionadaCheckBox.Location = new System.Drawing.Point(168, 263);
+            this.solucionadaCheckBox.Name = "solucionadaCheckBox";
+            this.solucionadaCheckBox.Size = new System.Drawing.Size(200, 24);
+            this.solucionadaCheckBox.TabIndex = 351;
+            this.solucionadaCheckBox.Text = "checkBox1";
+            this.solucionadaCheckBox.UseVisualStyleBackColor = true;
             // 
             // ModificaFalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(715, 411);
-            this.Controls.Add(this.Descrip_txt);
-            this.Controls.Add(this.label10);
+            this.ClientSize = new System.Drawing.Size(1007, 454);
+            this.Controls.Add(numFallaLabel);
+            this.Controls.Add(this.numFallaTextBox);
+            this.Controls.Add(numComputadoraLabel);
+            this.Controls.Add(this.numComputadoraTextBox);
+            this.Controls.Add(descripcionFallaLabel);
+            this.Controls.Add(this.descripcionFallaTextBox);
+            this.Controls.Add(solucionadaLabel);
+            this.Controls.Add(this.solucionadaCheckBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.NumFalla_txt);
-            this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.ActualizarTextbox);
             this.Name = "ModificaFalla";
             this.Text = "ModificaFalla";
+            this.Load += new System.EventHandler(this.ModificaFalla_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,12 +186,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox Descrip_txt;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NumFalla_txt;
-        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Button ActualizarTextbox;
+        private System.Windows.Forms.TextBox numFallaTextBox;
+        private System.Windows.Forms.TextBox numComputadoraTextBox;
+        private System.Windows.Forms.TextBox descripcionFallaTextBox;
+        private System.Windows.Forms.CheckBox solucionadaCheckBox;
     }
 }

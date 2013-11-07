@@ -75,6 +75,14 @@ namespace SCM
             this.Dispose();
         }
 
+        private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            ModificaFalla mf = new ModificaFalla(row);
+            mf.Show();
+            this.Dispose();
+        }
+
        
     }
 }

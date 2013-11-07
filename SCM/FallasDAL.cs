@@ -97,12 +97,27 @@ namespace SCM
             }
             return dt;
         }
-        public string ActualizaInformacion()
+        public static void ActualizaInformacion(Falla falla)
         {
-            DataConections dc = new DataConections();
-            SqlCeConnection cn = new SqlCeConnection();
-          //  cn = dc.conectaConBD();
-            string query = "";
+            using (SqlCeConnection conn = DataConections.conectaConBD())
+            {
+                SqlCeCommand comm = new SqlCeCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol WHERE NumFalla = @numfalla", conn);
+                comm.Parameters.Add("@numcomp",falla.NumComputadora);
+                comm.Parameters.Add("@descrip",falla.descripcionFalla);
+                comm.Parameters.Add("@sol",falla.Solucionada);
+                comm.Parameters.Add("@numfalla",falla.numFalla);
+                try
+                {
+                    comm.ExecuteNonQuery();
+                    MessageBox.Show("Falla actualizada!");
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error al actualizar /n/n/n" + e.ToString());
+                }
+            }
+        }
+        public static string ModificarFalla(){
             return "";
         }
     }

@@ -71,10 +71,10 @@
     <Compile Include="AgregarFalla.Designer.cs">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </Compile>
-    <Compile Include="BDDataSet.Designer.cs">
+    <Compile Include="BDDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDDataSet.xsd</DependentUpon>
+      <DependentUpon>BDDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataConections.cs" />
     <Compile Include="Falla.cs" />
@@ -139,16 +139,16 @@
       <DependentUpon>TodasFallas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="BDDataSet.xsc">
-      <DependentUpon>BDDataSet.xsd</DependentUpon>
+    <None Include="BDDataSet1.xsc">
+      <DependentUpon>BDDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="BDDataSet.xsd">
+    <None Include="BDDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BDDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BDDataSet.xss">
-      <DependentUpon>BDDataSet.xsd</DependentUpon>
+    <None Include="BDDataSet1.xss">
+      <DependentUpon>BDDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

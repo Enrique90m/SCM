@@ -11,26 +11,46 @@ namespace SCM
 {
     public partial class ModificaFalla : Form
     {
-        public ModificaFalla()
+        DataGridViewRow row = new DataGridViewRow();
+        public ModificaFalla(DataGridViewRow row1)
         {
             InitializeComponent();
             DataTable dt = new DataTable();
+            row = row1;
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            string datoAbuscar;
+            Falla falla = new Falla();
+            falla.NumComputadora = numComputadoraTextBox.Text;
+            falla.descripcionFalla = descripcionFallaTextBox.Text;
+            falla.numFalla = int.Parse(numFallaTextBox.Text);
+            if (solucionadaCheckBox.Checked == true)
+                falla.Solucionada = true;
+            else
+                falla.Solucionada = false;
+
+            FallasDAL.ActualizaInformacion(falla);
+        }       
+       
+
+        private void ModificaFalla_Load(object sender, EventArgs e)
+        {
+            numFallaTextBox.Text = row.Cells[0].Value.ToString();
+            numComputadoraTextBox.Text = row.Cells[1].Value.ToString();
+            descripcionFallaTextBox.Text = row.Cells[2].Value.ToString();
+
+            if (bool.Parse(row.Cells[5].Value.ToString()) == true)
+                solucionadaCheckBox.Checked = true;
+            else
+                solucionadaCheckBox.Checked = false;
         }
 
-        private void NumFalla_txt_Leave(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(NumFalla_txt.Text) || string.IsNullOrWhiteSpace(NumFalla_txt.Text))
-            {
-                MessageBox.Show("Debe capturar el numero de falla");
-                return;
-            }
-
-            Falla ObjetoFalla = new Falla();
+            TodasFallas tf = new TodasFallas();
+            tf.Show();
+            this.Dispose();
         }
     }
 }
