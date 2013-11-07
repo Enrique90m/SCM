@@ -22,5 +22,11 @@ namespace SCM
             falla.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Reportes rp = new Reportes();
+            rp.Show();
+        }
     }
 }
