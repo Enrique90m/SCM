@@ -12,7 +12,7 @@ namespace SCM
     {
         public static SqlCeConnection conectaConBD()
         {
-            SqlCeConnection conn = new SqlCeConnection("Data Source= c:/SCM/SCM/BD.sdf");
+            SqlCeConnection conn = new SqlCeConnection("Data Source=|DataDirectory|\\BD.sdf");
             try
             {                
                 conn.Open();

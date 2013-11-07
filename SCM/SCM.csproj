@@ -77,6 +77,8 @@
       <DependentUpon>BDDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataConections.cs" />
+    <Compile Include="Equipos.cs" />
+    <Compile Include="EquiposDAL.cs" />
     <Compile Include="Falla.cs" />
     <Compile Include="Fallas.cs">
       <SubType>Form</SubType>

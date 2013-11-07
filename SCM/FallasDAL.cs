@@ -117,8 +117,5 @@ namespace SCM
                 }
             }
         }
-        public static string ModificarFalla(){
-            return "";
-        }
     }
 }
