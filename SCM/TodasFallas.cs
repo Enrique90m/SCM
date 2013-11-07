@@ -50,7 +50,7 @@ namespace SCM
                 lb.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumFalla = " + textBox1.Text);
             }
             else
-                    lb.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumComputadora = " + textBox1.Text);
+                    lb.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumComputadora = '" + textBox1.Text+"'");
               
             //else
                   //  lb.buscaFalla(dt, "SELECT * FROM LIBROS WHERE AUTOR = '" + textBox1.Text + "'");
