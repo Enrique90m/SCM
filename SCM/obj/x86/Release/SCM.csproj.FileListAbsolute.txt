@@ -14,3 +14,5 @@ C:\SCM\SCM\obj\x86\Release\SCM.TodasFallas.resources
 C:\SCM\SCM\obj\x86\Release\SCM.exe
 C:\SCM\SCM\obj\x86\Release\SCM.pdb
 C:\SCM\SCM\obj\x86\Release\SCM.ModificaFalla.resources
+C:\SCM\SCM\obj\x86\Release\SCM.EquiposFormulario.resources
+C:\SCM\SCM\obj\x86\Release\SCM.Reportes.resources

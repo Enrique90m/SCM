@@ -32,9 +32,11 @@ namespace SCM
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Application.Restart();
             //this.Hide();
             //ModificaFalla mf = new ModificaFalla();
             //mf.Show();
         }
+
     }
 }

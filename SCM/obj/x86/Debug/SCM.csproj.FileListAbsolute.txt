@@ -15,3 +15,4 @@ C:\SCM\SCM\obj\x86\Debug\SCM.pdb
 C:\SCM\SCM\obj\x86\Debug\SCM.TodasFallas.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.ModificaFalla.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.Reportes.resources
+C:\SCM\SCM\obj\x86\Debug\SCM.EquiposFormulario.resources

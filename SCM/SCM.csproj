@@ -79,6 +79,12 @@
     <Compile Include="DataConections.cs" />
     <Compile Include="Equipos.cs" />
     <Compile Include="EquiposDAL.cs" />
+    <Compile Include="EquiposFormulario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquiposFormulario.Designer.cs">
+      <DependentUpon>EquiposFormulario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Falla.cs" />
     <Compile Include="Fallas.cs">
       <SubType>Form</SubType>
@@ -122,6 +128,9 @@
     <EmbeddedResource Include="AgregarFalla.resx">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EquiposFormulario.resx">
+      <DependentUpon>EquiposFormulario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fallas.resx">
       <DependentUpon>Fallas.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +151,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
@@ -175,6 +185,20 @@
     <Content Include="BD.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\back_2.ico" />
+    <None Include="Resources\exit.ico" />
+    <None Include="Resources\symbol_add.ico" />
+    <None Include="Resources\manilla_add_folder_to_archive.ico" />
+    <None Include="Resources\add_files_to_archive_blue.ico" />
+    <None Include="Resources\plus.ico" />
+    <None Include="Resources\utilities_system_monitor.ico" />
+    <None Include="Resources\my_computer_no_wallpaper.ico" />
+    <None Include="Resources\computer1.png" />
+    <None Include="Resources\my_computer2.png" />
+    <None Include="Resources\program_group.png" />
+    <None Include="Resources\Line Chart.png" />
+    <None Include="Resources\Pie Chart.png" />
+    <None Include="Resources\Modify1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">

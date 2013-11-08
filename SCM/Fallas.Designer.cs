@@ -61,11 +61,11 @@
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(230, 187);
+            this.button2.Location = new System.Drawing.Point(242, 180);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 66);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Modificacion";
+            this.button2.Text = "Regresar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

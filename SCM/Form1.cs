@@ -28,5 +28,12 @@ namespace SCM
             Reportes rp = new Reportes();
             rp.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EquiposFormulario ef = new EquiposFormulario();
+            ef.Show();
+            this.Hide();
+        }
     }
 }

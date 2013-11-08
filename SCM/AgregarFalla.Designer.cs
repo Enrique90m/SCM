@@ -45,9 +45,9 @@
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label9.Location = new System.Drawing.Point(196, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(226, 37);
+            this.label9.Size = new System.Drawing.Size(183, 37);
             this.label9.TabIndex = 64;
-            this.label9.Text = "Agregar Libro      ";
+            this.label9.Text = "Agregar Falla";
             // 
             // label3
             // 

@@ -7,5 +7,6 @@ namespace SCM
 {
     public class EquiposDAL
     {
+
     }
 }
