@@ -28,6 +28,7 @@ namespace SCM
 
         private void inventarioDeEquiposYModificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             DataTable dt = new DataTable();
             tabControl1.SelectTab(1);
             dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
@@ -73,6 +74,6 @@ namespace SCM
                 MessageBox.Show("Hubo un error al guardar el registro","Error de base de datos",MessageBoxButtons.OK,MessageBoxIcon.Hand);
             }
         }
-
+       
     }
 }

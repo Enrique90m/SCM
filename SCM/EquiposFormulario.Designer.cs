@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label iDLabel;
             System.Windows.Forms.Label numEquipoLabel;
             System.Windows.Forms.Label marcaLabel;
             System.Windows.Forms.Label numSerieLabel;
@@ -49,15 +48,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.iDTextBox = new System.Windows.Forms.TextBox();
             this.numEquipoTextBox = new System.Windows.Forms.TextBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            iDLabel = new System.Windows.Forms.Label();
             numEquipoLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
@@ -68,15 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // iDLabel
-            // 
-            iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(69, 61);
-            iDLabel.Name = "iDLabel";
-            iDLabel.Size = new System.Drawing.Size(21, 13);
-            iDLabel.TabIndex = 0;
-            iDLabel.Text = "ID:";
             // 
             // numEquipoLabel
             // 
@@ -154,6 +142,7 @@
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(88, 24);
             this.toolStripDropDownButton1.Text = "Archivo";
+            //this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // usarElSistemaComoAdministradorToolStripMenuItem
             // 
@@ -251,8 +240,6 @@
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(iDLabel);
-            this.tabPage1.Controls.Add(this.iDTextBox);
             this.tabPage1.Controls.Add(numEquipoLabel);
             this.tabPage1.Controls.Add(this.numEquipoTextBox);
             this.tabPage1.Controls.Add(marcaLabel);
@@ -268,6 +255,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "AgregarEquipo";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(247, 202);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 38);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Regresar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -287,13 +283,6 @@
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Agregar Equipo";
-            // 
-            // iDTextBox
-            // 
-            this.iDTextBox.Location = new System.Drawing.Point(143, 58);
-            this.iDTextBox.Name = "iDTextBox";
-            this.iDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.iDTextBox.TabIndex = 1;
             // 
             // numEquipoTextBox
             // 
@@ -322,15 +311,6 @@
             this.salaTextBox.Name = "salaTextBox";
             this.salaTextBox.Size = new System.Drawing.Size(100, 20);
             this.salaTextBox.TabIndex = 9;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(247, 202);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 38);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Regresar";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // EquiposFormulario
             // 
@@ -372,7 +352,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox iDTextBox;
         private System.Windows.Forms.TextBox numEquipoTextBox;
         private System.Windows.Forms.TextBox marcaTextBox;
         private System.Windows.Forms.TextBox numSerieTextBox;
