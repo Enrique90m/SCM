@@ -45,7 +45,9 @@
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.contactenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,8 +56,7 @@
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             iDLabel = new System.Windows.Forms.Label();
             numEquipoLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
@@ -64,8 +65,8 @@
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // iDLabel
@@ -216,6 +217,16 @@
             this.tabControl1.Size = new System.Drawing.Size(638, 327);
             this.tabControl1.TabIndex = 5;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(630, 301);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridView1);
@@ -227,8 +238,17 @@
             this.tabPage2.Text = "Inventario";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 32);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(553, 234);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(iDLabel);
@@ -251,12 +271,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(196, 207);
+            this.button1.Location = new System.Drawing.Point(120, 202);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 38);
             this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
+            this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -302,23 +323,14 @@
             this.salaTextBox.Size = new System.Drawing.Size(100, 20);
             this.salaTextBox.TabIndex = 9;
             // 
-            // dataGridView1
+            // button2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(553, 234);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(630, 301);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(247, 202);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 38);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Regresar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // EquiposFormulario
             // 
@@ -334,9 +346,9 @@
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,6 +379,7 @@
         private System.Windows.Forms.TextBox salaTextBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button2;
 
     }
 }
