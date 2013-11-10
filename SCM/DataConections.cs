@@ -12,14 +12,16 @@ namespace SCM
     {
         public static SqlCeConnection conectaConBD()
         {
-            SqlCeConnection conn = new SqlCeConnection("Data Source=|DataDirectory|\\BD.sdf");
+            SqlCeConnection conn = new SqlCeConnection(@"Data Source=|DataDirectory|\BD.sdf");
             try
             {                
                 conn.Open();
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error al abrir la base de datos, para mayor especificacion del problema se desglosara el error: /n/n/n" + e.ToString());
+                MessageBox.Show("Error al abrir la base de datos, para mayor especificacion del problema se desglosara el error: \n\n" + e.ToString(),"Error de base de datos",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Al no tener conexion a la base de datos se saldra del sistema por seguridad de los datos","Error del sistema",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                Application.Exit();
             }
             return conn;
         }

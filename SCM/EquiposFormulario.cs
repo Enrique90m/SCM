@@ -28,7 +28,9 @@ namespace SCM
 
         private void inventarioDeEquiposYModificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
             tabControl1.SelectTab(1);
+            dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
         }
 
         private void regresarAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace SCM
             //Ya capturo datos minimos, ahora valida que no halla capturado un NumEquipo que ya exista
             if (EquiposDAL.existe(numEquipoTextBox.Text))
             {
-                MessageBox.Show("El Numero de equipo: " + numEquipoTextBox +" ya esta registrado anteriormente y debe ser unico, porfavor verifique sus datos","Eror de duplicacion",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                MessageBox.Show("El Numero de equipo: " + numEquipoTextBox.Text +" ya esta registrado anteriormente y debe ser unico, porfavor verifique sus datos","Eror de duplicacion",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 return;
             }
             
