@@ -110,6 +110,19 @@ namespace SCM
             {
                 MessageBox.Show("Error al actualizar los datos del equipo: " + numEquipoTextBox1.Text,"Error de base de datos", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            numEquipoTextBox.Text = null;
+            salaTextBox.Text = null;
+            marcaTextBox.Text = null;
+            numSerieTextBox.Text = null;
+        }
+
+        private void Regresar_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(1);
         }       
        
     }
