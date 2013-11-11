@@ -11,6 +11,8 @@ namespace SCM
 {
     public partial class EquiposFormulario : Form
     {
+        string RespNumEquipo;
+
         public EquiposFormulario()
         {
             InitializeComponent();
@@ -23,12 +25,12 @@ namespace SCM
 
         private void EquiposFormulario_Load(object sender, EventArgs e)
         {
+           
 
         }
 
         private void inventarioDeEquiposYModificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             DataTable dt = new DataTable();
             tabControl1.SelectTab(1);
             dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
@@ -74,6 +76,41 @@ namespace SCM
                 MessageBox.Show("Hubo un error al guardar el registro","Error de base de datos",MessageBoxButtons.OK,MessageBoxIcon.Hand);
             }
         }
+
+        private void dataGridView1_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {       
+            //Pone los datos en los txtbox
+            numEquipoTextBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            marcaTextBox1.Text =  dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            numSerieTextBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            salaTextBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+          
+            //Si en dado caso, quiere cambiar el NumEquipo, se respalda en esta variable para poder encontrarlo
+            //ya que si no se respalda, nunca lo encontrara al momento de actualizarlo
+            RespNumEquipo = numEquipoTextBox1.Text;
+
+            //Cambia de tab
+            tabControl1.SelectTab(3);
+        }
+
+        private void ActualizarTextbox_Click(object sender, EventArgs e)
+        {
+            Equipos oEquipo = new Equipos();
+            oEquipo.NumEquipo = numEquipoTextBox1.Text;
+            oEquipo.sala = salaTextBox1.Text;
+            oEquipo.NumSerie = numSerieTextBox1.Text;
+            oEquipo.Marca = marcaTextBox1.Text;            
+            int error =  EquiposDAL.ActualizarInfoDeEquipo(oEquipo,RespNumEquipo);
+
+            if (error > 0)
+            {
+                MessageBox.Show("Actualizacion correcta de los datos", "Finalizacion de proceso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar los datos del equipo: " + numEquipoTextBox1.Text,"Error de base de datos", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }       
        
     }
 }

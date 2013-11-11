@@ -69,5 +69,25 @@ namespace SCM
                 return dt;
             }
         }
+        public static int ActualizarInfoDeEquipo(Equipos oEquipo, string RespNumEquipo)
+        {
+            string query = " UPDATE EQUIPOS SET NumEquipo=@ne, Marca=@marca, NumSerie=@ns, Sala=@sala WHERE NumEquipo=@NumeroEquipo";
+            int error;
+
+            using (SqlCeConnection cn = DataConections.conectaConBD())
+            {
+                SqlCeCommand cm = new SqlCeCommand(query, cn);
+                cm.Parameters.AddWithValue("@ne", oEquipo.NumEquipo);
+                cm.Parameters.AddWithValue("@marca", oEquipo.Marca);
+                cm.Parameters.AddWithValue("@ns", oEquipo.NumSerie);
+                cm.Parameters.AddWithValue("@sala", oEquipo.sala);
+                cm.Parameters.AddWithValue("@NumeroEquipo", RespNumEquipo);
+
+                error = cm.ExecuteNonQuery();
+                cn.Close();
+            }
+                return error;
+            
+        }
     }
 }
