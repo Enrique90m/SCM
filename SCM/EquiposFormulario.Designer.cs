@@ -36,6 +36,8 @@
             System.Windows.Forms.Label marcaLabel1;
             System.Windows.Forms.Label numSerieLabel1;
             System.Windows.Forms.Label salaLabel1;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -43,12 +45,13 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.numEquipoTextBox = new System.Windows.Forms.TextBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.Regresar = new System.Windows.Forms.Button();
+            this.ActualizarTextbox = new System.Windows.Forms.Button();
             this.numEquipoTextBox1 = new System.Windows.Forms.TextBox();
             this.marcaTextBox1 = new System.Windows.Forms.TextBox();
             this.numSerieTextBox1 = new System.Windows.Forms.TextBox();
@@ -64,8 +67,6 @@
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.contactenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.Regresar = new System.Windows.Forms.Button();
-            this.ActualizarTextbox = new System.Windows.Forms.Button();
             numEquipoLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
@@ -74,6 +75,8 @@
             marcaLabel1 = new System.Windows.Forms.Label();
             numSerieLabel1 = new System.Windows.Forms.Label();
             salaLabel1 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,38 +88,90 @@
             // numEquipoLabel
             // 
             numEquipoLabel.AutoSize = true;
-            numEquipoLabel.Location = new System.Drawing.Point(69, 87);
+            numEquipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numEquipoLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            numEquipoLabel.Location = new System.Drawing.Point(26, 51);
             numEquipoLabel.Name = "numEquipoLabel";
-            numEquipoLabel.Size = new System.Drawing.Size(68, 13);
+            numEquipoLabel.Size = new System.Drawing.Size(133, 24);
             numEquipoLabel.TabIndex = 2;
             numEquipoLabel.Text = "Num Equipo:";
             // 
             // marcaLabel
             // 
             marcaLabel.AutoSize = true;
-            marcaLabel.Location = new System.Drawing.Point(69, 113);
+            marcaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            marcaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            marcaLabel.Location = new System.Drawing.Point(26, 85);
             marcaLabel.Name = "marcaLabel";
-            marcaLabel.Size = new System.Drawing.Size(40, 13);
+            marcaLabel.Size = new System.Drawing.Size(73, 24);
             marcaLabel.TabIndex = 4;
             marcaLabel.Text = "Marca:";
             // 
             // numSerieLabel
             // 
             numSerieLabel.AutoSize = true;
-            numSerieLabel.Location = new System.Drawing.Point(69, 139);
+            numSerieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numSerieLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            numSerieLabel.Location = new System.Drawing.Point(26, 119);
             numSerieLabel.Name = "numSerieLabel";
-            numSerieLabel.Size = new System.Drawing.Size(59, 13);
+            numSerieLabel.Size = new System.Drawing.Size(115, 24);
             numSerieLabel.TabIndex = 6;
             numSerieLabel.Text = "Num Serie:";
             // 
             // salaLabel
             // 
             salaLabel.AutoSize = true;
-            salaLabel.Location = new System.Drawing.Point(69, 165);
+            salaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            salaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            salaLabel.Location = new System.Drawing.Point(26, 153);
             salaLabel.Name = "salaLabel";
-            salaLabel.Size = new System.Drawing.Size(31, 13);
+            salaLabel.Size = new System.Drawing.Size(56, 24);
             salaLabel.TabIndex = 8;
             salaLabel.Text = "Sala:";
+            // 
+            // numEquipoLabel1
+            // 
+            numEquipoLabel1.AutoSize = true;
+            numEquipoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numEquipoLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            numEquipoLabel1.Location = new System.Drawing.Point(12, 53);
+            numEquipoLabel1.Name = "numEquipoLabel1";
+            numEquipoLabel1.Size = new System.Drawing.Size(111, 20);
+            numEquipoLabel1.TabIndex = 0;
+            numEquipoLabel1.Text = "Num Equipo:";
+            // 
+            // marcaLabel1
+            // 
+            marcaLabel1.AutoSize = true;
+            marcaLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            marcaLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            marcaLabel1.Location = new System.Drawing.Point(12, 95);
+            marcaLabel1.Name = "marcaLabel1";
+            marcaLabel1.Size = new System.Drawing.Size(63, 20);
+            marcaLabel1.TabIndex = 2;
+            marcaLabel1.Text = "Marca:";
+            // 
+            // numSerieLabel1
+            // 
+            numSerieLabel1.AutoSize = true;
+            numSerieLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            numSerieLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            numSerieLabel1.Location = new System.Drawing.Point(12, 137);
+            numSerieLabel1.Name = "numSerieLabel1";
+            numSerieLabel1.Size = new System.Drawing.Size(97, 20);
+            numSerieLabel1.TabIndex = 4;
+            numSerieLabel1.Text = "Num Serie:";
+            // 
+            // salaLabel1
+            // 
+            salaLabel1.AutoSize = true;
+            salaLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            salaLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            salaLabel1.Location = new System.Drawing.Point(12, 179);
+            salaLabel1.Name = "salaLabel1";
+            salaLabel1.Size = new System.Drawing.Size(50, 20);
+            salaLabel1.TabIndex = 6;
+            salaLabel1.Text = "Sala:";
             // 
             // tabControl1
             // 
@@ -124,32 +179,32 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 30);
+            this.tabControl1.Location = new System.Drawing.Point(0, 30);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(638, 327);
+            this.tabControl1.Size = new System.Drawing.Size(762, 427);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(630, 301);
+            this.tabPage3.Size = new System.Drawing.Size(754, 401);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(630, 301);
+            this.tabPage2.Size = new System.Drawing.Size(754, 401);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Inventario";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -162,9 +217,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage1.Controls.Add(label2);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(numEquipoLabel);
             this.tabPage1.Controls.Add(this.numEquipoTextBox);
             this.tabPage1.Controls.Add(marcaLabel);
@@ -176,69 +232,67 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(630, 301);
+            this.tabPage1.Size = new System.Drawing.Size(754, 401);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "AgregarEquipo";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(247, 202);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(211, 215);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 38);
+            this.button2.Size = new System.Drawing.Size(118, 58);
             this.button2.TabIndex = 12;
             this.button2.Text = "Regresar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(120, 202);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(77, 215);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 38);
+            this.button1.Size = new System.Drawing.Size(118, 58);
             this.button1.TabIndex = 11;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Agregar Equipo";
-            // 
             // numEquipoTextBox
             // 
-            this.numEquipoTextBox.Location = new System.Drawing.Point(143, 84);
+            this.numEquipoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numEquipoTextBox.Location = new System.Drawing.Point(162, 49);
             this.numEquipoTextBox.Name = "numEquipoTextBox";
-            this.numEquipoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numEquipoTextBox.Size = new System.Drawing.Size(100, 29);
             this.numEquipoTextBox.TabIndex = 3;
             // 
             // marcaTextBox
             // 
-            this.marcaTextBox.Location = new System.Drawing.Point(143, 110);
+            this.marcaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marcaTextBox.Location = new System.Drawing.Point(102, 84);
             this.marcaTextBox.Name = "marcaTextBox";
-            this.marcaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.marcaTextBox.Size = new System.Drawing.Size(100, 29);
             this.marcaTextBox.TabIndex = 5;
             // 
             // numSerieTextBox
             // 
-            this.numSerieTextBox.Location = new System.Drawing.Point(143, 136);
+            this.numSerieTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSerieTextBox.Location = new System.Drawing.Point(147, 119);
             this.numSerieTextBox.Name = "numSerieTextBox";
-            this.numSerieTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numSerieTextBox.Size = new System.Drawing.Size(100, 29);
             this.numSerieTextBox.TabIndex = 7;
             // 
             // salaTextBox
             // 
-            this.salaTextBox.Location = new System.Drawing.Point(143, 162);
+            this.salaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salaTextBox.Location = new System.Drawing.Point(85, 154);
             this.salaTextBox.Name = "salaTextBox";
-            this.salaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.salaTextBox.Size = new System.Drawing.Size(100, 29);
             this.salaTextBox.TabIndex = 9;
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage4.Controls.Add(label1);
             this.tabPage4.Controls.Add(this.Regresar);
             this.tabPage4.Controls.Add(this.ActualizarTextbox);
             this.tabPage4.Controls.Add(numEquipoLabel1);
@@ -252,73 +306,63 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(630, 301);
+            this.tabPage4.Size = new System.Drawing.Size(754, 401);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Modificacion";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // numEquipoLabel1
+            // Regresar
             // 
-            numEquipoLabel1.AutoSize = true;
-            numEquipoLabel1.Location = new System.Drawing.Point(94, 27);
-            numEquipoLabel1.Name = "numEquipoLabel1";
-            numEquipoLabel1.Size = new System.Drawing.Size(68, 13);
-            numEquipoLabel1.TabIndex = 0;
-            numEquipoLabel1.Text = "Num Equipo:";
+            this.Regresar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Regresar.Location = new System.Drawing.Point(234, 229);
+            this.Regresar.Name = "Regresar";
+            this.Regresar.Size = new System.Drawing.Size(136, 60);
+            this.Regresar.TabIndex = 342;
+            this.Regresar.Text = "Regresar";
+            this.Regresar.UseVisualStyleBackColor = true;
+            // 
+            // ActualizarTextbox
+            // 
+            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarTextbox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ActualizarTextbox.Location = new System.Drawing.Point(76, 229);
+            this.ActualizarTextbox.Name = "ActualizarTextbox";
+            this.ActualizarTextbox.Size = new System.Drawing.Size(132, 60);
+            this.ActualizarTextbox.TabIndex = 341;
+            this.ActualizarTextbox.Text = "Actualizar informacion";
+            this.ActualizarTextbox.UseVisualStyleBackColor = true;
+            this.ActualizarTextbox.Click += new System.EventHandler(this.ActualizarTextbox_Click);
             // 
             // numEquipoTextBox1
             // 
-            this.numEquipoTextBox1.Location = new System.Drawing.Point(168, 24);
+            this.numEquipoTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numEquipoTextBox1.Location = new System.Drawing.Point(124, 51);
             this.numEquipoTextBox1.Name = "numEquipoTextBox1";
-            this.numEquipoTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.numEquipoTextBox1.Size = new System.Drawing.Size(100, 26);
             this.numEquipoTextBox1.TabIndex = 1;
-            // 
-            // marcaLabel1
-            // 
-            marcaLabel1.AutoSize = true;
-            marcaLabel1.Location = new System.Drawing.Point(94, 53);
-            marcaLabel1.Name = "marcaLabel1";
-            marcaLabel1.Size = new System.Drawing.Size(40, 13);
-            marcaLabel1.TabIndex = 2;
-            marcaLabel1.Text = "Marca:";
             // 
             // marcaTextBox1
             // 
-            this.marcaTextBox1.Location = new System.Drawing.Point(168, 50);
+            this.marcaTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marcaTextBox1.Location = new System.Drawing.Point(86, 93);
             this.marcaTextBox1.Name = "marcaTextBox1";
-            this.marcaTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.marcaTextBox1.Size = new System.Drawing.Size(100, 26);
             this.marcaTextBox1.TabIndex = 3;
-            // 
-            // numSerieLabel1
-            // 
-            numSerieLabel1.AutoSize = true;
-            numSerieLabel1.Location = new System.Drawing.Point(94, 79);
-            numSerieLabel1.Name = "numSerieLabel1";
-            numSerieLabel1.Size = new System.Drawing.Size(59, 13);
-            numSerieLabel1.TabIndex = 4;
-            numSerieLabel1.Text = "Num Serie:";
             // 
             // numSerieTextBox1
             // 
-            this.numSerieTextBox1.Location = new System.Drawing.Point(168, 76);
+            this.numSerieTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSerieTextBox1.Location = new System.Drawing.Point(119, 135);
             this.numSerieTextBox1.Name = "numSerieTextBox1";
-            this.numSerieTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.numSerieTextBox1.Size = new System.Drawing.Size(100, 26);
             this.numSerieTextBox1.TabIndex = 5;
-            // 
-            // salaLabel1
-            // 
-            salaLabel1.AutoSize = true;
-            salaLabel1.Location = new System.Drawing.Point(94, 105);
-            salaLabel1.Name = "salaLabel1";
-            salaLabel1.Size = new System.Drawing.Size(31, 13);
-            salaLabel1.TabIndex = 6;
-            salaLabel1.Text = "Sala:";
             // 
             // salaTextBox1
             // 
-            this.salaTextBox1.Location = new System.Drawing.Point(168, 102);
+            this.salaTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salaTextBox1.Location = new System.Drawing.Point(74, 174);
             this.salaTextBox1.Name = "salaTextBox1";
-            this.salaTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.salaTextBox1.Size = new System.Drawing.Size(100, 26);
             this.salaTextBox1.TabIndex = 7;
             // 
             // toolStripLabel1
@@ -413,28 +457,27 @@
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // Regresar
+            // label1
             // 
-            this.Regresar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Regresar.Location = new System.Drawing.Point(211, 153);
-            this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(136, 60);
-            this.Regresar.TabIndex = 342;
-            this.Regresar.Text = "Regresar";
-            this.Regresar.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            label1.Location = new System.Drawing.Point(70, 3);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(292, 31);
+            label1.TabIndex = 343;
+            label1.Text = "Modificar informacion";
             // 
-            // ActualizarTextbox
+            // label2
             // 
-            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualizarTextbox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ActualizarTextbox.Location = new System.Drawing.Point(53, 153);
-            this.ActualizarTextbox.Name = "ActualizarTextbox";
-            this.ActualizarTextbox.Size = new System.Drawing.Size(132, 60);
-            this.ActualizarTextbox.TabIndex = 341;
-            this.ActualizarTextbox.Text = "Actualizar informacion";
-            this.ActualizarTextbox.UseVisualStyleBackColor = true;
-            this.ActualizarTextbox.Click += new System.EventHandler(this.ActualizarTextbox_Click);
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            label2.Location = new System.Drawing.Point(71, 3);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(212, 31);
+            label2.TabIndex = 344;
+            label2.Text = "Agregar equipo";
             // 
             // EquiposFormulario
             // 
@@ -466,7 +509,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox numEquipoTextBox;
         private System.Windows.Forms.TextBox marcaTextBox;
         private System.Windows.Forms.TextBox numSerieTextBox;
