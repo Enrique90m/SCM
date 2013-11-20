@@ -67,7 +67,10 @@ namespace SCM
         {
             FallasDAL fl = new FallasDAL();
             DataTable dt = new DataTable();
-            FallasDAL.buscaFalla(dt, "SELECT * FROM Fallas");
+            if (checkBox1.Checked == true)
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
+            else
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 0");
             dataGridView1.DataSource = dt;
         }
 

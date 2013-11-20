@@ -81,27 +81,6 @@ namespace SCM
             }
             return dt;
         }
-        public DataTable obtieneFallasSolucionadas(DataTable dt)
-        {
-            using (SqlCeConnection cn = DataConections.conectaConBD())
-            {
-                try
-                {
-                    SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM FALLAS", cn);
-                    da.Fill(dt);
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show("Error al obtener las fallas de la tabla falla", "Error de sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    cn.Close();
-                }
-
-                return dt;
-            }
-        }
         public static DataTable buscaFalla(DataTable dt, string comando)
         {
             using (SqlCeConnection conexion = DataConections.conectaConBD())
