@@ -102,11 +102,13 @@ namespace SCM
         {
             using (SqlCeConnection conn = DataConections.conectaConBD())
             {
-                SqlCeCommand comm = new SqlCeCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol WHERE NumFalla = @numfalla", conn);
+                SqlCeCommand comm = new SqlCeCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol, Categoria=@cat WHERE NumFalla = @numfalla", conn);
                 comm.Parameters.Add("@numcomp",falla.NumComputadora);
                 comm.Parameters.Add("@descrip",falla.descripcionFalla);
                 comm.Parameters.Add("@sol",falla.Solucionada);
                 comm.Parameters.Add("@numfalla",falla.numFalla);
+                comm.Parameters.Add("@cat",falla.categoria);
+
                 try
                 {
                     comm.ExecuteNonQuery();

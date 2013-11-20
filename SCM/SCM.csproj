@@ -185,6 +185,12 @@
     <Content Include="BD.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\edit_clear.png" />
+    <None Include="Resources\27_edit_text.png" />
+    <None Include="Resources\system_software_update.png" />
+    <None Include="Resources\back %282%29.png" />
+    <None Include="Resources\pie_chart_yellow.png" />
+    <None Include="Resources\add1.png" />
     <None Include="Resources\stats.png" />
     <None Include="Resources\virtual_pc.ico" />
     <None Include="Resources\report_check.png" />

@@ -21,14 +21,26 @@ namespace SCM
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(numComputadoraTextBox.Text) || string.IsNullOrEmpty(descripcionFallaTextBox.Text))
+            {
+                MessageBox.Show("Debe de capturar el numero de computadora y descripcion antes de actualizar", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             Falla falla = new Falla();
             falla.NumComputadora = numComputadoraTextBox.Text;
             falla.descripcionFalla = descripcionFallaTextBox.Text;
             falla.numFalla = int.Parse(numFallaTextBox.Text);
+            
             if (solucionadaCheckBox.Checked == true)
                 falla.Solucionada = true;
             else
                 falla.Solucionada = false;
+
+            if (radioButton1.Checked == true)
+                falla.categoria = "Hardware";
+            else
+                falla.categoria = "Software";
 
             FallasDAL.ActualizaInformacion(falla);
         }       
@@ -51,6 +63,13 @@ namespace SCM
             TodasFallas tf = new TodasFallas();
             tf.Show();
             this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            numComputadoraTextBox.Text = null;
+            descripcionFallaTextBox.Text = null;
+            solucionadaCheckBox.Checked = false;
         }
     }
 }
