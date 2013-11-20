@@ -71,17 +71,38 @@ namespace SCM
             {
                 try
                 {
-                    SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM FALLAS", conexion);
+                    SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 0", conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("", "Error - No se pudo contar el total de Libros \n \n" + e.ToString());
+                    MessageBox.Show("", "Error - No se pudo obtener el inventario del sistema \n \n" + e.ToString());
                 }
             }
             return dt;
         }
-        public DataTable buscaFalla(DataTable dt, string comando)
+        public DataTable obtieneFallasSolucionadas(DataTable dt)
+        {
+            using (SqlCeConnection cn = DataConections.conectaConBD())
+            {
+                try
+                {
+                    SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM FALLAS", cn);
+                    da.Fill(dt);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error al obtener las fallas de la tabla falla", "Error de sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+
+                return dt;
+            }
+        }
+        public static DataTable buscaFalla(DataTable dt, string comando)
         {
             using (SqlCeConnection conexion = DataConections.conectaConBD())
             {
@@ -120,5 +141,6 @@ namespace SCM
                 }
             }
         }
+
     }
 }

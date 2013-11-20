@@ -47,14 +47,17 @@ namespace SCM
                     MessageBox.Show("Ingreso algun dato que no es un numero, porfavor verifique!");
                     return;
                 }
-                lb.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumFalla = " + textBox1.Text);
+                if (checkBox1.Checked == true)
+                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumFalla = " + textBox1.Text);
+                else
+                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumFalla = " + textBox1.Text + " AND Solucionada = 0");
             }
             else
-                    lb.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumComputadora = '" + textBox1.Text+"'");
-              
-            //else
-                  //  lb.buscaFalla(dt, "SELECT * FROM LIBROS WHERE AUTOR = '" + textBox1.Text + "'");
-
+                if (checkBox1.Checked == true)
+                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
+                else
+                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 1");
+                         
 
 
             dataGridView1.DataSource = dt;
@@ -64,7 +67,7 @@ namespace SCM
         {
             FallasDAL fl = new FallasDAL();
             DataTable dt = new DataTable();
-            fl.buscaFalla(dt, "SELECT * FROM Fallas");
+            FallasDAL.buscaFalla(dt, "SELECT * FROM Fallas");
             dataGridView1.DataSource = dt;
         }
 
@@ -81,6 +84,18 @@ namespace SCM
             ModificaFalla mf = new ModificaFalla(row);
             mf.Show();
             this.Dispose();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+            if (checkBox1.Checked == true)
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
+            else
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 0");
+
+            dataGridView1.DataSource = dt;
         }
 
        
