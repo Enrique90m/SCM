@@ -185,6 +185,7 @@
     <Content Include="BD.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\back %281%29.png" />
     <None Include="Resources\back_2.ico" />
     <None Include="Resources\exit.ico" />
     <None Include="Resources\symbol_add.ico" />
