@@ -44,8 +44,8 @@
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
             salaLabel = new System.Windows.Forms.Label();
@@ -88,17 +88,40 @@
             salaLabel.TabIndex = 6;
             salaLabel.Text = "Sala:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Location = new System.Drawing.Point(21, 207);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(81, 21);
+            label1.TabIndex = 8;
+            label1.Text = "Categoria";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.Color.White;
+            label3.Location = new System.Drawing.Point(21, 39);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(94, 21);
+            label3.TabIndex = 66;
+            label3.Text = "Descripcion";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Image = global::SCM.Properties.Resources.utilities_system_monitor;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Location = new System.Drawing.Point(431, 24);
+            this.label9.Location = new System.Drawing.Point(401, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(219, 41);
+            this.label9.Size = new System.Drawing.Size(461, 66);
             this.label9.TabIndex = 64;
-            this.label9.Text = "Agregar Falla";
+            this.label9.Text = "Agregar Falla          ";
             // 
             // label2
             // 
@@ -131,11 +154,12 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Heavy", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Image = global::SCM.Properties.Resources.symbol_add;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(764, 267);
+            this.btnAgregar.Location = new System.Drawing.Point(764, 315);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(213, 152);
+            this.btnAgregar.Size = new System.Drawing.Size(213, 104);
             this.btnAgregar.TabIndex = 65;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -143,11 +167,12 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::SCM.Properties.Resources.back_2;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(983, 267);
+            this.button1.Location = new System.Drawing.Point(983, 315);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 152);
+            this.button1.Size = new System.Drawing.Size(213, 104);
             this.button1.TabIndex = 66;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = true;
@@ -213,18 +238,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de la falla";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(24, 231);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(98, 25);
-            this.radioButton1.TabIndex = 62;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Hardware";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -237,27 +250,18 @@
             this.radioButton2.Text = "Software";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // radioButton1
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(21, 207);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(81, 21);
-            label1.TabIndex = 8;
-            label1.Text = "Categoria";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.ForeColor = System.Drawing.Color.White;
-            label3.Location = new System.Drawing.Point(21, 39);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(94, 21);
-            label3.TabIndex = 66;
-            label3.Text = "Descripcion";
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(24, 231);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(98, 25);
+            this.radioButton1.TabIndex = 62;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Hardware";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // AgregarFalla
             // 
@@ -277,6 +281,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarFalla";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            //this.Load += new System.EventHandler(this.AgregarFalla_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

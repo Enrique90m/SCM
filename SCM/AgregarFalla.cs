@@ -18,6 +18,12 @@ namespace SCM
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNumEqui.Text)  ||  string.IsNullOrWhiteSpace(txtDescripFalla.Text))
+            {
+                MessageBox.Show("Debe capturar el numero de equipo, descripcion y categoria","Falta de datos", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
             Falla objetoFalla = new Falla();
             FallasDAL dl = new FallasDAL();
             objetoFalla.numFalla = dl.obtieneTotalDeFallas() + 1;
@@ -48,7 +54,7 @@ namespace SCM
         private void txtNumEqui_Leave(object sender, EventArgs e)
         {
             //Verifics que no sea vacio
-            if (string.IsNullOrWhiteSpace(this.Text))
+            if (string.IsNullOrWhiteSpace(txtNumEqui.Text))
                 return;
 
             //No esta vacio, procede a buscar el equipo por el NumEquipo proporcionado
@@ -64,6 +70,7 @@ namespace SCM
 
         }
 
+      
        
         
     }
