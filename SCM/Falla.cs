@@ -16,5 +16,6 @@ namespace SCM
         public DateTime fechaAlta;
         public DateTime fechaBaja;
         public bool Solucionada;
+        public string categoria;
     }
 }

@@ -16,7 +16,7 @@ namespace SCM
             {
                 try
                 {
-                    string query = "INSERT INTO FALLAS VALUES(@numfalla,@numcompu,@desc,@fechaAlta,@fechaBaja,@solucionada)";
+                    string query = "INSERT INTO FALLAS VALUES(@numfalla,@numcompu,@desc,@fechaAlta,@fechaBaja,@solucionada,@categoria)";
                     SqlCeCommand comando = new SqlCeCommand(query, conn);
                     comando.Parameters.AddWithValue("@numfalla", objetoFalla.numFalla);
                     comando.Parameters.AddWithValue("@numcompu", objetoFalla.NumComputadora);
@@ -24,6 +24,7 @@ namespace SCM
                     comando.Parameters.AddWithValue("@fechaAlta", objetoFalla.fechaAlta);
                     comando.Parameters.AddWithValue("@fechaBaja", DBNull.Value);
                     comando.Parameters.AddWithValue("@solucionada", 0);
+                    comando.Parameters.AddWithValue("@categoria",objetoFalla.categoria);
 
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Falla agregada correctamente!");

@@ -89,5 +89,32 @@ namespace SCM
                 return error;
             
         }
+        public static Equipos BuscaDatosEquipo(string pNumEquipo)
+        {
+            Equipos equipo = new Equipos();
+            using (SqlCeConnection cnn = DataConections.conectaConBD())
+            {
+                string query = @" SELECT Marca, NumSerie, Sala FROM EQUIPOS WHERE NumEquipo = @NumEquipo";
+                SqlCeCommand cm = new SqlCeCommand(query,cnn);
+                cm.Parameters.AddWithValue("@NumEquipo",pNumEquipo);
+
+                SqlCeDataReader rd = cm.ExecuteReader();
+                bool EncontroEquipo = false;
+               
+                while (rd.Read())
+                {
+                    equipo.Marca = rd.GetString(0);
+                    equipo.NumSerie = rd.GetString(1);
+                    equipo.sala = rd.GetString(2);
+                    EncontroEquipo = true;
+                }
+
+                if (EncontroEquipo == false)                
+                    MessageBox.Show("No se encontro ningun equipo, verifique sus datos","Error de busqueda de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+         
+                cnn.Close();
+                return equipo;
+            }
+        }
     }
 }
