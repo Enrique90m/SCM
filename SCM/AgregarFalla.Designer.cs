@@ -113,15 +113,15 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Image = global::SCM.Properties.Resources.utilities_system_monitor;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Location = new System.Drawing.Point(401, 9);
+            this.label9.Location = new System.Drawing.Point(323, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(461, 66);
+            this.label9.Size = new System.Drawing.Size(379, 47);
             this.label9.TabIndex = 64;
-            this.label9.Text = "Agregar Falla          ";
+            this.label9.Text = "Agregar Falla             ";
             // 
             // label2
             // 

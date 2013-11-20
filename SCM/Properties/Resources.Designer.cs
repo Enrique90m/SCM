@@ -193,6 +193,26 @@ namespace SCM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap report_check {
+            get {
+                object obj = ResourceManager.GetObject("report_check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stats {
+            get {
+                object obj = ResourceManager.GetObject("stats", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap symbol_add {
             get {
                 object obj = ResourceManager.GetObject("symbol_add", resourceCulture);
@@ -206,6 +226,16 @@ namespace SCM.Properties {
         internal static System.Drawing.Bitmap utilities_system_monitor {
             get {
                 object obj = ResourceManager.GetObject("utilities_system_monitor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap virtual_pc {
+            get {
+                object obj = ResourceManager.GetObject("virtual_pc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
