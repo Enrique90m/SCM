@@ -110,6 +110,8 @@ namespace SCM
             {
                 MessageBox.Show("Error al actualizar los datos del equipo: " + numEquipoTextBox1.Text,"Error de base de datos", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            DataTable dt = new DataTable();
+            dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
         }
 
         private void button2_Click(object sender, EventArgs e)

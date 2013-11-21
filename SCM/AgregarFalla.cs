@@ -109,13 +109,26 @@ namespace SCM
             Equipos equipo = EquiposDAL.BuscaDatosEquipo(txtNumEqui.Text);
 
             if (string.IsNullOrWhiteSpace(equipo.Marca))
+            {
+                txtNumEqui.Focus();
                 return;
+            }
 
             marcaTextBox.Text = equipo.Marca;
             numSerieTextBox.Text = equipo.NumSerie;
             salaTextBox.Text = equipo.sala;
             txtDescripFalla.Focus();
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtDescripFalla.Text = null;
+            txtNumEqui.Text = null;
+            salaTextBox.Text = null;
+            marcaTextBox.Text = null;
+            numSerieTextBox.Text = null;
+            txtNumEqui.Focus();
         }
 
       

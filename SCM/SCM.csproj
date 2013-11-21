@@ -185,6 +185,8 @@
     <Content Include="BD.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\list_remove.png" />
+    <None Include="Resources\file_add.png" />
     <None Include="Resources\edit_clear.png" />
     <None Include="Resources\27_edit_text.png" />
     <None Include="Resources\system_software_update.png" />

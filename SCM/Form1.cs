@@ -25,8 +25,9 @@ namespace SCM
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Reportes rp = new Reportes();
-            rp.Show();
+            MessageBox.Show("Modulo en desarrollo", "Mensaje de SCRF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //Reportes rp = new Reportes();
+            //rp.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

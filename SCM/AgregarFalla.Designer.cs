@@ -33,12 +33,9 @@
             System.Windows.Forms.Label salaLabel;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label3;
-            this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescripFalla = new System.Windows.Forms.TextBox();
             this.txtNumEqui = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
@@ -46,6 +43,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
             salaLabel = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@
             label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // marcaLabel
@@ -60,7 +62,7 @@
             marcaLabel.AutoSize = true;
             marcaLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             marcaLabel.ForeColor = System.Drawing.Color.White;
-            marcaLabel.Location = new System.Drawing.Point(34, 45);
+            marcaLabel.Location = new System.Drawing.Point(20, 22);
             marcaLabel.Name = "marcaLabel";
             marcaLabel.Size = new System.Drawing.Size(60, 21);
             marcaLabel.TabIndex = 2;
@@ -71,7 +73,7 @@
             numSerieLabel.AutoSize = true;
             numSerieLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             numSerieLabel.ForeColor = System.Drawing.Color.White;
-            numSerieLabel.Location = new System.Drawing.Point(34, 87);
+            numSerieLabel.Location = new System.Drawing.Point(20, 64);
             numSerieLabel.Name = "numSerieLabel";
             numSerieLabel.Size = new System.Drawing.Size(87, 21);
             numSerieLabel.TabIndex = 4;
@@ -82,7 +84,7 @@
             salaLabel.AutoSize = true;
             salaLabel.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             salaLabel.ForeColor = System.Drawing.Color.White;
-            salaLabel.Location = new System.Drawing.Point(34, 129);
+            salaLabel.Location = new System.Drawing.Point(20, 106);
             salaLabel.Name = "salaLabel";
             salaLabel.Size = new System.Drawing.Size(45, 21);
             salaLabel.TabIndex = 6;
@@ -93,7 +95,7 @@
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(21, 207);
+            label1.Location = new System.Drawing.Point(13, 186);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(81, 21);
             label1.TabIndex = 8;
@@ -104,31 +106,18 @@
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label3.ForeColor = System.Drawing.Color.White;
-            label3.Location = new System.Drawing.Point(21, 39);
+            label3.Location = new System.Drawing.Point(13, 18);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(94, 21);
             label3.TabIndex = 66;
             label3.Text = "Descripcion";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Image = global::SCM.Properties.Resources.utilities_system_monitor;
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Location = new System.Drawing.Point(385, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(379, 47);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Agregar Falla             ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 82);
+            this.label2.Location = new System.Drawing.Point(42, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 26);
             this.label2.TabIndex = 62;
@@ -137,7 +126,7 @@
             // txtDescripFalla
             // 
             this.txtDescripFalla.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripFalla.Location = new System.Drawing.Point(24, 63);
+            this.txtDescripFalla.Location = new System.Drawing.Point(16, 42);
             this.txtDescripFalla.Multiline = true;
             this.txtDescripFalla.Name = "txtDescripFalla";
             this.txtDescripFalla.Size = new System.Drawing.Size(663, 141);
@@ -146,37 +135,11 @@
             // txtNumEqui
             // 
             this.txtNumEqui.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumEqui.Location = new System.Drawing.Point(194, 87);
+            this.txtNumEqui.Location = new System.Drawing.Point(199, 43);
             this.txtNumEqui.Name = "txtNumEqui";
             this.txtNumEqui.Size = new System.Drawing.Size(211, 21);
             this.txtNumEqui.TabIndex = 60;
             this.txtNumEqui.Leave += new System.EventHandler(this.txtNumEqui_Leave);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Heavy", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Image = global::SCM.Properties.Resources.symbol_add;
-            this.btnAgregar.Location = new System.Drawing.Point(764, 305);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(201, 176);
-            this.btnAgregar.TabIndex = 65;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::SCM.Properties.Resources.back_2;
-            this.button1.Location = new System.Drawing.Point(983, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 176);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "Regresar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -188,9 +151,9 @@
             this.groupBox1.Controls.Add(this.salaTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox1.Location = new System.Drawing.Point(33, 114);
+            this.groupBox1.Location = new System.Drawing.Point(38, 70);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(709, 180);
+            this.groupBox1.Size = new System.Drawing.Size(709, 143);
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del equipo";
@@ -198,7 +161,7 @@
             // marcaTextBox
             // 
             this.marcaTextBox.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marcaTextBox.Location = new System.Drawing.Point(100, 44);
+            this.marcaTextBox.Location = new System.Drawing.Point(86, 21);
             this.marcaTextBox.Name = "marcaTextBox";
             this.marcaTextBox.ReadOnly = true;
             this.marcaTextBox.Size = new System.Drawing.Size(360, 26);
@@ -207,7 +170,7 @@
             // numSerieTextBox
             // 
             this.numSerieTextBox.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSerieTextBox.Location = new System.Drawing.Point(127, 85);
+            this.numSerieTextBox.Location = new System.Drawing.Point(113, 62);
             this.numSerieTextBox.Name = "numSerieTextBox";
             this.numSerieTextBox.ReadOnly = true;
             this.numSerieTextBox.Size = new System.Drawing.Size(360, 26);
@@ -216,7 +179,7 @@
             // salaTextBox
             // 
             this.salaTextBox.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salaTextBox.Location = new System.Drawing.Point(85, 126);
+            this.salaTextBox.Location = new System.Drawing.Point(71, 103);
             this.salaTextBox.Name = "salaTextBox";
             this.salaTextBox.ReadOnly = true;
             this.salaTextBox.Size = new System.Drawing.Size(360, 26);
@@ -224,6 +187,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(label3);
             this.groupBox2.Controls.Add(label1);
             this.groupBox2.Controls.Add(this.radioButton2);
@@ -231,9 +195,9 @@
             this.groupBox2.Controls.Add(this.txtDescripFalla);
             this.groupBox2.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox2.Location = new System.Drawing.Point(33, 316);
+            this.groupBox2.Location = new System.Drawing.Point(38, 219);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(709, 284);
+            this.groupBox2.Size = new System.Drawing.Size(709, 233);
             this.groupBox2.TabIndex = 68;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de la falla";
@@ -242,7 +206,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(147, 231);
+            this.radioButton2.Location = new System.Drawing.Point(139, 201);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(93, 25);
             this.radioButton2.TabIndex = 63;
@@ -255,7 +219,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(24, 231);
+            this.radioButton1.Location = new System.Drawing.Point(16, 201);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(98, 25);
             this.radioButton1.TabIndex = 62;
@@ -263,27 +227,83 @@
             this.radioButton1.Text = "Hardware";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnAgregar);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Teal;
+            this.groupBox3.Location = new System.Drawing.Point(16, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(759, 495);
+            this.groupBox3.TabIndex = 68;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Agregar falla";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Image = global::SCM.Properties.Resources.list_remove;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(499, 188);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(178, 38);
+            this.button3.TabIndex = 68;
+            this.button3.Text = "Borrar datos";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.Image = global::SCM.Properties.Resources.file_add;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(50, 448);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(155, 41);
+            this.btnAgregar.TabIndex = 65;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::SCM.Properties.Resources.back__1_;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(217, 448);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 41);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "Regresar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AgregarFalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1193, 619);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(860, 514);
             this.Controls.Add(this.txtNumEqui);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
             this.Name = "AgregarFalla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "4";
+            this.Text = "SCRF - Version 1.0";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,7 +311,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescripFalla;
         private System.Windows.Forms.TextBox txtNumEqui;
@@ -304,6 +323,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button3;
 
     }
 }
