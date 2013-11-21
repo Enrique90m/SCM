@@ -102,12 +102,17 @@ namespace SCM
         {
             using (SqlCeConnection conn = DataConections.conectaConBD())
             {
-                SqlCeCommand comm = new SqlCeCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol, Categoria=@cat WHERE NumFalla = @numfalla", conn);
+                SqlCeCommand comm = new SqlCeCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol, Categoria=@cat, FechaBaja=@fbaja WHERE NumFalla = @numfalla", conn);
                 comm.Parameters.Add("@numcomp",falla.NumComputadora);
                 comm.Parameters.Add("@descrip",falla.descripcionFalla);
                 comm.Parameters.Add("@sol",falla.Solucionada);
                 comm.Parameters.Add("@numfalla",falla.numFalla);
                 comm.Parameters.Add("@cat",falla.categoria);
+                //Verifica si fecha baja contiene null, si es asi manda como argumento null, lo hago asi puesto que DateTime NO hacepta null
+                if (falla.fechaBaja != DateTime.MinValue)
+                    comm.Parameters.AddWithValue("@fbaja", falla.fechaBaja);
+                else
+                    comm.Parameters.AddWithValue("@fbaja", DBNull.Value);
 
                 try
                 {

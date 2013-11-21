@@ -31,7 +31,7 @@ namespace SCM
             objetoFalla.numFalla = dl.obtieneTotalDeFallas() + 1;
             objetoFalla.NumComputadora = txtNumEqui.Text;
             objetoFalla.descripcionFalla = txtDescripFalla.Text;
-            objetoFalla.fechaAlta = DateTime.Today.Date;
+            objetoFalla.fechaAlta = DateTime.Now;
 
             if (radioButton1.Checked)
                 objetoFalla.categoria = radioButton1.Text;
