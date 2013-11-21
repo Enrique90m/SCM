@@ -125,6 +125,28 @@ namespace SCM
                 }
             }
         }
+        public static void EliminaFalla(long numFalla)
+        {
+            using (SqlCeConnection cn = DataConections.conectaConBD())
+            {
+                string query = @"DELETE FROM FALLAS WHERE NumFalla = @Numfalla";
+                SqlCeCommand cm = new SqlCeCommand(query,cn);
+                cm.Parameters.AddWithValue("@Numfalla",numFalla);
+                try
+                {
+                    cm.ExecuteNonQuery();
+                    MessageBox.Show("Falla eliminada correctamente!","", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error al borrar la falla por el siguiente error \n\n" + e.ToString() , "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
+        }
 
     }
 }

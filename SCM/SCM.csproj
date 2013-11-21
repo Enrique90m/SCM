@@ -185,6 +185,7 @@
     <Content Include="BD.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\mail_delete.ico" />
     <None Include="Resources\google_earth.png" />
     <None Include="Resources\list_remove.png" />
     <None Include="Resources\file_add.png" />

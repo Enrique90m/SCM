@@ -40,15 +40,16 @@
             this.descripcionFallaTextBox = new System.Windows.Forms.TextBox();
             this.solucionadaCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.ActualizarTextbox = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.FechaBajaTextBox = new System.Windows.Forms.TextBox();
             this.fechaAltaTextbx = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.ActualizarTextbox = new System.Windows.Forms.Button();
             numFallaLabel = new System.Windows.Forms.Label();
             numComputadoraLabel = new System.Windows.Forms.Label();
             descripcionFallaLabel = new System.Windows.Forms.Label();
@@ -172,6 +173,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button2);
@@ -191,48 +193,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modificar falla";
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::SCM.Properties.Resources.google_earth;
-            this.button3.Location = new System.Drawing.Point(463, 352);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(196, 55);
-            this.button3.TabIndex = 356;
-            this.button3.Text = "Reenviar correo";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::SCM.Properties.Resources.back__1_;
-            this.button1.Location = new System.Drawing.Point(720, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 55);
-            this.button1.TabIndex = 340;
-            this.button1.Text = "Regresar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::SCM.Properties.Resources.edit_clear;
-            this.button2.Location = new System.Drawing.Point(248, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 55);
-            this.button2.TabIndex = 353;
-            this.button2.Text = "Limpiar datos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -244,20 +204,6 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Software";
             this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // ActualizarTextbox
-            // 
-            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualizarTextbox.ForeColor = System.Drawing.Color.Black;
-            this.ActualizarTextbox.Image = global::SCM.Properties.Resources.system_software_update;
-            this.ActualizarTextbox.Location = new System.Drawing.Point(9, 352);
-            this.ActualizarTextbox.Name = "ActualizarTextbox";
-            this.ActualizarTextbox.Size = new System.Drawing.Size(223, 55);
-            this.ActualizarTextbox.TabIndex = 339;
-            this.ActualizarTextbox.Text = "Actualizar informacion";
-            this.ActualizarTextbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ActualizarTextbox.UseVisualStyleBackColor = true;
-            this.ActualizarTextbox.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // radioButton1
             // 
@@ -309,6 +255,76 @@
             this.fechaAltaTextbx.Size = new System.Drawing.Size(201, 26);
             this.fechaAltaTextbx.TabIndex = 347;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Image = global::SCM.Properties.Resources.mail_delete;
+            this.button4.Location = new System.Drawing.Point(224, 361);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(151, 46);
+            this.button4.TabIndex = 357;
+            this.button4.Text = "Eliminar falla";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Image = global::SCM.Properties.Resources.google_earth;
+            this.button3.Location = new System.Drawing.Point(608, 361);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(151, 46);
+            this.button3.TabIndex = 356;
+            this.button3.Text = "Reenviar correo";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::SCM.Properties.Resources.back__1_;
+            this.button1.Location = new System.Drawing.Point(765, 361);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 46);
+            this.button1.TabIndex = 340;
+            this.button1.Text = "Regresar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::SCM.Properties.Resources.edit_clear;
+            this.button2.Location = new System.Drawing.Point(381, 361);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(151, 46);
+            this.button2.TabIndex = 353;
+            this.button2.Text = "Limpiar datos";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ActualizarTextbox
+            // 
+            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarTextbox.ForeColor = System.Drawing.Color.Black;
+            this.ActualizarTextbox.Image = global::SCM.Properties.Resources.system_software_update;
+            this.ActualizarTextbox.Location = new System.Drawing.Point(9, 361);
+            this.ActualizarTextbox.Name = "ActualizarTextbox";
+            this.ActualizarTextbox.Size = new System.Drawing.Size(209, 46);
+            this.ActualizarTextbox.TabIndex = 339;
+            this.ActualizarTextbox.Text = "Actualizar informacion";
+            this.ActualizarTextbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ActualizarTextbox.UseVisualStyleBackColor = true;
+            this.ActualizarTextbox.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
             // ModificaFalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,5 +360,6 @@
         private System.Windows.Forms.TextBox FechaBajaTextBox;
         private System.Windows.Forms.TextBox fechaAltaTextbx;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

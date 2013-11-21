@@ -193,6 +193,16 @@ namespace SCM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mail_delete {
+            get {
+                object obj = ResourceManager.GetObject("mail_delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap manilla_add_folder_to_archive {
             get {
                 object obj = ResourceManager.GetObject("manilla_add_folder_to_archive", resourceCulture);

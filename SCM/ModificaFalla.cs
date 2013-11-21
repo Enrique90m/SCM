@@ -144,5 +144,18 @@ namespace SCM
 
             MessageBox.Show("Correo enviado correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("Esta seguro de que desea eliminar la falla?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (respuesta.Equals(DialogResult.No))
+                return;
+
+            FallasDAL.EliminaFalla(long.Parse(numFallaTextBox.Text));
+            TodasFallas td = new TodasFallas();
+            td.Show();
+            this.Dispose();
+        }
     }
 }
