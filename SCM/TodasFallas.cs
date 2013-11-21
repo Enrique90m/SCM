@@ -23,6 +23,7 @@ namespace SCM
             lb.obtieneTodasLasFallas(dt);
             dataGridView1.DataSource = dt;
             textBox1.Focus();
+            dataGridView1.ForeColor = Color.Black;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,9 +55,9 @@ namespace SCM
             }
             else
                 if (checkBox1.Checked == true)
-                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
+                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumComputadora = '" + textBox1.Text + "'");
                 else
-                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 1");
+                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumComputadora =  '"+ textBox1.Text + "' AND Solucionada = 0");
                          
 
 
@@ -101,6 +102,5 @@ namespace SCM
             dataGridView1.DataSource = dt;
         }
 
-       
     }
 }
