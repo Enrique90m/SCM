@@ -41,10 +41,10 @@
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             marcaLabel = new System.Windows.Forms.Label();
@@ -151,7 +151,7 @@
             this.groupBox1.Controls.Add(this.salaTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox1.Location = new System.Drawing.Point(38, 70);
+            this.groupBox1.Location = new System.Drawing.Point(22, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(709, 143);
             this.groupBox1.TabIndex = 67;
@@ -202,6 +202,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de la falla";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Image = global::SCM.Properties.Resources.list_remove;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(499, 188);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(178, 38);
+            this.button3.TabIndex = 68;
+            this.button3.Text = "Borrar datos";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -231,6 +246,7 @@
             // 
             this.groupBox3.Controls.Add(this.btnAgregar);
             this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Teal;
             this.groupBox3.Location = new System.Drawing.Point(16, 12);
@@ -239,21 +255,6 @@
             this.groupBox3.TabIndex = 68;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agregar falla";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::SCM.Properties.Resources.list_remove;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(499, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 38);
-            this.button3.TabIndex = 68;
-            this.button3.Text = "Borrar datos";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnAgregar
             // 
@@ -292,7 +293,6 @@
             this.ClientSize = new System.Drawing.Size(860, 514);
             this.Controls.Add(this.txtNumEqui);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));

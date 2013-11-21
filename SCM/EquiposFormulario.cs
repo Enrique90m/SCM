@@ -42,41 +42,7 @@ namespace SCM
             f.Show();
             this.Hide();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Valida que halla capturado lo basico: NumEquipo y Sala
-            if (string.IsNullOrWhiteSpace(numEquipoTextBox.Text) || string.IsNullOrWhiteSpace(salaTextBox.Text))
-            {
-                MessageBox.Show("Falta capturar datos basicos, minimo se tiene que capturar:\n\n -Numero de equipo \n -Sala", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            //Ya capturo datos minimos, ahora valida que no halla capturado un NumEquipo que ya exista
-            if (EquiposDAL.existe(numEquipoTextBox.Text))
-            {
-                MessageBox.Show("El Numero de equipo: " + numEquipoTextBox.Text +" ya esta registrado anteriormente y debe ser unico, porfavor verifique sus datos","Eror de duplicacion",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-                return;
-            }
-            
-            //Ya se valido que capture todo y no exista duplicado, ahora llena los campos y lo agrega
-            Equipos Equipo = new Equipos();
-            Equipo.NumEquipo = numEquipoTextBox.Text;
-            Equipo.Marca = marcaTextBox.Text;
-            Equipo.NumSerie = numSerieTextBox.Text;
-            Equipo.sala = salaTextBox.Text;
-
-            int resultado = EquiposDAL.AgregarEquipo(Equipo);
-            if (resultado > 0)
-            {
-                MessageBox.Show("Equipo " + numEquipoTextBox.Text + " guardado correctamente", "Equipo registrado", MessageBoxButtons.OK, MessageBoxIcon.None);
-            }
-            else
-            {
-                MessageBox.Show("Hubo un error al guardar el registro","Error de base de datos",MessageBoxButtons.OK,MessageBoxIcon.Hand);
-            }
-        }
-
+        
         private void dataGridView1_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {       
             //Pone los datos en los txtbox
@@ -93,27 +59,6 @@ namespace SCM
             tabControl1.SelectTab(3);
         }
 
-        private void ActualizarTextbox_Click(object sender, EventArgs e)
-        {
-            Equipos oEquipo = new Equipos();
-            oEquipo.NumEquipo = numEquipoTextBox1.Text;
-            oEquipo.sala = salaTextBox1.Text;
-            oEquipo.NumSerie = numSerieTextBox1.Text;
-            oEquipo.Marca = marcaTextBox1.Text;            
-            int error =  EquiposDAL.ActualizarInfoDeEquipo(oEquipo,RespNumEquipo);
-
-            if (error > 0)
-            {
-                MessageBox.Show("Actualizacion correcta de los datos", "Finalizacion de proceso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Error al actualizar los datos del equipo: " + numEquipoTextBox1.Text,"Error de base de datos", MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            DataTable dt = new DataTable();
-            dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             numEquipoTextBox.Text = null;
@@ -122,10 +67,82 @@ namespace SCM
             numSerieTextBox.Text = null;
         }
 
-        private void Regresar_Click(object sender, EventArgs e)
+        private void ActualizarTextbox_Click_1(object sender, EventArgs e)
+        {
+            Equipos oEquipo = new Equipos();
+            oEquipo.NumEquipo = numEquipoTextBox1.Text;
+            oEquipo.sala = salaTextBox1.Text;
+            oEquipo.NumSerie = numSerieTextBox1.Text;
+            oEquipo.Marca = marcaTextBox1.Text;
+            int error = EquiposDAL.ActualizarInfoDeEquipo(oEquipo, RespNumEquipo);
+
+            if (error > 0)
+            {
+                MessageBox.Show("Actualizacion correcta de los datos", "Finalizacion de proceso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar los datos del equipo: " + numEquipoTextBox1.Text, "Error de base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            DataTable dt = new DataTable();
+            dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            //Valida que halla capturado lo basico: NumEquipo y Sala
+            if (string.IsNullOrWhiteSpace(numEquipoTextBox.Text) || string.IsNullOrWhiteSpace(salaTextBox.Text))
+            {
+                MessageBox.Show("Falta capturar datos basicos, minimo se tiene que capturar:\n\n -Numero de equipo \n -Sala", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //Ya capturo datos minimos, ahora valida que no halla capturado un NumEquipo que ya exista
+            if (EquiposDAL.existe(numEquipoTextBox.Text))
+            {
+                MessageBox.Show("El Numero de equipo: " + numEquipoTextBox.Text + " ya esta registrado anteriormente y debe ser unico, porfavor verifique sus datos", "Eror de duplicacion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+
+            //Ya se valido que capture todo y no exista duplicado, ahora llena los campos y lo agrega
+            Equipos Equipo = new Equipos();
+            Equipo.NumEquipo = numEquipoTextBox.Text;
+            Equipo.Marca = marcaTextBox.Text;
+            Equipo.NumSerie = numSerieTextBox.Text;
+            Equipo.sala = salaTextBox.Text;
+
+            int resultado = EquiposDAL.AgregarEquipo(Equipo);
+            if (resultado > 0)
+            {
+                MessageBox.Show("Equipo " + numEquipoTextBox.Text + " guardado correctamente", "Equipo registrado", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error al guardar el registro", "Error de base de datos", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(1);
-        }       
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            numEquipoTextBox.Text = null;
+            marcaTextBox.Text = null;
+            salaTextBox.Text = null;
+            numSerieTextBox.Text = null;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            numEquipoTextBox1.Text = null;
+            marcaTextBox1.Text = null;
+            salaTextBox1.Text = null;
+            numSerieTextBox1.Text = null;
+        }
+     
        
     }
 }
