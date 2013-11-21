@@ -42,47 +42,47 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.NumFalla_Radiobtn = new System.Windows.Forms.RadioButton();
-            this.NumComp_Radiobtn = new System.Windows.Forms.RadioButton();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NumEquipo_Radiobtn = new System.Windows.Forms.RadioButton();
+            this.Sala_RadioBtn = new System.Windows.Forms.RadioButton();
+            this.datoABuscar = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
             this.numEquipoTextBox = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.Eiminar = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.regresarButtom = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.ActualizarTextbox = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.salaTextBox1 = new System.Windows.Forms.TextBox();
             this.numEquipoTextBox1 = new System.Windows.Forms.TextBox();
             this.numSerieTextBox1 = new System.Windows.Forms.TextBox();
             this.marcaTextBox1 = new System.Windows.Forms.TextBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.contactenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.usarElSistemaComoAdministradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioDeEquiposYModificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regresarAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.contactenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.verTodos = new System.Windows.Forms.Button();
+            this.Regresar = new System.Windows.Forms.Button();
+            this.buscar = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.Eiminar = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.regresarButtom = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.ActualizarTextbox = new System.Windows.Forms.Button();
             numEquipoLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
@@ -166,7 +166,7 @@
             marcaLabel1.AutoSize = true;
             marcaLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             marcaLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            marcaLabel1.Location = new System.Drawing.Point(6, 84);
+            marcaLabel1.Location = new System.Drawing.Point(6, 123);
             marcaLabel1.Name = "marcaLabel1";
             marcaLabel1.Size = new System.Drawing.Size(63, 20);
             marcaLabel1.TabIndex = 2;
@@ -177,7 +177,7 @@
             numSerieLabel1.AutoSize = true;
             numSerieLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             numSerieLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            numSerieLabel1.Location = new System.Drawing.Point(6, 126);
+            numSerieLabel1.Location = new System.Drawing.Point(6, 165);
             numSerieLabel1.Name = "numSerieLabel1";
             numSerieLabel1.Size = new System.Drawing.Size(97, 20);
             numSerieLabel1.TabIndex = 4;
@@ -188,7 +188,7 @@
             salaLabel1.AutoSize = true;
             salaLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             salaLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            salaLabel1.Location = new System.Drawing.Point(6, 168);
+            salaLabel1.Location = new System.Drawing.Point(6, 83);
             salaLabel1.Name = "salaLabel1";
             salaLabel1.Size = new System.Drawing.Size(50, 20);
             salaLabel1.TabIndex = 6;
@@ -244,12 +244,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.NumFalla_Radiobtn);
-            this.groupBox1.Controls.Add(this.NumComp_Radiobtn);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.verTodos);
+            this.groupBox1.Controls.Add(this.Regresar);
+            this.groupBox1.Controls.Add(this.NumEquipo_Radiobtn);
+            this.groupBox1.Controls.Add(this.Sala_RadioBtn);
+            this.groupBox1.Controls.Add(this.buscar);
+            this.groupBox1.Controls.Add(this.datoABuscar);
             this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.groupBox1.Location = new System.Drawing.Point(8, 25);
@@ -259,78 +259,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por:";
             // 
-            // button3
+            // NumEquipo_Radiobtn
             // 
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::SCM.Properties.Resources.Line_Chart;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(502, 52);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 37);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Ver todos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.NumEquipo_Radiobtn.AutoSize = true;
+            this.NumEquipo_Radiobtn.Checked = true;
+            this.NumEquipo_Radiobtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumEquipo_Radiobtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NumEquipo_Radiobtn.Location = new System.Drawing.Point(11, 29);
+            this.NumEquipo_Radiobtn.Name = "NumEquipo_Radiobtn";
+            this.NumEquipo_Radiobtn.Size = new System.Drawing.Size(116, 23);
+            this.NumEquipo_Radiobtn.TabIndex = 10;
+            this.NumEquipo_Radiobtn.TabStop = true;
+            this.NumEquipo_Radiobtn.Text = "Num. Equipo";
+            this.NumEquipo_Radiobtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Sala_RadioBtn
             // 
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::SCM.Properties.Resources.back__1_;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(653, 54);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 37);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Regresar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Sala_RadioBtn.AutoSize = true;
+            this.Sala_RadioBtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sala_RadioBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Sala_RadioBtn.Location = new System.Drawing.Point(133, 29);
+            this.Sala_RadioBtn.Name = "Sala_RadioBtn";
+            this.Sala_RadioBtn.Size = new System.Drawing.Size(55, 23);
+            this.Sala_RadioBtn.TabIndex = 11;
+            this.Sala_RadioBtn.TabStop = true;
+            this.Sala_RadioBtn.Text = "Sala";
+            this.Sala_RadioBtn.UseVisualStyleBackColor = true;
             // 
-            // NumFalla_Radiobtn
+            // datoABuscar
             // 
-            this.NumFalla_Radiobtn.AutoSize = true;
-            this.NumFalla_Radiobtn.Checked = true;
-            this.NumFalla_Radiobtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumFalla_Radiobtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NumFalla_Radiobtn.Location = new System.Drawing.Point(11, 29);
-            this.NumFalla_Radiobtn.Name = "NumFalla_Radiobtn";
-            this.NumFalla_Radiobtn.Size = new System.Drawing.Size(116, 23);
-            this.NumFalla_Radiobtn.TabIndex = 10;
-            this.NumFalla_Radiobtn.TabStop = true;
-            this.NumFalla_Radiobtn.Text = "Num. Equipo";
-            this.NumFalla_Radiobtn.UseVisualStyleBackColor = true;
-            // 
-            // NumComp_Radiobtn
-            // 
-            this.NumComp_Radiobtn.AutoSize = true;
-            this.NumComp_Radiobtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumComp_Radiobtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NumComp_Radiobtn.Location = new System.Drawing.Point(133, 29);
-            this.NumComp_Radiobtn.Name = "NumComp_Radiobtn";
-            this.NumComp_Radiobtn.Size = new System.Drawing.Size(55, 23);
-            this.NumComp_Radiobtn.TabIndex = 11;
-            this.NumComp_Radiobtn.TabStop = true;
-            this.NumComp_Radiobtn.Text = "Sala";
-            this.NumComp_Radiobtn.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(371, 52);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 37);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Buscar";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(11, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 26);
-            this.textBox1.TabIndex = 13;
+            this.datoABuscar.Location = new System.Drawing.Point(11, 58);
+            this.datoABuscar.Name = "datoABuscar";
+            this.datoABuscar.Size = new System.Drawing.Size(346, 26);
+            this.datoABuscar.TabIndex = 13;
             // 
             // groupBox2
             // 
@@ -346,6 +307,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(18, 25);
             this.dataGridView1.Name = "dataGridView1";
@@ -366,9 +328,12 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.button10);
             this.groupBox5.Controls.Add(this.btnAgregar);
             this.groupBox5.Controls.Add(this.button12);
             this.groupBox5.Controls.Add(this.groupBox3);
+            this.groupBox5.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.Color.Teal;
             this.groupBox5.Location = new System.Drawing.Point(8, 6);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1028, 439);
@@ -376,37 +341,8 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Agregar equipo";
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Image = global::SCM.Properties.Resources.file_add;
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(49, 300);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(196, 71);
-            this.btnAgregar.TabIndex = 348;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Image = global::SCM.Properties.Resources.back__1_;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.Location = new System.Drawing.Point(265, 300);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(218, 71);
-            this.button12.TabIndex = 349;
-            this.button12.Text = "Regresar";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Controls.Add(salaLabel);
             this.groupBox3.Controls.Add(this.marcaTextBox);
             this.groupBox3.Controls.Add(this.salaTextBox);
@@ -424,26 +360,12 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del equipo";
             // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Image = global::SCM.Properties.Resources.list_remove;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(460, 156);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(221, 54);
-            this.button10.TabIndex = 350;
-            this.button10.Text = "Borrar datos";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // marcaTextBox
             // 
             this.marcaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marcaTextBox.Location = new System.Drawing.Point(106, 81);
             this.marcaTextBox.Name = "marcaTextBox";
-            this.marcaTextBox.Size = new System.Drawing.Size(100, 29);
+            this.marcaTextBox.Size = new System.Drawing.Size(294, 29);
             this.marcaTextBox.TabIndex = 5;
             // 
             // salaTextBox
@@ -451,7 +373,7 @@
             this.salaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salaTextBox.Location = new System.Drawing.Point(89, 151);
             this.salaTextBox.Name = "salaTextBox";
-            this.salaTextBox.Size = new System.Drawing.Size(100, 29);
+            this.salaTextBox.Size = new System.Drawing.Size(294, 29);
             this.salaTextBox.TabIndex = 9;
             // 
             // numSerieTextBox
@@ -459,7 +381,7 @@
             this.numSerieTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSerieTextBox.Location = new System.Drawing.Point(151, 116);
             this.numSerieTextBox.Name = "numSerieTextBox";
-            this.numSerieTextBox.Size = new System.Drawing.Size(100, 29);
+            this.numSerieTextBox.Size = new System.Drawing.Size(294, 29);
             this.numSerieTextBox.TabIndex = 7;
             // 
             // numEquipoTextBox
@@ -467,7 +389,7 @@
             this.numEquipoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numEquipoTextBox.Location = new System.Drawing.Point(166, 46);
             this.numEquipoTextBox.Name = "numEquipoTextBox";
-            this.numEquipoTextBox.Size = new System.Drawing.Size(100, 29);
+            this.numEquipoTextBox.Size = new System.Drawing.Size(294, 29);
             this.numEquipoTextBox.TabIndex = 3;
             // 
             // tabPage4
@@ -498,73 +420,6 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Modificacion de equipo";
             // 
-            // Eiminar
-            // 
-            this.Eiminar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eiminar.ForeColor = System.Drawing.Color.Black;
-            this.Eiminar.Image = global::SCM.Properties.Resources.mail_delete;
-            this.Eiminar.Location = new System.Drawing.Point(240, 359);
-            this.Eiminar.Name = "Eiminar";
-            this.Eiminar.Size = new System.Drawing.Size(151, 46);
-            this.Eiminar.TabIndex = 362;
-            this.Eiminar.Text = "Eliminar equipo";
-            this.Eiminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eiminar.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Image = global::SCM.Properties.Resources.google_earth;
-            this.button9.Location = new System.Drawing.Point(624, 359);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(151, 46);
-            this.button9.TabIndex = 361;
-            this.button9.Text = "Enviar correo";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // regresarButtom
-            // 
-            this.regresarButtom.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regresarButtom.ForeColor = System.Drawing.Color.Black;
-            this.regresarButtom.Image = global::SCM.Properties.Resources.back__1_;
-            this.regresarButtom.Location = new System.Drawing.Point(781, 359);
-            this.regresarButtom.Name = "regresarButtom";
-            this.regresarButtom.Size = new System.Drawing.Size(154, 46);
-            this.regresarButtom.TabIndex = 359;
-            this.regresarButtom.Text = "Regresar";
-            this.regresarButtom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.regresarButtom.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Image = global::SCM.Properties.Resources.edit_clear;
-            this.button11.Location = new System.Drawing.Point(397, 359);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(151, 46);
-            this.button11.TabIndex = 360;
-            this.button11.Text = "Limpiar datos";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // ActualizarTextbox
-            // 
-            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualizarTextbox.ForeColor = System.Drawing.Color.Black;
-            this.ActualizarTextbox.Image = global::SCM.Properties.Resources.system_software_update;
-            this.ActualizarTextbox.Location = new System.Drawing.Point(25, 359);
-            this.ActualizarTextbox.Name = "ActualizarTextbox";
-            this.ActualizarTextbox.Size = new System.Drawing.Size(209, 46);
-            this.ActualizarTextbox.TabIndex = 358;
-            this.ActualizarTextbox.Text = "Actualizar informacion";
-            this.ActualizarTextbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ActualizarTextbox.UseVisualStyleBackColor = true;
-            this.ActualizarTextbox.Click += new System.EventHandler(this.ActualizarTextbox_Click_1);
-            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(numEquipoLabel1);
@@ -587,7 +442,7 @@
             // salaTextBox1
             // 
             this.salaTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salaTextBox1.Location = new System.Drawing.Point(68, 163);
+            this.salaTextBox1.Location = new System.Drawing.Point(68, 78);
             this.salaTextBox1.Name = "salaTextBox1";
             this.salaTextBox1.Size = new System.Drawing.Size(304, 26);
             this.salaTextBox1.TabIndex = 7;
@@ -603,7 +458,7 @@
             // numSerieTextBox1
             // 
             this.numSerieTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSerieTextBox1.Location = new System.Drawing.Point(113, 124);
+            this.numSerieTextBox1.Location = new System.Drawing.Point(113, 163);
             this.numSerieTextBox1.Name = "numSerieTextBox1";
             this.numSerieTextBox1.Size = new System.Drawing.Size(304, 26);
             this.numSerieTextBox1.TabIndex = 5;
@@ -611,10 +466,51 @@
             // marcaTextBox1
             // 
             this.marcaTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marcaTextBox1.Location = new System.Drawing.Point(80, 82);
+            this.marcaTextBox1.Location = new System.Drawing.Point(80, 121);
             this.marcaTextBox1.Name = "marcaTextBox1";
             this.marcaTextBox1.Size = new System.Drawing.Size(304, 26);
             this.marcaTextBox1.TabIndex = 3;
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contactenosToolStripMenuItem});
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(88, 24);
+            this.toolStripDropDownButton2.Text = "Acerca de";
+            // 
+            // contactenosToolStripMenuItem
+            // 
+            this.contactenosToolStripMenuItem.Name = "contactenosToolStripMenuItem";
+            this.contactenosToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
+            this.contactenosToolStripMenuItem.Text = "Detalles del sistema";
+            this.contactenosToolStripMenuItem.Click += new System.EventHandler(this.contactenosToolStripMenuItem_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripSeparator1,
+            this.toolStripDropDownButton1,
+            this.toolStripSeparator2,
+            this.toolStripDropDownButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1052, 27);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
@@ -623,11 +519,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(181, 24);
             this.toolStripLabel1.Text = " SCRF-Control de equipos";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripDropDownButton1
             // 
@@ -672,41 +563,161 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(324, 24);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // toolStripSeparator2
+            // verTodos
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.verTodos.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verTodos.ForeColor = System.Drawing.Color.Black;
+            this.verTodos.Image = global::SCM.Properties.Resources.Line_Chart;
+            this.verTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.verTodos.Location = new System.Drawing.Point(502, 52);
+            this.verTodos.Name = "verTodos";
+            this.verTodos.Size = new System.Drawing.Size(145, 37);
+            this.verTodos.TabIndex = 17;
+            this.verTodos.Text = "Ver todos";
+            this.verTodos.UseVisualStyleBackColor = true;
+            this.verTodos.Click += new System.EventHandler(this.verTodos_Click);
             // 
-            // toolStripDropDownButton2
+            // Regresar
             // 
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contactenosToolStripMenuItem});
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(88, 24);
-            this.toolStripDropDownButton2.Text = "Acerca de";
+            this.Regresar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.ForeColor = System.Drawing.Color.Black;
+            this.Regresar.Image = global::SCM.Properties.Resources.back__1_;
+            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Regresar.Location = new System.Drawing.Point(653, 54);
+            this.Regresar.Name = "Regresar";
+            this.Regresar.Size = new System.Drawing.Size(117, 37);
+            this.Regresar.TabIndex = 16;
+            this.Regresar.Text = "Regresar";
+            this.Regresar.UseVisualStyleBackColor = true;
+            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
             // 
-            // contactenosToolStripMenuItem
+            // buscar
             // 
-            this.contactenosToolStripMenuItem.Name = "contactenosToolStripMenuItem";
-            this.contactenosToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.contactenosToolStripMenuItem.Text = "Detalles del sistema";
+            this.buscar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buscar.ForeColor = System.Drawing.Color.Black;
+            this.buscar.Image = ((System.Drawing.Image)(resources.GetObject("buscar.Image")));
+            this.buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buscar.Location = new System.Drawing.Point(371, 52);
+            this.buscar.Name = "buscar";
+            this.buscar.Size = new System.Drawing.Size(125, 37);
+            this.buscar.TabIndex = 15;
+            this.buscar.Text = "Buscar";
+            this.buscar.UseVisualStyleBackColor = true;
+            this.buscar.Click += new System.EventHandler(this.buscar_Click);
             // 
-            // toolStrip1
+            // button10
             // 
-            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripSeparator1,
-            this.toolStripDropDownButton1,
-            this.toolStripSeparator2,
-            this.toolStripDropDownButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1052, 27);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
+            this.button10.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.Black;
+            this.button10.Image = global::SCM.Properties.Resources.list_remove;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button10.Location = new System.Drawing.Point(512, 300);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(221, 71);
+            this.button10.TabIndex = 12;
+            this.button10.Text = "Borrar datos";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.Image = global::SCM.Properties.Resources.file_add;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(49, 300);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(196, 71);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.Black;
+            this.button12.Image = global::SCM.Properties.Resources.back__1_;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button12.Location = new System.Drawing.Point(265, 300);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(218, 71);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "Regresar";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // Eiminar
+            // 
+            this.Eiminar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eiminar.ForeColor = System.Drawing.Color.Black;
+            this.Eiminar.Image = global::SCM.Properties.Resources.mail_delete;
+            this.Eiminar.Location = new System.Drawing.Point(240, 359);
+            this.Eiminar.Name = "Eiminar";
+            this.Eiminar.Size = new System.Drawing.Size(151, 46);
+            this.Eiminar.TabIndex = 362;
+            this.Eiminar.Text = "Eliminar equipo";
+            this.Eiminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eiminar.UseVisualStyleBackColor = true;
+            this.Eiminar.Click += new System.EventHandler(this.Eiminar_Click);
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Image = global::SCM.Properties.Resources.google_earth;
+            this.button9.Location = new System.Drawing.Point(624, 359);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(151, 46);
+            this.button9.TabIndex = 361;
+            this.button9.Text = "Enviar correo";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // regresarButtom
+            // 
+            this.regresarButtom.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regresarButtom.ForeColor = System.Drawing.Color.Black;
+            this.regresarButtom.Image = global::SCM.Properties.Resources.back__1_;
+            this.regresarButtom.Location = new System.Drawing.Point(781, 359);
+            this.regresarButtom.Name = "regresarButtom";
+            this.regresarButtom.Size = new System.Drawing.Size(154, 46);
+            this.regresarButtom.TabIndex = 359;
+            this.regresarButtom.Text = "Regresar";
+            this.regresarButtom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.regresarButtom.UseVisualStyleBackColor = true;
+            this.regresarButtom.Click += new System.EventHandler(this.regresarButtom_Click);
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.Black;
+            this.button11.Image = global::SCM.Properties.Resources.edit_clear;
+            this.button11.Location = new System.Drawing.Point(397, 359);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(151, 46);
+            this.button11.TabIndex = 360;
+            this.button11.Text = "Limpiar datos";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // ActualizarTextbox
+            // 
+            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarTextbox.ForeColor = System.Drawing.Color.Black;
+            this.ActualizarTextbox.Image = global::SCM.Properties.Resources.system_software_update;
+            this.ActualizarTextbox.Location = new System.Drawing.Point(25, 359);
+            this.ActualizarTextbox.Name = "ActualizarTextbox";
+            this.ActualizarTextbox.Size = new System.Drawing.Size(209, 46);
+            this.ActualizarTextbox.TabIndex = 358;
+            this.ActualizarTextbox.Text = "Actualizar informacion";
+            this.ActualizarTextbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ActualizarTextbox.UseVisualStyleBackColor = true;
+            this.ActualizarTextbox.Click += new System.EventHandler(this.ActualizarTextbox_Click_1);
             // 
             // EquiposFormulario
             // 
@@ -771,12 +782,11 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.RadioButton NumFalla_Radiobtn;
-        private System.Windows.Forms.RadioButton NumComp_Radiobtn;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button verTodos;
+        private System.Windows.Forms.RadioButton NumEquipo_Radiobtn;
+        private System.Windows.Forms.RadioButton Sala_RadioBtn;
+        private System.Windows.Forms.Button buscar;
+        private System.Windows.Forms.TextBox datoABuscar;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -789,6 +799,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Regresar;
 
     }
 }

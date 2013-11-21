@@ -116,5 +116,44 @@ namespace SCM
                 return equipo;
             }
         }
+        public static DataTable buscaEquipo(DataTable dt, string comando)
+        {
+            using (SqlCeConnection conexion = DataConections.conectaConBD())
+            {
+                try
+                {
+                    SqlCeDataAdapter da = new SqlCeDataAdapter(comando, conexion);
+                    da.Fill(dt);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Ocurrio un error en el sistema: \n\n + " + e.ToString());
+                    return dt;
+                }
+            }
+            return dt;
+        }
+        public static void EliminaEquipo(string numEquipo)
+        {
+            using (SqlCeConnection cn = DataConections.conectaConBD())
+            {
+                string query = @"DELETE FROM EQUIPOS WHERE NumEquipo = @Numeq";
+                SqlCeCommand cm = new SqlCeCommand(query, cn);
+                cm.Parameters.AddWithValue("@Numeq", numEquipo);
+                try
+                {
+                    cm.ExecuteNonQuery();
+                    MessageBox.Show("Equipo eliminado correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error al borrar el equipo por el siguiente error: \n\n" + e.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
+        }
     }
 }

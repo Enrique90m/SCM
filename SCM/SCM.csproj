@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarFalla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="TodasFallas.Designer.cs">
       <DependentUpon>TodasFallas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AcercaDe.resx">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarFalla.resx">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +194,7 @@
     <Content Include="BD.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\itnl.jpg" />
     <None Include="Resources\mail_delete.ico" />
     <None Include="Resources\google_earth.png" />
     <None Include="Resources\list_remove.png" />

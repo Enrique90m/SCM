@@ -15,3 +15,4 @@ C:\SCM\SCM\obj\x86\Debug\SCM.Reportes.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.EquiposFormulario.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.csprojResolveAssemblyReference.cache
 C:\SCM\SCM\obj\x86\Debug\SCM.csproj.GenerateResource.Cache
+C:\SCM\SCM\obj\x86\Debug\SCM.AcercaDe.resources
