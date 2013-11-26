@@ -26,6 +26,12 @@ namespace SCM
                 return;
             }
 
+            if (txtNumEqui.Text.Length > 10 || txtDescripFalla.Text.Length > 110)
+            {
+                MessageBox.Show("Sobrepaso el maximo total de caracteres que permite la descripcion de la falla", "Sobre carga de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Falla objetoFalla = new Falla();
             FallasDAL dl = new FallasDAL();
             objetoFalla.numFalla = dl.obtieneTotalDeFallas() + 1;
@@ -40,6 +46,10 @@ namespace SCM
           
              dl.AgregaFalla(objetoFalla);
 
+             DialogResult respuesta = MessageBox.Show("Desea enviar el correo electronico? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+             if (respuesta.Equals(DialogResult.No))
+                 return;
 
             //envia correo    
              MailMessage mail = new MailMessage();

@@ -28,7 +28,19 @@ namespace SCM
                 MessageBox.Show("Debe de capturar el numero de computadora y descripcion antes de actualizar", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
+            if (numComputadoraTextBox.Text.Length > 4 || descripcionFallaTextBox.Text.Length > 110)
+            {
+                MessageBox.Show("Sobrepaso el maximo total de caracteres que permite la descripcion de la falla o el numero de computadora", "Sobre carga de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!EquiposDAL.existe(numComputadoraTextBox.Text))
+            {
+                MessageBox.Show("El numero de equipo " + numComputadoraTextBox.Text + " no existe en los registros actuales, debe asignar la falla a un numero de equipo valido", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Falla falla = new Falla();
             falla.NumComputadora = numComputadoraTextBox.Text;
             falla.descripcionFalla = descripcionFallaTextBox.Text;
