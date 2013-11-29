@@ -48,13 +48,13 @@ namespace SCM
 
             if (solucionadaCheckBox.Checked == true)
             {
-                falla.Solucionada = true;
+                falla.Solucionada = "Si";
                 falla.fechaBaja = DateTime.Now;
             }
             else
             {
                 falla.fechaBaja = DateTime.MinValue;
-                falla.Solucionada = false;
+                falla.Solucionada = "No";
             }
 
             if (radioButton1.Checked == true)
@@ -85,7 +85,7 @@ namespace SCM
                 FechaBajaTextBox.Text = row.Cells[4].Value.ToString();
 
             //Verifica si esta solucionada
-            if (bool.Parse(row.Cells[5].Value.ToString()) == true)
+            if (row.Cells[5].Value.ToString() == "Si")
                 solucionadaCheckBox.Checked = true;
             else
                 solucionadaCheckBox.Checked = false;

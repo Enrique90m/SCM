@@ -49,12 +49,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.6.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Users\Enrique\Desktop\System.Data.SqlServerCe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,10 +85,14 @@
     <Compile Include="AgregarFalla.Designer.cs">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </Compile>
-    <Compile Include="BDDataSet1.Designer.cs">
+    <Compile Include="bdDataSet.cs">
+      <DependentUpon>bdDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bdDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDDataSet1.xsd</DependentUpon>
+      <DependentUpon>bdDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataConections.cs" />
     <Compile Include="Equipos.cs" />
@@ -162,6 +174,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reporte.rdlc" />
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,16 +182,16 @@
       <DependentUpon>TodasFallas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="BDDataSet1.xsc">
-      <DependentUpon>BDDataSet1.xsd</DependentUpon>
+    <None Include="bdDataSet.xsc">
+      <DependentUpon>bdDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BDDataSet1.xsd">
+    <None Include="bdDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>bdDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BDDataSet1.xss">
-      <DependentUpon>BDDataSet1.xsd</DependentUpon>
+    <None Include="bdDataSet.xss">
+      <DependentUpon>bdDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

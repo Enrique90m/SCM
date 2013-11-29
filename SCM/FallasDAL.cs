@@ -5,6 +5,7 @@ using System.Text;
 using System.Data.SqlServerCe;
 using System.Data;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SCM
 {
@@ -12,19 +13,20 @@ namespace SCM
     {
         public void AgregaFalla(Falla objetoFalla)
         {
-            using (SqlCeConnection conn = DataConections.conectaConBD())
+            using (MySqlConnection conn = DataConections.conectaConBD())
             {
                 try
                 {
-                    string query = "INSERT INTO FALLAS VALUES(@numfalla,@numcompu,@desc,@fechaAlta,@fechaBaja,@solucionada,@categoria)";
-                    SqlCeCommand comando = new SqlCeCommand(query, conn);
+                    string query = "INSERT INTO FALLAS VALUES(@numfalla,@numcompu,@desc,@fechaAlta,@fechaBaja,@solucionada,@categoria,@elim)";
+                   MySqlCommand comando = new MySqlCommand(query, conn);
                     comando.Parameters.AddWithValue("@numfalla", objetoFalla.numFalla);
                     comando.Parameters.AddWithValue("@numcompu", objetoFalla.NumComputadora);
                     comando.Parameters.AddWithValue("@desc", objetoFalla.descripcionFalla);
                     comando.Parameters.AddWithValue("@fechaAlta", objetoFalla.fechaAlta);
                     comando.Parameters.AddWithValue("@fechaBaja", DBNull.Value);
-                    comando.Parameters.AddWithValue("@solucionada", 0);
+                    comando.Parameters.AddWithValue("@solucionada", "No");
                     comando.Parameters.AddWithValue("@categoria",objetoFalla.categoria);
+                    comando.Parameters.AddWithValue("@elim","No");
 
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Falla agregada correctamente!");
@@ -45,11 +47,11 @@ namespace SCM
         {
             DataTable dt = new DataTable();
 
-            using (SqlCeConnection conexion = DataConections.conectaConBD())
+            using (MySqlConnection conexion = DataConections.conectaConBD())
             {
                 try
                 {
-                    SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM FALLAS", conexion);
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM FALLAS", conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
@@ -67,11 +69,11 @@ namespace SCM
         public DataTable obtieneTodasLasFallas(DataTable dt)
         {
             DataConections bd = new DataConections();
-            using (SqlCeConnection conexion = DataConections.conectaConBD())
+            using (MySqlConnection conexion = DataConections.conectaConBD())
             {
                 try
                 {
-                    SqlCeDataAdapter da = new SqlCeDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 0", conexion);
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 'NO'", conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
@@ -83,11 +85,11 @@ namespace SCM
         }
         public static DataTable buscaFalla(DataTable dt, string comando)
         {
-            using (SqlCeConnection conexion = DataConections.conectaConBD())
+            using (MySqlConnection conexion = DataConections.conectaConBD())
             {
                 try
                 {
-                    SqlCeDataAdapter da = new SqlCeDataAdapter(comando, conexion);
+                    MySqlDataAdapter da = new MySqlDataAdapter(comando, conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
@@ -100,14 +102,14 @@ namespace SCM
         }
         public static void ActualizaInformacion(Falla falla)
         {
-            using (SqlCeConnection conn = DataConections.conectaConBD())
+            using (MySqlConnection conn = DataConections.conectaConBD())
             {
-                SqlCeCommand comm = new SqlCeCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol, Categoria=@cat, FechaBaja=@fbaja WHERE NumFalla = @numfalla", conn);
-                comm.Parameters.Add("@numcomp",falla.NumComputadora);
-                comm.Parameters.Add("@descrip",falla.descripcionFalla);
-                comm.Parameters.Add("@sol",falla.Solucionada);
-                comm.Parameters.Add("@numfalla",falla.numFalla);
-                comm.Parameters.Add("@cat",falla.categoria);
+               MySqlCommand comm = new MySqlCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol, Categoria=@cat, FechaBaja=@fbaja WHERE idFalla = @numfalla", conn);
+                comm.Parameters.AddWithValue("@numcomp",falla.NumComputadora);
+                comm.Parameters.AddWithValue("@descrip",falla.descripcionFalla);
+                comm.Parameters.AddWithValue("@sol",falla.Solucionada);
+                comm.Parameters.AddWithValue("@numfalla",falla.numFalla);
+                comm.Parameters.AddWithValue("@cat",falla.categoria);
                 //Verifica si fecha baja contiene null, si es asi manda como argumento null, lo hago asi puesto que DateTime NO hacepta null
                 if (falla.fechaBaja != DateTime.MinValue)
                     comm.Parameters.AddWithValue("@fbaja", falla.fechaBaja);
@@ -127,10 +129,10 @@ namespace SCM
         }
         public static void EliminaFalla(long numFalla)
         {
-            using (SqlCeConnection cn = DataConections.conectaConBD())
+            using (MySqlConnection cn = DataConections.conectaConBD())
             {
                 string query = @"DELETE FROM FALLAS WHERE NumFalla = @Numfalla";
-                SqlCeCommand cm = new SqlCeCommand(query,cn);
+               MySqlCommand cm = new MySqlCommand(query,cn);
                 cm.Parameters.AddWithValue("@Numfalla",numFalla);
                 try
                 {

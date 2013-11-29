@@ -15,7 +15,8 @@ namespace SCM
         public string descripcionFalla;
         public DateTime fechaAlta;
         public DateTime fechaBaja;
-        public bool Solucionada;
+        public string Solucionada;
         public string categoria;
+        public string cancelada;
     }
 }

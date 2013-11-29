@@ -97,7 +97,7 @@ namespace SCM
             if (checkBox1.Checked == true)
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
             else
-                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 0");
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada ='No'");
 
             dataGridView1.DataSource = dt;
         }

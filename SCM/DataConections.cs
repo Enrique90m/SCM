@@ -5,14 +5,15 @@ using System.Text;
 using System.Data.SqlServerCe;
 using System.Data;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SCM
 {
     public class DataConections
     {
-        public static SqlCeConnection conectaConBD()
+        public static MySqlConnection conectaConBD()
         {
-            SqlCeConnection conn = new SqlCeConnection(@"Data Source=|DataDirectory|\BD.sdf");
+            MySqlConnection conn = new MySqlConnection(@"Server=localhost;Database=bd;Uid=root;Pwd=elkike_;");
             try
             {                
                 conn.Open();
