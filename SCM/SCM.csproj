@@ -85,10 +85,6 @@
     <Compile Include="AgregarFalla.Designer.cs">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </Compile>
-    <Compile Include="bdDataSet.cs">
-      <DependentUpon>bdDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="bdDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteFecha.Designer.cs">
+      <DependentUpon>ReporteFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,7 +176,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reporte.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReporteFecha.resx">
+      <DependentUpon>ReporteFecha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>

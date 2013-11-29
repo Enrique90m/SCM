@@ -43,5 +43,15 @@ namespace SCM.Properties {
                 return ((string)(this["bdConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;User Id=root;password=elkike_;database=bd")]
+        public string bdConnectionString2 {
+            get {
+                return ((string)(this["bdConnectionString2"]));
+            }
+        }
     }
 }

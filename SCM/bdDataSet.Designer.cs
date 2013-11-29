@@ -30,7 +30,7 @@ namespace SCM {
         
         private SeleccionarTodosDataTable tableSeleccionarTodos;
         
-        private global::System.Data.DataRelation relationfk_Fallas_Equipos;
+        private BuscaFallaEntreFechasDataTable tableBuscaFallaEntreFechas;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -68,6 +68,9 @@ namespace SCM {
                 }
                 if ((ds.Tables["SeleccionarTodos"] != null)) {
                     base.Tables.Add(new SeleccionarTodosDataTable(ds.Tables["SeleccionarTodos"]));
+                }
+                if ((ds.Tables["BuscaFallaEntreFechas"] != null)) {
+                    base.Tables.Add(new BuscaFallaEntreFechasDataTable(ds.Tables["BuscaFallaEntreFechas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -114,6 +117,16 @@ namespace SCM {
         public SeleccionarTodosDataTable SeleccionarTodos {
             get {
                 return this.tableSeleccionarTodos;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public BuscaFallaEntreFechasDataTable BuscaFallaEntreFechas {
+            get {
+                return this.tableBuscaFallaEntreFechas;
             }
         }
         
@@ -193,6 +206,9 @@ namespace SCM {
                 if ((ds.Tables["SeleccionarTodos"] != null)) {
                     base.Tables.Add(new SeleccionarTodosDataTable(ds.Tables["SeleccionarTodos"]));
                 }
+                if ((ds.Tables["BuscaFallaEntreFechas"] != null)) {
+                    base.Tables.Add(new BuscaFallaEntreFechasDataTable(ds.Tables["BuscaFallaEntreFechas"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -244,7 +260,12 @@ namespace SCM {
                     this.tableSeleccionarTodos.InitVars();
                 }
             }
-            this.relationfk_Fallas_Equipos = this.Relations["fk_Fallas_Equipos"];
+            this.tableBuscaFallaEntreFechas = ((BuscaFallaEntreFechasDataTable)(base.Tables["BuscaFallaEntreFechas"]));
+            if ((initTable == true)) {
+                if ((this.tableBuscaFallaEntreFechas != null)) {
+                    this.tableBuscaFallaEntreFechas.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -261,10 +282,8 @@ namespace SCM {
             base.Tables.Add(this.tablefallas);
             this.tableSeleccionarTodos = new SeleccionarTodosDataTable();
             base.Tables.Add(this.tableSeleccionarTodos);
-            this.relationfk_Fallas_Equipos = new global::System.Data.DataRelation("fk_Fallas_Equipos", new global::System.Data.DataColumn[] {
-                        this.tableequipos.idEquipoColumn}, new global::System.Data.DataColumn[] {
-                        this.tablefallas.Equipos_idEquipoColumn}, false);
-            this.Relations.Add(this.relationfk_Fallas_Equipos);
+            this.tableBuscaFallaEntreFechas = new BuscaFallaEntreFechasDataTable();
+            base.Tables.Add(this.tableBuscaFallaEntreFechas);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -282,6 +301,12 @@ namespace SCM {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeSeleccionarTodos() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeBuscaFallaEntreFechas() {
             return false;
         }
         
@@ -349,6 +374,9 @@ namespace SCM {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void SeleccionarTodosRowChangeEventHandler(object sender, SeleccionarTodosRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void BuscaFallaEntreFechasRowChangeEventHandler(object sender, BuscaFallaEntreFechasRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -356,19 +384,13 @@ namespace SCM {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class equiposDataTable : global::System.Data.TypedTableBase<equiposRow> {
             
-            private global::System.Data.DataColumn columnidEquipo;
+            private global::System.Data.DataColumn columnNumEquipo;
             
             private global::System.Data.DataColumn columnMarca;
             
             private global::System.Data.DataColumn columnNumSerie;
             
             private global::System.Data.DataColumn columnSala;
-            
-            private global::System.Data.DataColumn columnFechaAlta;
-            
-            private global::System.Data.DataColumn columnEliminado;
-            
-            private global::System.Data.DataColumn columnFechaEliminacion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -405,9 +427,9 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idEquipoColumn {
+            public global::System.Data.DataColumn NumEquipoColumn {
                 get {
-                    return this.columnidEquipo;
+                    return this.columnNumEquipo;
                 }
             }
             
@@ -432,30 +454,6 @@ namespace SCM {
             public global::System.Data.DataColumn SalaColumn {
                 get {
                     return this.columnSala;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaAltaColumn {
-                get {
-                    return this.columnFechaAlta;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EliminadoColumn {
-                get {
-                    return this.columnEliminado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaEliminacionColumn {
-                get {
-                    return this.columnFechaEliminacion;
                 }
             }
             
@@ -496,16 +494,13 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public equiposRow AddequiposRow(int idEquipo, string Marca, string NumSerie, string Sala, System.DateTime FechaAlta, byte[] Eliminado, System.DateTime FechaEliminacion) {
+            public equiposRow AddequiposRow(int NumEquipo, string Marca, string NumSerie, string Sala) {
                 equiposRow rowequiposRow = ((equiposRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idEquipo,
+                        NumEquipo,
                         Marca,
                         NumSerie,
-                        Sala,
-                        FechaAlta,
-                        Eliminado,
-                        FechaEliminacion};
+                        Sala};
                 rowequiposRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowequiposRow);
                 return rowequiposRow;
@@ -513,9 +508,9 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public equiposRow FindByidEquipo(int idEquipo) {
+            public equiposRow FindByNumEquipo(int NumEquipo) {
                 return ((equiposRow)(this.Rows.Find(new object[] {
-                            idEquipo})));
+                            NumEquipo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -535,36 +530,27 @@ namespace SCM {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnidEquipo = base.Columns["idEquipo"];
+                this.columnNumEquipo = base.Columns["NumEquipo"];
                 this.columnMarca = base.Columns["Marca"];
                 this.columnNumSerie = base.Columns["NumSerie"];
                 this.columnSala = base.Columns["Sala"];
-                this.columnFechaAlta = base.Columns["FechaAlta"];
-                this.columnEliminado = base.Columns["Eliminado"];
-                this.columnFechaEliminacion = base.Columns["FechaEliminacion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnidEquipo = new global::System.Data.DataColumn("idEquipo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidEquipo);
+                this.columnNumEquipo = new global::System.Data.DataColumn("NumEquipo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumEquipo);
                 this.columnMarca = new global::System.Data.DataColumn("Marca", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMarca);
                 this.columnNumSerie = new global::System.Data.DataColumn("NumSerie", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumSerie);
                 this.columnSala = new global::System.Data.DataColumn("Sala", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSala);
-                this.columnFechaAlta = new global::System.Data.DataColumn("FechaAlta", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaAlta);
-                this.columnEliminado = new global::System.Data.DataColumn("Eliminado", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEliminado);
-                this.columnFechaEliminacion = new global::System.Data.DataColumn("FechaEliminacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaEliminacion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidEquipo}, true));
-                this.columnidEquipo.AllowDBNull = false;
-                this.columnidEquipo.Unique = true;
+                                this.columnNumEquipo}, true));
+                this.columnNumEquipo.AllowDBNull = false;
+                this.columnNumEquipo.Unique = true;
                 this.columnMarca.MaxLength = 20;
                 this.columnNumSerie.MaxLength = 45;
                 this.columnSala.MaxLength = 3;
@@ -703,7 +689,7 @@ namespace SCM {
             
             private global::System.Data.DataColumn columnidFalla;
             
-            private global::System.Data.DataColumn columnEquipos_idEquipo;
+            private global::System.Data.DataColumn columnNumComputadora;
             
             private global::System.Data.DataColumn columnDescripcionFalla;
             
@@ -711,9 +697,9 @@ namespace SCM {
             
             private global::System.Data.DataColumn columnFechaBaja;
             
-            private global::System.Data.DataColumn columnCategoria;
-            
             private global::System.Data.DataColumn columnSolucionada;
+            
+            private global::System.Data.DataColumn columnCategoria;
             
             private global::System.Data.DataColumn columnEliminada;
             
@@ -760,9 +746,9 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Equipos_idEquipoColumn {
+            public global::System.Data.DataColumn NumComputadoraColumn {
                 get {
-                    return this.columnEquipos_idEquipo;
+                    return this.columnNumComputadora;
                 }
             }
             
@@ -792,17 +778,17 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CategoriaColumn {
+            public global::System.Data.DataColumn SolucionadaColumn {
                 get {
-                    return this.columnCategoria;
+                    return this.columnSolucionada;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SolucionadaColumn {
+            public global::System.Data.DataColumn CategoriaColumn {
                 get {
-                    return this.columnSolucionada;
+                    return this.columnCategoria;
                 }
             }
             
@@ -851,20 +837,17 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public fallasRow AddfallasRow(int idFalla, equiposRow parentequiposRowByfk_Fallas_Equipos, string DescripcionFalla, System.DateTime FechaAlta, System.DateTime FechaBaja, string Categoria, byte[] Solucionada, byte[] Eliminada) {
+            public fallasRow AddfallasRow(int idFalla, string NumComputadora, string DescripcionFalla, System.DateTime FechaAlta, System.DateTime FechaBaja, string Solucionada, string Categoria, string Eliminada) {
                 fallasRow rowfallasRow = ((fallasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idFalla,
-                        null,
+                        NumComputadora,
                         DescripcionFalla,
                         FechaAlta,
                         FechaBaja,
-                        Categoria,
                         Solucionada,
+                        Categoria,
                         Eliminada};
-                if ((parentequiposRowByfk_Fallas_Equipos != null)) {
-                    columnValuesArray[1] = parentequiposRowByfk_Fallas_Equipos[0];
-                }
                 rowfallasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowfallasRow);
                 return rowfallasRow;
@@ -895,12 +878,12 @@ namespace SCM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnidFalla = base.Columns["idFalla"];
-                this.columnEquipos_idEquipo = base.Columns["Equipos_idEquipo"];
+                this.columnNumComputadora = base.Columns["NumComputadora"];
                 this.columnDescripcionFalla = base.Columns["DescripcionFalla"];
                 this.columnFechaAlta = base.Columns["FechaAlta"];
                 this.columnFechaBaja = base.Columns["FechaBaja"];
-                this.columnCategoria = base.Columns["Categoria"];
                 this.columnSolucionada = base.Columns["Solucionada"];
+                this.columnCategoria = base.Columns["Categoria"];
                 this.columnEliminada = base.Columns["Eliminada"];
             }
             
@@ -909,27 +892,29 @@ namespace SCM {
             private void InitClass() {
                 this.columnidFalla = new global::System.Data.DataColumn("idFalla", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidFalla);
-                this.columnEquipos_idEquipo = new global::System.Data.DataColumn("Equipos_idEquipo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEquipos_idEquipo);
+                this.columnNumComputadora = new global::System.Data.DataColumn("NumComputadora", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumComputadora);
                 this.columnDescripcionFalla = new global::System.Data.DataColumn("DescripcionFalla", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcionFalla);
                 this.columnFechaAlta = new global::System.Data.DataColumn("FechaAlta", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaAlta);
                 this.columnFechaBaja = new global::System.Data.DataColumn("FechaBaja", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaBaja);
+                this.columnSolucionada = new global::System.Data.DataColumn("Solucionada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSolucionada);
                 this.columnCategoria = new global::System.Data.DataColumn("Categoria", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCategoria);
-                this.columnSolucionada = new global::System.Data.DataColumn("Solucionada", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSolucionada);
-                this.columnEliminada = new global::System.Data.DataColumn("Eliminada", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnEliminada = new global::System.Data.DataColumn("Eliminada", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEliminada);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidFalla}, true));
                 this.columnidFalla.AllowDBNull = false;
                 this.columnidFalla.Unique = true;
-                this.columnEquipos_idEquipo.AllowDBNull = false;
+                this.columnNumComputadora.MaxLength = 45;
                 this.columnDescripcionFalla.MaxLength = 150;
+                this.columnSolucionada.MaxLength = 2;
                 this.columnCategoria.MaxLength = 20;
+                this.columnEliminada.MaxLength = 2;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1065,7 +1050,7 @@ namespace SCM {
             
             private global::System.Data.DataColumn columnidFalla;
             
-            private global::System.Data.DataColumn columnEquipos_idEquipo;
+            private global::System.Data.DataColumn columnNumComputadora;
             
             private global::System.Data.DataColumn columnDescripcionFalla;
             
@@ -1073,9 +1058,9 @@ namespace SCM {
             
             private global::System.Data.DataColumn columnFechaBaja;
             
-            private global::System.Data.DataColumn columnCategoria;
-            
             private global::System.Data.DataColumn columnSolucionada;
+            
+            private global::System.Data.DataColumn columnCategoria;
             
             private global::System.Data.DataColumn columnEliminada;
             
@@ -1122,9 +1107,9 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Equipos_idEquipoColumn {
+            public global::System.Data.DataColumn NumComputadoraColumn {
                 get {
-                    return this.columnEquipos_idEquipo;
+                    return this.columnNumComputadora;
                 }
             }
             
@@ -1154,17 +1139,17 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CategoriaColumn {
+            public global::System.Data.DataColumn SolucionadaColumn {
                 get {
-                    return this.columnCategoria;
+                    return this.columnSolucionada;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SolucionadaColumn {
+            public global::System.Data.DataColumn CategoriaColumn {
                 get {
-                    return this.columnSolucionada;
+                    return this.columnCategoria;
                 }
             }
             
@@ -1213,16 +1198,16 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SeleccionarTodosRow AddSeleccionarTodosRow(int idFalla, int Equipos_idEquipo, string DescripcionFalla, System.DateTime FechaAlta, System.DateTime FechaBaja, string Categoria, byte[] Solucionada, byte[] Eliminada) {
+            public SeleccionarTodosRow AddSeleccionarTodosRow(int idFalla, string NumComputadora, string DescripcionFalla, System.DateTime FechaAlta, System.DateTime FechaBaja, string Solucionada, string Categoria, string Eliminada) {
                 SeleccionarTodosRow rowSeleccionarTodosRow = ((SeleccionarTodosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idFalla,
-                        Equipos_idEquipo,
+                        NumComputadora,
                         DescripcionFalla,
                         FechaAlta,
                         FechaBaja,
-                        Categoria,
                         Solucionada,
+                        Categoria,
                         Eliminada};
                 rowSeleccionarTodosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSeleccionarTodosRow);
@@ -1254,12 +1239,12 @@ namespace SCM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnidFalla = base.Columns["idFalla"];
-                this.columnEquipos_idEquipo = base.Columns["Equipos_idEquipo"];
+                this.columnNumComputadora = base.Columns["NumComputadora"];
                 this.columnDescripcionFalla = base.Columns["DescripcionFalla"];
                 this.columnFechaAlta = base.Columns["FechaAlta"];
                 this.columnFechaBaja = base.Columns["FechaBaja"];
-                this.columnCategoria = base.Columns["Categoria"];
                 this.columnSolucionada = base.Columns["Solucionada"];
+                this.columnCategoria = base.Columns["Categoria"];
                 this.columnEliminada = base.Columns["Eliminada"];
             }
             
@@ -1268,27 +1253,29 @@ namespace SCM {
             private void InitClass() {
                 this.columnidFalla = new global::System.Data.DataColumn("idFalla", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidFalla);
-                this.columnEquipos_idEquipo = new global::System.Data.DataColumn("Equipos_idEquipo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEquipos_idEquipo);
+                this.columnNumComputadora = new global::System.Data.DataColumn("NumComputadora", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumComputadora);
                 this.columnDescripcionFalla = new global::System.Data.DataColumn("DescripcionFalla", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcionFalla);
                 this.columnFechaAlta = new global::System.Data.DataColumn("FechaAlta", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaAlta);
                 this.columnFechaBaja = new global::System.Data.DataColumn("FechaBaja", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaBaja);
+                this.columnSolucionada = new global::System.Data.DataColumn("Solucionada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSolucionada);
                 this.columnCategoria = new global::System.Data.DataColumn("Categoria", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCategoria);
-                this.columnSolucionada = new global::System.Data.DataColumn("Solucionada", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSolucionada);
-                this.columnEliminada = new global::System.Data.DataColumn("Eliminada", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnEliminada = new global::System.Data.DataColumn("Eliminada", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEliminada);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidFalla}, true));
                 this.columnidFalla.AllowDBNull = false;
                 this.columnidFalla.Unique = true;
-                this.columnEquipos_idEquipo.AllowDBNull = false;
+                this.columnNumComputadora.MaxLength = 45;
                 this.columnDescripcionFalla.MaxLength = 150;
+                this.columnSolucionada.MaxLength = 2;
                 this.columnCategoria.MaxLength = 20;
+                this.columnEliminada.MaxLength = 2;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1416,6 +1403,367 @@ namespace SCM {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class BuscaFallaEntreFechasDataTable : global::System.Data.TypedTableBase<BuscaFallaEntreFechasRow> {
+            
+            private global::System.Data.DataColumn columnidFalla;
+            
+            private global::System.Data.DataColumn columnNumComputadora;
+            
+            private global::System.Data.DataColumn columnDescripcionFalla;
+            
+            private global::System.Data.DataColumn columnFechaAlta;
+            
+            private global::System.Data.DataColumn columnFechaBaja;
+            
+            private global::System.Data.DataColumn columnSolucionada;
+            
+            private global::System.Data.DataColumn columnCategoria;
+            
+            private global::System.Data.DataColumn columnEliminada;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BuscaFallaEntreFechasDataTable() {
+                this.TableName = "BuscaFallaEntreFechas";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal BuscaFallaEntreFechasDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected BuscaFallaEntreFechasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idFallaColumn {
+                get {
+                    return this.columnidFalla;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NumComputadoraColumn {
+                get {
+                    return this.columnNumComputadora;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DescripcionFallaColumn {
+                get {
+                    return this.columnDescripcionFalla;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FechaAltaColumn {
+                get {
+                    return this.columnFechaAlta;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FechaBajaColumn {
+                get {
+                    return this.columnFechaBaja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SolucionadaColumn {
+                get {
+                    return this.columnSolucionada;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CategoriaColumn {
+                get {
+                    return this.columnCategoria;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EliminadaColumn {
+                get {
+                    return this.columnEliminada;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BuscaFallaEntreFechasRow this[int index] {
+                get {
+                    return ((BuscaFallaEntreFechasRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event BuscaFallaEntreFechasRowChangeEventHandler BuscaFallaEntreFechasRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event BuscaFallaEntreFechasRowChangeEventHandler BuscaFallaEntreFechasRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event BuscaFallaEntreFechasRowChangeEventHandler BuscaFallaEntreFechasRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event BuscaFallaEntreFechasRowChangeEventHandler BuscaFallaEntreFechasRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddBuscaFallaEntreFechasRow(BuscaFallaEntreFechasRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BuscaFallaEntreFechasRow AddBuscaFallaEntreFechasRow(int idFalla, string NumComputadora, string DescripcionFalla, System.DateTime FechaAlta, System.DateTime FechaBaja, string Solucionada, string Categoria, string Eliminada) {
+                BuscaFallaEntreFechasRow rowBuscaFallaEntreFechasRow = ((BuscaFallaEntreFechasRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        idFalla,
+                        NumComputadora,
+                        DescripcionFalla,
+                        FechaAlta,
+                        FechaBaja,
+                        Solucionada,
+                        Categoria,
+                        Eliminada};
+                rowBuscaFallaEntreFechasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBuscaFallaEntreFechasRow);
+                return rowBuscaFallaEntreFechasRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BuscaFallaEntreFechasRow FindByidFalla(int idFalla) {
+                return ((BuscaFallaEntreFechasRow)(this.Rows.Find(new object[] {
+                            idFalla})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                BuscaFallaEntreFechasDataTable cln = ((BuscaFallaEntreFechasDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new BuscaFallaEntreFechasDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnidFalla = base.Columns["idFalla"];
+                this.columnNumComputadora = base.Columns["NumComputadora"];
+                this.columnDescripcionFalla = base.Columns["DescripcionFalla"];
+                this.columnFechaAlta = base.Columns["FechaAlta"];
+                this.columnFechaBaja = base.Columns["FechaBaja"];
+                this.columnSolucionada = base.Columns["Solucionada"];
+                this.columnCategoria = base.Columns["Categoria"];
+                this.columnEliminada = base.Columns["Eliminada"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnidFalla = new global::System.Data.DataColumn("idFalla", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidFalla);
+                this.columnNumComputadora = new global::System.Data.DataColumn("NumComputadora", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumComputadora);
+                this.columnDescripcionFalla = new global::System.Data.DataColumn("DescripcionFalla", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripcionFalla);
+                this.columnFechaAlta = new global::System.Data.DataColumn("FechaAlta", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaAlta);
+                this.columnFechaBaja = new global::System.Data.DataColumn("FechaBaja", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaBaja);
+                this.columnSolucionada = new global::System.Data.DataColumn("Solucionada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSolucionada);
+                this.columnCategoria = new global::System.Data.DataColumn("Categoria", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategoria);
+                this.columnEliminada = new global::System.Data.DataColumn("Eliminada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEliminada);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidFalla}, true));
+                this.columnidFalla.AllowDBNull = false;
+                this.columnidFalla.Unique = true;
+                this.columnNumComputadora.MaxLength = 45;
+                this.columnDescripcionFalla.MaxLength = 150;
+                this.columnSolucionada.MaxLength = 2;
+                this.columnCategoria.MaxLength = 20;
+                this.columnEliminada.MaxLength = 2;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BuscaFallaEntreFechasRow NewBuscaFallaEntreFechasRow() {
+                return ((BuscaFallaEntreFechasRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new BuscaFallaEntreFechasRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(BuscaFallaEntreFechasRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.BuscaFallaEntreFechasRowChanged != null)) {
+                    this.BuscaFallaEntreFechasRowChanged(this, new BuscaFallaEntreFechasRowChangeEvent(((BuscaFallaEntreFechasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.BuscaFallaEntreFechasRowChanging != null)) {
+                    this.BuscaFallaEntreFechasRowChanging(this, new BuscaFallaEntreFechasRowChangeEvent(((BuscaFallaEntreFechasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.BuscaFallaEntreFechasRowDeleted != null)) {
+                    this.BuscaFallaEntreFechasRowDeleted(this, new BuscaFallaEntreFechasRowChangeEvent(((BuscaFallaEntreFechasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.BuscaFallaEntreFechasRowDeleting != null)) {
+                    this.BuscaFallaEntreFechasRowDeleting(this, new BuscaFallaEntreFechasRowChangeEvent(((BuscaFallaEntreFechasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveBuscaFallaEntreFechasRow(BuscaFallaEntreFechasRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                bdDataSet ds = new bdDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "BuscaFallaEntreFechasDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class equiposRow : global::System.Data.DataRow {
@@ -1431,12 +1779,12 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int idEquipo {
+            public int NumEquipo {
                 get {
-                    return ((int)(this[this.tableequipos.idEquipoColumn]));
+                    return ((int)(this[this.tableequipos.NumEquipoColumn]));
                 }
                 set {
-                    this[this.tableequipos.idEquipoColumn] = value;
+                    this[this.tableequipos.NumEquipoColumn] = value;
                 }
             }
             
@@ -1490,54 +1838,6 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime FechaAlta {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableequipos.FechaAltaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaAlta\' de la tabla \'equipos\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableequipos.FechaAltaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] Eliminado {
-                get {
-                    try {
-                        return ((byte[])(this[this.tableequipos.EliminadoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Eliminado\' de la tabla \'equipos\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableequipos.EliminadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime FechaEliminacion {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableequipos.FechaEliminacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaEliminacion\' de la tabla \'equipos\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableequipos.FechaEliminacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMarcaNull() {
                 return this.IsNull(this.tableequipos.MarcaColumn);
             }
@@ -1571,53 +1871,6 @@ namespace SCM {
             public void SetSalaNull() {
                 this[this.tableequipos.SalaColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFechaAltaNull() {
-                return this.IsNull(this.tableequipos.FechaAltaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFechaAltaNull() {
-                this[this.tableequipos.FechaAltaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEliminadoNull() {
-                return this.IsNull(this.tableequipos.EliminadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEliminadoNull() {
-                this[this.tableequipos.EliminadoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFechaEliminacionNull() {
-                return this.IsNull(this.tableequipos.FechaEliminacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFechaEliminacionNull() {
-                this[this.tableequipos.FechaEliminacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public fallasRow[] GetfallasRows() {
-                if ((this.Table.ChildRelations["fk_Fallas_Equipos"] == null)) {
-                    return new fallasRow[0];
-                }
-                else {
-                    return ((fallasRow[])(base.GetChildRows(this.Table.ChildRelations["fk_Fallas_Equipos"])));
-                }
-            }
         }
         
         /// <summary>
@@ -1647,12 +1900,17 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Equipos_idEquipo {
+            public string NumComputadora {
                 get {
-                    return ((int)(this[this.tablefallas.Equipos_idEquipoColumn]));
+                    try {
+                        return ((string)(this[this.tablefallas.NumComputadoraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumComputadora\' de la tabla \'fallas\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablefallas.Equipos_idEquipoColumn] = value;
+                    this[this.tablefallas.NumComputadoraColumn] = value;
                 }
             }
             
@@ -1706,6 +1964,22 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Solucionada {
+                get {
+                    try {
+                        return ((string)(this[this.tablefallas.SolucionadaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Solucionada\' de la tabla \'fallas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablefallas.SolucionadaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Categoria {
                 get {
                     try {
@@ -1722,26 +1996,10 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] Solucionada {
+            public string Eliminada {
                 get {
                     try {
-                        return ((byte[])(this[this.tablefallas.SolucionadaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Solucionada\' de la tabla \'fallas\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablefallas.SolucionadaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] Eliminada {
-                get {
-                    try {
-                        return ((byte[])(this[this.tablefallas.EliminadaColumn]));
+                        return ((string)(this[this.tablefallas.EliminadaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'Eliminada\' de la tabla \'fallas\' es DBNull.", e);
@@ -1754,13 +2012,14 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public equiposRow equiposRow {
-                get {
-                    return ((equiposRow)(this.GetParentRow(this.Table.ParentRelations["fk_Fallas_Equipos"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["fk_Fallas_Equipos"]);
-                }
+            public bool IsNumComputadoraNull() {
+                return this.IsNull(this.tablefallas.NumComputadoraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNumComputadoraNull() {
+                this[this.tablefallas.NumComputadoraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1801,18 +2060,6 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCategoriaNull() {
-                return this.IsNull(this.tablefallas.CategoriaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCategoriaNull() {
-                this[this.tablefallas.CategoriaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSolucionadaNull() {
                 return this.IsNull(this.tablefallas.SolucionadaColumn);
             }
@@ -1821,6 +2068,18 @@ namespace SCM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSolucionadaNull() {
                 this[this.tablefallas.SolucionadaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategoriaNull() {
+                return this.IsNull(this.tablefallas.CategoriaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategoriaNull() {
+                this[this.tablefallas.CategoriaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1863,12 +2122,18 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Equipos_idEquipo {
+            public string NumComputadora {
                 get {
-                    return ((int)(this[this.tableSeleccionarTodos.Equipos_idEquipoColumn]));
+                    try {
+                        return ((string)(this[this.tableSeleccionarTodos.NumComputadoraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumComputadora\' de la tabla \'SeleccionarTodos\' es DBNull." +
+                                "", e);
+                    }
                 }
                 set {
-                    this[this.tableSeleccionarTodos.Equipos_idEquipoColumn] = value;
+                    this[this.tableSeleccionarTodos.NumComputadoraColumn] = value;
                 }
             }
             
@@ -1923,6 +2188,22 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Solucionada {
+                get {
+                    try {
+                        return ((string)(this[this.tableSeleccionarTodos.SolucionadaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Solucionada\' de la tabla \'SeleccionarTodos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSeleccionarTodos.SolucionadaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Categoria {
                 get {
                     try {
@@ -1939,26 +2220,10 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] Solucionada {
+            public string Eliminada {
                 get {
                     try {
-                        return ((byte[])(this[this.tableSeleccionarTodos.SolucionadaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Solucionada\' de la tabla \'SeleccionarTodos\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSeleccionarTodos.SolucionadaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] Eliminada {
-                get {
-                    try {
-                        return ((byte[])(this[this.tableSeleccionarTodos.EliminadaColumn]));
+                        return ((string)(this[this.tableSeleccionarTodos.EliminadaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'Eliminada\' de la tabla \'SeleccionarTodos\' es DBNull.", e);
@@ -1967,6 +2232,18 @@ namespace SCM {
                 set {
                     this[this.tableSeleccionarTodos.EliminadaColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNumComputadoraNull() {
+                return this.IsNull(this.tableSeleccionarTodos.NumComputadoraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNumComputadoraNull() {
+                this[this.tableSeleccionarTodos.NumComputadoraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2007,18 +2284,6 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCategoriaNull() {
-                return this.IsNull(this.tableSeleccionarTodos.CategoriaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCategoriaNull() {
-                this[this.tableSeleccionarTodos.CategoriaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSolucionadaNull() {
                 return this.IsNull(this.tableSeleccionarTodos.SolucionadaColumn);
             }
@@ -2031,6 +2296,18 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategoriaNull() {
+                return this.IsNull(this.tableSeleccionarTodos.CategoriaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategoriaNull() {
+                this[this.tableSeleccionarTodos.CategoriaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEliminadaNull() {
                 return this.IsNull(this.tableSeleccionarTodos.EliminadaColumn);
             }
@@ -2039,6 +2316,235 @@ namespace SCM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEliminadaNull() {
                 this[this.tableSeleccionarTodos.EliminadaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class BuscaFallaEntreFechasRow : global::System.Data.DataRow {
+            
+            private BuscaFallaEntreFechasDataTable tableBuscaFallaEntreFechas;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal BuscaFallaEntreFechasRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableBuscaFallaEntreFechas = ((BuscaFallaEntreFechasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int idFalla {
+                get {
+                    return ((int)(this[this.tableBuscaFallaEntreFechas.idFallaColumn]));
+                }
+                set {
+                    this[this.tableBuscaFallaEntreFechas.idFallaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NumComputadora {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuscaFallaEntreFechas.NumComputadoraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumComputadora\' de la tabla \'BuscaFallaEntreFechas\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuscaFallaEntreFechas.NumComputadoraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DescripcionFalla {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuscaFallaEntreFechas.DescripcionFallaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DescripcionFalla\' de la tabla \'BuscaFallaEntreFechas\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuscaFallaEntreFechas.DescripcionFallaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime FechaAlta {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableBuscaFallaEntreFechas.FechaAltaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaAlta\' de la tabla \'BuscaFallaEntreFechas\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableBuscaFallaEntreFechas.FechaAltaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime FechaBaja {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableBuscaFallaEntreFechas.FechaBajaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaBaja\' de la tabla \'BuscaFallaEntreFechas\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableBuscaFallaEntreFechas.FechaBajaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Solucionada {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuscaFallaEntreFechas.SolucionadaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Solucionada\' de la tabla \'BuscaFallaEntreFechas\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuscaFallaEntreFechas.SolucionadaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Categoria {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuscaFallaEntreFechas.CategoriaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Categoria\' de la tabla \'BuscaFallaEntreFechas\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableBuscaFallaEntreFechas.CategoriaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Eliminada {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuscaFallaEntreFechas.EliminadaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Eliminada\' de la tabla \'BuscaFallaEntreFechas\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableBuscaFallaEntreFechas.EliminadaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNumComputadoraNull() {
+                return this.IsNull(this.tableBuscaFallaEntreFechas.NumComputadoraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNumComputadoraNull() {
+                this[this.tableBuscaFallaEntreFechas.NumComputadoraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDescripcionFallaNull() {
+                return this.IsNull(this.tableBuscaFallaEntreFechas.DescripcionFallaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDescripcionFallaNull() {
+                this[this.tableBuscaFallaEntreFechas.DescripcionFallaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFechaAltaNull() {
+                return this.IsNull(this.tableBuscaFallaEntreFechas.FechaAltaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFechaAltaNull() {
+                this[this.tableBuscaFallaEntreFechas.FechaAltaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFechaBajaNull() {
+                return this.IsNull(this.tableBuscaFallaEntreFechas.FechaBajaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFechaBajaNull() {
+                this[this.tableBuscaFallaEntreFechas.FechaBajaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSolucionadaNull() {
+                return this.IsNull(this.tableBuscaFallaEntreFechas.SolucionadaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSolucionadaNull() {
+                this[this.tableBuscaFallaEntreFechas.SolucionadaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategoriaNull() {
+                return this.IsNull(this.tableBuscaFallaEntreFechas.CategoriaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategoriaNull() {
+                this[this.tableBuscaFallaEntreFechas.CategoriaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEliminadaNull() {
+                return this.IsNull(this.tableBuscaFallaEntreFechas.EliminadaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEliminadaNull() {
+                this[this.tableBuscaFallaEntreFechas.EliminadaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2130,6 +2636,40 @@ namespace SCM {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SeleccionarTodosRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class BuscaFallaEntreFechasRowChangeEvent : global::System.EventArgs {
+            
+            private BuscaFallaEntreFechasRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BuscaFallaEntreFechasRowChangeEvent(BuscaFallaEntreFechasRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BuscaFallaEntreFechasRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2269,24 +2809,21 @@ namespace SCM.bdDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "equipos";
-            tableMapping.ColumnMappings.Add("idEquipo", "idEquipo");
+            tableMapping.ColumnMappings.Add("NumEquipo", "NumEquipo");
             tableMapping.ColumnMappings.Add("Marca", "Marca");
             tableMapping.ColumnMappings.Add("NumSerie", "NumSerie");
             tableMapping.ColumnMappings.Add("Sala", "Sala");
-            tableMapping.ColumnMappings.Add("FechaAlta", "FechaAlta");
-            tableMapping.ColumnMappings.Add("Eliminado", "Eliminado");
-            tableMapping.ColumnMappings.Add("FechaEliminacion", "FechaEliminacion");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `equipos` WHERE ((`idEquipo` = @Original_idEquipo) AND ((@IsNull_Marca = 1 AND `Marca` IS NULL) OR (`Marca` = @Original_Marca)) AND ((@IsNull_NumSerie = 1 AND `NumSerie` IS NULL) OR (`NumSerie` = @Original_NumSerie)) AND ((@IsNull_Sala = 1 AND `Sala` IS NULL) OR (`Sala` = @Original_Sala)) AND ((@IsNull_FechaAlta = 1 AND `FechaAlta` IS NULL) OR (`FechaAlta` = @Original_FechaAlta)) AND ((@IsNull_Eliminado = 1 AND `Eliminado` IS NULL) OR (`Eliminado` = @Original_Eliminado)) AND ((@IsNull_FechaEliminacion = 1 AND `FechaEliminacion` IS NULL) OR (`FechaEliminacion` = @Original_FechaEliminacion)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `equipos` WHERE ((`NumEquipo` = @Original_NumEquipo) AND ((@IsNull_Marca = 1 AND `Marca` IS NULL) OR (`Marca` = @Original_Marca)) AND ((@IsNull_NumSerie = 1 AND `NumSerie` IS NULL) OR (`NumSerie` = @Original_NumSerie)) AND ((@IsNull_Sala = 1 AND `Sala` IS NULL) OR (`Sala` = @Original_Sala)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_idEquipo";
+            param.ParameterName = "@Original_NumEquipo";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "idEquipo";
+            param.SourceColumn = "NumEquipo";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -2338,70 +2875,19 @@ namespace SCM.bdDataSetTableAdapters {
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "Sala";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_FechaAlta";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaAlta";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_FechaAlta";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaAlta";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_Eliminado";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "Eliminado";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_Eliminado";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
-            param.IsNullable = true;
-            param.SourceColumn = "Eliminado";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_FechaEliminacion";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaEliminacion";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_FechaEliminacion";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaEliminacion";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `equipos` (`idEquipo`, `Marca`, `NumSerie`, `Sala`, `FechaAlta`, `Eli" +
-                "minado`, `FechaEliminacion`) VALUES (@idEquipo, @Marca, @NumSerie, @Sala, @Fecha" +
-                "Alta, @Eliminado, @FechaEliminacion)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `equipos` (`NumEquipo`, `Marca`, `NumSerie`, `Sala`) VALUES (@NumEqui" +
+                "po, @Marca, @NumSerie, @Sala)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@idEquipo";
+            param.ParameterName = "@NumEquipo";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "idEquipo";
+            param.SourceColumn = "NumEquipo";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Marca";
@@ -2423,37 +2909,17 @@ namespace SCM.bdDataSetTableAdapters {
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "Sala";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@FechaAlta";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaAlta";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Eliminado";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
-            param.IsNullable = true;
-            param.SourceColumn = "Eliminado";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@FechaEliminacion";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaEliminacion";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `equipos` SET `idEquipo` = @idEquipo, `Marca` = @Marca, `NumSerie` = @NumSerie, `Sala` = @Sala, `FechaAlta` = @FechaAlta, `Eliminado` = @Eliminado, `FechaEliminacion` = @FechaEliminacion WHERE ((`idEquipo` = @Original_idEquipo) AND ((@IsNull_Marca = 1 AND `Marca` IS NULL) OR (`Marca` = @Original_Marca)) AND ((@IsNull_NumSerie = 1 AND `NumSerie` IS NULL) OR (`NumSerie` = @Original_NumSerie)) AND ((@IsNull_Sala = 1 AND `Sala` IS NULL) OR (`Sala` = @Original_Sala)) AND ((@IsNull_FechaAlta = 1 AND `FechaAlta` IS NULL) OR (`FechaAlta` = @Original_FechaAlta)) AND ((@IsNull_Eliminado = 1 AND `Eliminado` IS NULL) OR (`Eliminado` = @Original_Eliminado)) AND ((@IsNull_FechaEliminacion = 1 AND `FechaEliminacion` IS NULL) OR (`FechaEliminacion` = @Original_FechaEliminacion)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `equipos` SET `NumEquipo` = @NumEquipo, `Marca` = @Marca, `NumSerie` = @NumSerie, `Sala` = @Sala WHERE ((`NumEquipo` = @Original_NumEquipo) AND ((@IsNull_Marca = 1 AND `Marca` IS NULL) OR (`Marca` = @Original_Marca)) AND ((@IsNull_NumSerie = 1 AND `NumSerie` IS NULL) OR (`NumSerie` = @Original_NumSerie)) AND ((@IsNull_Sala = 1 AND `Sala` IS NULL) OR (`Sala` = @Original_Sala)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@idEquipo";
+            param.ParameterName = "@NumEquipo";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "idEquipo";
+            param.SourceColumn = "NumEquipo";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Marca";
@@ -2477,31 +2943,11 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceColumn = "Sala";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@FechaAlta";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaAlta";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Eliminado";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
-            param.IsNullable = true;
-            param.SourceColumn = "Eliminado";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@FechaEliminacion";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaEliminacion";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_idEquipo";
+            param.ParameterName = "@Original_NumEquipo";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "idEquipo";
+            param.SourceColumn = "NumEquipo";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -2553,56 +2999,6 @@ namespace SCM.bdDataSetTableAdapters {
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "Sala";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_FechaAlta";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaAlta";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_FechaAlta";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaAlta";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_Eliminado";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "Eliminado";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_Eliminado";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
-            param.IsNullable = true;
-            param.SourceColumn = "Eliminado";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_FechaEliminacion";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaEliminacion";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_FechaEliminacion";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "FechaEliminacion";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -2611,7 +3007,7 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::SCM.Properties.Settings.Default.bdConnectionString1;
+            this._connection.ConnectionString = global::SCM.Properties.Settings.Default.bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2620,8 +3016,7 @@ namespace SCM.bdDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `idEquipo`, `Marca`, `NumSerie`, `Sala`, `FechaAlta`, `Eliminado`, `FechaE" +
-                "liminacion` FROM `equipos`";
+            this._commandCollection[0].CommandText = "SELECT `NumEquipo`, `Marca`, `NumSerie`, `Sala` FROM `equipos`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2682,8 +3077,8 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idEquipo, string Original_Marca, string Original_NumSerie, string Original_Sala, global::System.Nullable<global::System.DateTime> Original_FechaAlta, string Original_Eliminado, global::System.Nullable<global::System.DateTime> Original_FechaEliminacion) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idEquipo));
+        public virtual int Delete(int Original_NumEquipo, string Original_Marca, string Original_NumSerie, string Original_Sala) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_NumEquipo));
             if ((Original_Marca == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -2708,30 +3103,6 @@ namespace SCM.bdDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Sala));
             }
-            if ((Original_FechaAlta.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_FechaAlta.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Eliminado == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Eliminado));
-            }
-            if ((Original_FechaEliminacion.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_FechaEliminacion.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2752,8 +3123,8 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int idEquipo, string Marca, string NumSerie, string Sala, global::System.Nullable<global::System.DateTime> FechaAlta, string Eliminado, global::System.Nullable<global::System.DateTime> FechaEliminacion) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idEquipo));
+        public virtual int Insert(int NumEquipo, string Marca, string NumSerie, string Sala) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(NumEquipo));
             if ((Marca == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -2771,24 +3142,6 @@ namespace SCM.bdDataSetTableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Sala));
-            }
-            if ((FechaAlta.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(FechaAlta.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Eliminado == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Eliminado));
-            }
-            if ((FechaEliminacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(FechaEliminacion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2810,8 +3163,8 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int idEquipo, string Marca, string NumSerie, string Sala, global::System.Nullable<global::System.DateTime> FechaAlta, string Eliminado, global::System.Nullable<global::System.DateTime> FechaEliminacion, int Original_idEquipo, string Original_Marca, string Original_NumSerie, string Original_Sala, global::System.Nullable<global::System.DateTime> Original_FechaAlta, string Original_Eliminado, global::System.Nullable<global::System.DateTime> Original_FechaEliminacion) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idEquipo));
+        public virtual int Update(int NumEquipo, string Marca, string NumSerie, string Sala, int Original_NumEquipo, string Original_Marca, string Original_NumSerie, string Original_Sala) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(NumEquipo));
             if ((Marca == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -2830,72 +3183,30 @@ namespace SCM.bdDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Sala));
             }
-            if ((FechaAlta.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(FechaAlta.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Eliminado == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Eliminado));
-            }
-            if ((FechaEliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(FechaEliminacion.Value));
-            }
-            else {
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_NumEquipo));
+            if ((Original_Marca == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_idEquipo));
-            if ((Original_Marca == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Marca));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Marca));
             }
             if ((Original_NumSerie == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_NumSerie));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_NumSerie));
             }
             if ((Original_Sala == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Sala));
-            }
-            if ((Original_FechaAlta.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_FechaAlta.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Eliminado == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Eliminado));
-            }
-            if ((Original_FechaEliminacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_FechaEliminacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Sala));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2917,8 +3228,8 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Marca, string NumSerie, string Sala, global::System.Nullable<global::System.DateTime> FechaAlta, string Eliminado, global::System.Nullable<global::System.DateTime> FechaEliminacion, int Original_idEquipo, string Original_Marca, string Original_NumSerie, string Original_Sala, global::System.Nullable<global::System.DateTime> Original_FechaAlta, string Original_Eliminado, global::System.Nullable<global::System.DateTime> Original_FechaEliminacion) {
-            return this.Update(Original_idEquipo, Marca, NumSerie, Sala, FechaAlta, Eliminado, FechaEliminacion, Original_idEquipo, Original_Marca, Original_NumSerie, Original_Sala, Original_FechaAlta, Original_Eliminado, Original_FechaEliminacion);
+        public virtual int Update(string Marca, string NumSerie, string Sala, int Original_NumEquipo, string Original_Marca, string Original_NumSerie, string Original_Sala) {
+            return this.Update(Original_NumEquipo, Marca, NumSerie, Sala, Original_NumEquipo, Original_Marca, Original_NumSerie, Original_Sala);
         }
     }
     
@@ -3044,17 +3355,17 @@ namespace SCM.bdDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "fallas";
             tableMapping.ColumnMappings.Add("idFalla", "idFalla");
-            tableMapping.ColumnMappings.Add("Equipos_idEquipo", "Equipos_idEquipo");
+            tableMapping.ColumnMappings.Add("NumComputadora", "NumComputadora");
             tableMapping.ColumnMappings.Add("DescripcionFalla", "DescripcionFalla");
             tableMapping.ColumnMappings.Add("FechaAlta", "FechaAlta");
             tableMapping.ColumnMappings.Add("FechaBaja", "FechaBaja");
-            tableMapping.ColumnMappings.Add("Categoria", "Categoria");
             tableMapping.ColumnMappings.Add("Solucionada", "Solucionada");
+            tableMapping.ColumnMappings.Add("Categoria", "Categoria");
             tableMapping.ColumnMappings.Add("Eliminada", "Eliminada");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `fallas` WHERE ((`idFalla` = @Original_idFalla) AND (`Equipos_idEquipo` = @Original_Equipos_idEquipo) AND ((@IsNull_DescripcionFalla = 1 AND `DescripcionFalla` IS NULL) OR (`DescripcionFalla` = @Original_DescripcionFalla)) AND ((@IsNull_FechaAlta = 1 AND `FechaAlta` IS NULL) OR (`FechaAlta` = @Original_FechaAlta)) AND ((@IsNull_FechaBaja = 1 AND `FechaBaja` IS NULL) OR (`FechaBaja` = @Original_FechaBaja)) AND ((@IsNull_Categoria = 1 AND `Categoria` IS NULL) OR (`Categoria` = @Original_Categoria)) AND ((@IsNull_Solucionada = 1 AND `Solucionada` IS NULL) OR (`Solucionada` = @Original_Solucionada)) AND ((@IsNull_Eliminada = 1 AND `Eliminada` IS NULL) OR (`Eliminada` = @Original_Eliminada)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `fallas` WHERE ((`idFalla` = @Original_idFalla) AND ((@IsNull_NumComputadora = 1 AND `NumComputadora` IS NULL) OR (`NumComputadora` = @Original_NumComputadora)) AND ((@IsNull_DescripcionFalla = 1 AND `DescripcionFalla` IS NULL) OR (`DescripcionFalla` = @Original_DescripcionFalla)) AND ((@IsNull_FechaAlta = 1 AND `FechaAlta` IS NULL) OR (`FechaAlta` = @Original_FechaAlta)) AND ((@IsNull_FechaBaja = 1 AND `FechaBaja` IS NULL) OR (`FechaBaja` = @Original_FechaBaja)) AND ((@IsNull_Solucionada = 1 AND `Solucionada` IS NULL) OR (`Solucionada` = @Original_Solucionada)) AND ((@IsNull_Categoria = 1 AND `Categoria` IS NULL) OR (`Categoria` = @Original_Categoria)) AND ((@IsNull_Eliminada = 1 AND `Eliminada` IS NULL) OR (`Eliminada` = @Original_Eliminada)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_idFalla";
@@ -3065,11 +3376,20 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_Equipos_idEquipo";
+            param.ParameterName = "@IsNull_NumComputadora";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "Equipos_idEquipo";
+            param.SourceColumn = "NumComputadora";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_NumComputadora";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "NumComputadora";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -3124,6 +3444,23 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@IsNull_Solucionada";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "Solucionada";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_Solucionada";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "Solucionada";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@IsNull_Categoria";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -3141,22 +3478,6 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_Solucionada";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "Solucionada";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_Solucionada";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
-            param.IsNullable = true;
-            param.SourceColumn = "Solucionada";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@IsNull_Eliminada";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -3167,14 +3488,18 @@ namespace SCM.bdDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Eliminada";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "Eliminada";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `fallas` (`idFalla`, `Equipos_idEquipo`, `DescripcionFalla`, `FechaAlta`, `FechaBaja`, `Categoria`, `Solucionada`, `Eliminada`) VALUES (@idFalla, @Equipos_idEquipo, @DescripcionFalla, @FechaAlta, @FechaBaja, @Categoria, @Solucionada, @Eliminada)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `fallas` (`idFalla`, `NumComputadora`, `DescripcionFalla`, `FechaAlta" +
+                "`, `FechaBaja`, `Solucionada`, `Categoria`, `Eliminada`) VALUES (@idFalla, @NumC" +
+                "omputadora, @DescripcionFalla, @FechaAlta, @FechaBaja, @Solucionada, @Categoria," +
+                " @Eliminada)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@idFalla";
@@ -3184,11 +3509,11 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceColumn = "idFalla";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Equipos_idEquipo";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.ParameterName = "@NumComputadora";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Equipos_idEquipo";
+            param.SourceColumn = "NumComputadora";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@DescripcionFalla";
@@ -3212,6 +3537,13 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceColumn = "FechaBaja";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Solucionada";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "Solucionada";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Categoria";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
@@ -3219,20 +3551,15 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceColumn = "Categoria";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Solucionada";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
-            param.IsNullable = true;
-            param.SourceColumn = "Solucionada";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Eliminada";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "Eliminada";
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `fallas` SET `idFalla` = @idFalla, `Equipos_idEquipo` = @Equipos_idEquipo, `DescripcionFalla` = @DescripcionFalla, `FechaAlta` = @FechaAlta, `FechaBaja` = @FechaBaja, `Categoria` = @Categoria, `Solucionada` = @Solucionada, `Eliminada` = @Eliminada WHERE ((`idFalla` = @Original_idFalla) AND (`Equipos_idEquipo` = @Original_Equipos_idEquipo) AND ((@IsNull_DescripcionFalla = 1 AND `DescripcionFalla` IS NULL) OR (`DescripcionFalla` = @Original_DescripcionFalla)) AND ((@IsNull_FechaAlta = 1 AND `FechaAlta` IS NULL) OR (`FechaAlta` = @Original_FechaAlta)) AND ((@IsNull_FechaBaja = 1 AND `FechaBaja` IS NULL) OR (`FechaBaja` = @Original_FechaBaja)) AND ((@IsNull_Categoria = 1 AND `Categoria` IS NULL) OR (`Categoria` = @Original_Categoria)) AND ((@IsNull_Solucionada = 1 AND `Solucionada` IS NULL) OR (`Solucionada` = @Original_Solucionada)) AND ((@IsNull_Eliminada = 1 AND `Eliminada` IS NULL) OR (`Eliminada` = @Original_Eliminada)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `fallas` SET `idFalla` = @idFalla, `NumComputadora` = @NumComputadora, `DescripcionFalla` = @DescripcionFalla, `FechaAlta` = @FechaAlta, `FechaBaja` = @FechaBaja, `Solucionada` = @Solucionada, `Categoria` = @Categoria, `Eliminada` = @Eliminada WHERE ((`idFalla` = @Original_idFalla) AND ((@IsNull_NumComputadora = 1 AND `NumComputadora` IS NULL) OR (`NumComputadora` = @Original_NumComputadora)) AND ((@IsNull_DescripcionFalla = 1 AND `DescripcionFalla` IS NULL) OR (`DescripcionFalla` = @Original_DescripcionFalla)) AND ((@IsNull_FechaAlta = 1 AND `FechaAlta` IS NULL) OR (`FechaAlta` = @Original_FechaAlta)) AND ((@IsNull_FechaBaja = 1 AND `FechaBaja` IS NULL) OR (`FechaBaja` = @Original_FechaBaja)) AND ((@IsNull_Solucionada = 1 AND `Solucionada` IS NULL) OR (`Solucionada` = @Original_Solucionada)) AND ((@IsNull_Categoria = 1 AND `Categoria` IS NULL) OR (`Categoria` = @Original_Categoria)) AND ((@IsNull_Eliminada = 1 AND `Eliminada` IS NULL) OR (`Eliminada` = @Original_Eliminada)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@idFalla";
@@ -3242,11 +3569,11 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceColumn = "idFalla";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Equipos_idEquipo";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.ParameterName = "@NumComputadora";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "Equipos_idEquipo";
+            param.SourceColumn = "NumComputadora";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@DescripcionFalla";
@@ -3270,6 +3597,13 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceColumn = "FechaBaja";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Solucionada";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "Solucionada";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Categoria";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
@@ -3277,14 +3611,9 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceColumn = "Categoria";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Solucionada";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
-            param.IsNullable = true;
-            param.SourceColumn = "Solucionada";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Eliminada";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "Eliminada";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -3297,11 +3626,20 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_Equipos_idEquipo";
+            param.ParameterName = "@IsNull_NumComputadora";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "Equipos_idEquipo";
+            param.SourceColumn = "NumComputadora";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_NumComputadora";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "NumComputadora";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -3356,6 +3694,23 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@IsNull_Solucionada";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "Solucionada";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_Solucionada";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "Solucionada";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@IsNull_Categoria";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -3373,22 +3728,6 @@ namespace SCM.bdDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@IsNull_Solucionada";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "Solucionada";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_Solucionada";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
-            param.IsNullable = true;
-            param.SourceColumn = "Solucionada";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@IsNull_Eliminada";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
@@ -3399,7 +3738,8 @@ namespace SCM.bdDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Eliminada";
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Binary;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "Eliminada";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -3410,7 +3750,7 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::SCM.Properties.Settings.Default.bdConnectionString1;
+            this._connection.ConnectionString = global::SCM.Properties.Settings.Default.bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3419,8 +3759,8 @@ namespace SCM.bdDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `idFalla`, `Equipos_idEquipo`, `DescripcionFalla`, `FechaAlta`, `FechaBaja" +
-                "`, `Categoria`, `Solucionada`, `Eliminada` FROM `fallas`";
+            this._commandCollection[0].CommandText = "SELECT `idFalla`, `NumComputadora`, `DescripcionFalla`, `FechaAlta`, `FechaBaja`," +
+                " `Solucionada`, `Categoria`, `Eliminada` FROM `fallas`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3481,56 +3821,63 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idFalla, int Original_Equipos_idEquipo, string Original_DescripcionFalla, global::System.Nullable<global::System.DateTime> Original_FechaAlta, global::System.Nullable<global::System.DateTime> Original_FechaBaja, string Original_Categoria, string Original_Solucionada, string Original_Eliminada) {
+        public virtual int Delete(int Original_idFalla, string Original_NumComputadora, string Original_DescripcionFalla, global::System.Nullable<global::System.DateTime> Original_FechaAlta, global::System.Nullable<global::System.DateTime> Original_FechaBaja, string Original_Solucionada, string Original_Categoria, string Original_Eliminada) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idFalla));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Equipos_idEquipo));
-            if ((Original_DescripcionFalla == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((Original_NumComputadora == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_DescripcionFalla));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_NumComputadora));
+            }
+            if ((Original_DescripcionFalla == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_DescripcionFalla));
             }
             if ((Original_FechaAlta.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_FechaAlta.Value));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_FechaAlta.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((Original_FechaBaja.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_FechaBaja.Value));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_FechaBaja.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Categoria == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_Categoria));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             if ((Original_Solucionada == null)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_Solucionada));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Solucionada));
+            }
+            if ((Original_Categoria == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Categoria));
             }
             if ((Original_Eliminada == null)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_Eliminada));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Eliminada));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3552,9 +3899,14 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int idFalla, int Equipos_idEquipo, string DescripcionFalla, global::System.Nullable<global::System.DateTime> FechaAlta, global::System.Nullable<global::System.DateTime> FechaBaja, string Categoria, string Solucionada, string Eliminada) {
+        public virtual int Insert(int idFalla, string NumComputadora, string DescripcionFalla, global::System.Nullable<global::System.DateTime> FechaAlta, global::System.Nullable<global::System.DateTime> FechaBaja, string Solucionada, string Categoria, string Eliminada) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idFalla));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Equipos_idEquipo));
+            if ((NumComputadora == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(NumComputadora));
+            }
             if ((DescripcionFalla == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
@@ -3573,17 +3925,17 @@ namespace SCM.bdDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Categoria == null)) {
+            if ((Solucionada == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Categoria));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Solucionada));
             }
-            if ((Solucionada == null)) {
+            if ((Categoria == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Solucionada));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Categoria));
             }
             if ((Eliminada == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
@@ -3613,23 +3965,28 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     int idFalla, 
-                    int Equipos_idEquipo, 
+                    string NumComputadora, 
                     string DescripcionFalla, 
                     global::System.Nullable<global::System.DateTime> FechaAlta, 
                     global::System.Nullable<global::System.DateTime> FechaBaja, 
-                    string Categoria, 
                     string Solucionada, 
+                    string Categoria, 
                     string Eliminada, 
                     int Original_idFalla, 
-                    int Original_Equipos_idEquipo, 
+                    string Original_NumComputadora, 
                     string Original_DescripcionFalla, 
                     global::System.Nullable<global::System.DateTime> Original_FechaAlta, 
                     global::System.Nullable<global::System.DateTime> Original_FechaBaja, 
-                    string Original_Categoria, 
                     string Original_Solucionada, 
+                    string Original_Categoria, 
                     string Original_Eliminada) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idFalla));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Equipos_idEquipo));
+            if ((NumComputadora == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(NumComputadora));
+            }
             if ((DescripcionFalla == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
@@ -3648,17 +4005,17 @@ namespace SCM.bdDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Categoria == null)) {
+            if ((Solucionada == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Categoria));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Solucionada));
             }
-            if ((Solucionada == null)) {
+            if ((Categoria == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Solucionada));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Categoria));
             }
             if ((Eliminada == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
@@ -3667,54 +4024,61 @@ namespace SCM.bdDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Eliminada));
             }
             this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_idFalla));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Equipos_idEquipo));
-            if ((Original_DescripcionFalla == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((Original_NumComputadora == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_DescripcionFalla));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_NumComputadora));
+            }
+            if ((Original_DescripcionFalla == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_DescripcionFalla));
             }
             if ((Original_FechaAlta.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_FechaAlta.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_FechaAlta.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             if ((Original_FechaBaja.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_FechaBaja.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_FechaBaja.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Categoria == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Categoria));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_Solucionada == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Solucionada));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Solucionada));
+            }
+            if ((Original_Categoria == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Categoria));
             }
             if ((Original_Eliminada == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Eliminada));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Eliminada));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3736,8 +4100,8 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Equipos_idEquipo, string DescripcionFalla, global::System.Nullable<global::System.DateTime> FechaAlta, global::System.Nullable<global::System.DateTime> FechaBaja, string Categoria, string Solucionada, string Eliminada, int Original_idFalla, int Original_Equipos_idEquipo, string Original_DescripcionFalla, global::System.Nullable<global::System.DateTime> Original_FechaAlta, global::System.Nullable<global::System.DateTime> Original_FechaBaja, string Original_Categoria, string Original_Solucionada, string Original_Eliminada) {
-            return this.Update(Original_idFalla, Equipos_idEquipo, DescripcionFalla, FechaAlta, FechaBaja, Categoria, Solucionada, Eliminada, Original_idFalla, Original_Equipos_idEquipo, Original_DescripcionFalla, Original_FechaAlta, Original_FechaBaja, Original_Categoria, Original_Solucionada, Original_Eliminada);
+        public virtual int Update(string NumComputadora, string DescripcionFalla, global::System.Nullable<global::System.DateTime> FechaAlta, global::System.Nullable<global::System.DateTime> FechaBaja, string Solucionada, string Categoria, string Eliminada, int Original_idFalla, string Original_NumComputadora, string Original_DescripcionFalla, global::System.Nullable<global::System.DateTime> Original_FechaAlta, global::System.Nullable<global::System.DateTime> Original_FechaBaja, string Original_Solucionada, string Original_Categoria, string Original_Eliminada) {
+            return this.Update(Original_idFalla, NumComputadora, DescripcionFalla, FechaAlta, FechaBaja, Solucionada, Categoria, Eliminada, Original_idFalla, Original_NumComputadora, Original_DescripcionFalla, Original_FechaAlta, Original_FechaBaja, Original_Solucionada, Original_Categoria, Original_Eliminada);
         }
     }
     
@@ -3863,12 +4227,12 @@ namespace SCM.bdDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "SeleccionarTodos";
             tableMapping.ColumnMappings.Add("idFalla", "idFalla");
-            tableMapping.ColumnMappings.Add("Equipos_idEquipo", "Equipos_idEquipo");
+            tableMapping.ColumnMappings.Add("NumComputadora", "NumComputadora");
             tableMapping.ColumnMappings.Add("DescripcionFalla", "DescripcionFalla");
             tableMapping.ColumnMappings.Add("FechaAlta", "FechaAlta");
             tableMapping.ColumnMappings.Add("FechaBaja", "FechaBaja");
-            tableMapping.ColumnMappings.Add("Categoria", "Categoria");
             tableMapping.ColumnMappings.Add("Solucionada", "Solucionada");
+            tableMapping.ColumnMappings.Add("Categoria", "Categoria");
             tableMapping.ColumnMappings.Add("Eliminada", "Eliminada");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -3877,7 +4241,7 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::SCM.Properties.Settings.Default.bdConnectionString1;
+            this._connection.ConnectionString = global::SCM.Properties.Settings.Default.bdConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3924,13 +4288,92 @@ namespace SCM.bdDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class QueriesTableAdapter : global::System.ComponentModel.Component {
+    public partial class BuscaFallaEntreFechasTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.IDbCommand[] _commandCollection;
+        private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
+        
+        private global::MySql.Data.MySqlClient.MySqlConnection _connection;
+        
+        private global::MySql.Data.MySqlClient.MySqlTransaction _transaction;
+        
+        private global::MySql.Data.MySqlClient.MySqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.IDbCommand[] CommandCollection {
+        public BuscaFallaEntreFechasTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::MySql.Data.MySqlClient.MySqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::MySql.Data.MySqlClient.MySqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::MySql.Data.MySqlClient.MySqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::MySql.Data.MySqlClient.MySqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -3941,60 +4384,110 @@ namespace SCM.bdDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "BuscaFallaEntreFechas";
+            tableMapping.ColumnMappings.Add("idFalla", "idFalla");
+            tableMapping.ColumnMappings.Add("NumComputadora", "NumComputadora");
+            tableMapping.ColumnMappings.Add("DescripcionFalla", "DescripcionFalla");
+            tableMapping.ColumnMappings.Add("FechaAlta", "FechaAlta");
+            tableMapping.ColumnMappings.Add("FechaBaja", "FechaBaja");
+            tableMapping.ColumnMappings.Add("Solucionada", "Solucionada");
+            tableMapping.ColumnMappings.Add("Categoria", "Categoria");
+            tableMapping.ColumnMappings.Add("Eliminada", "Eliminada");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
+            this._connection.ConnectionString = global::SCM.Properties.Settings.Default.bdConnectionString2;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            ((global::MySql.Data.MySqlClient.MySqlCommand)(this._commandCollection[0])).Connection = new global::MySql.Data.MySqlClient.MySqlConnection(global::SCM.Properties.Settings.Default.bdConnectionString1);
-            ((global::MySql.Data.MySqlClient.MySqlCommand)(this._commandCollection[0])).CommandText = "`bd`.`Insertar`";
-            ((global::MySql.Data.MySqlClient.MySqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "`bd`.`BuscaFallaEntreFechas`";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "id";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 10;
+            param.ParameterName = "fech1";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.Size = 2147483647;
             param.IsNullable = true;
-            ((global::MySql.Data.MySqlClient.MySqlCommand)(this._commandCollection[0])).Parameters.Add(param);
+            this._commandCollection[0].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "marcaa";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 10;
+            param.ParameterName = "fech2";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.Size = 2147483647;
             param.IsNullable = true;
-            ((global::MySql.Data.MySqlClient.MySqlCommand)(this._commandCollection[0])).Parameters.Add(param);
+            this._commandCollection[0].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Insertar(string id, string marcaa) {
-            global::MySql.Data.MySqlClient.MySqlCommand command = ((global::MySql.Data.MySqlClient.MySqlCommand)(this.CommandCollection[0]));
-            if ((id == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(bdDataSet.BuscaFallaEntreFechasDataTable dataTable, global::System.Nullable<global::System.DateTime> fech1, global::System.Nullable<global::System.DateTime> fech2) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((fech1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fech1.Value));
             }
             else {
-                command.Parameters[0].Value = ((string)(id));
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((marcaa == null)) {
-                command.Parameters[1].Value = global::System.DBNull.Value;
+            if ((fech2.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fech2.Value));
             }
             else {
-                command.Parameters[1].Value = ((string)(marcaa));
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
             }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
+            int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual bdDataSet.BuscaFallaEntreFechasDataTable GetData(global::System.Nullable<global::System.DateTime> fech1, global::System.Nullable<global::System.DateTime> fech2) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((fech1.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fech1.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((fech2.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fech2.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            bdDataSet.BuscaFallaEntreFechasDataTable dataTable = new bdDataSet.BuscaFallaEntreFechasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
