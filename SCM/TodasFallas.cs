@@ -94,10 +94,51 @@ namespace SCM
         {
             DataTable dt = new DataTable();
 
-            if (checkBox1.Checked == true)
+            //si los 2 estan check, pone todos los datos
+            if (checkBox1.Checked == true && checkBox2.Checked == true)
+            {
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
+                dataGridView1.DataSource = dt;
+                return;
+            }
+
+            if (checkBox1.Checked == false && checkBox2.Checked == true)
+            {
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Eliminada = 'Si' AND Solucionada = 'No'");
+                dataGridView1.DataSource = dt;
+                return;
+            }
+
+            if (checkBox1.Checked == true)
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Eliminada = 'No'");
             else
-                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada ='No'");
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada ='No' AND Eliminada = 'No'");
+
+            dataGridView1.DataSource = dt;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            //si los 2 estan check, pone todos los datos
+            if (checkBox1.Checked == true && checkBox2.Checked == true)
+            {
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
+                dataGridView1.DataSource = dt;
+                return;
+            }
+
+            if (checkBox2.Checked == false && checkBox1.Checked == true)
+            {
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Eliminada = 'No'");
+                dataGridView1.DataSource = dt;
+                return;
+            }
+
+            if (checkBox2.Checked == true)
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Eliminada = 'Si' OR Solucionada = 'No'");
+            else
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 'No' AND Eliminada = 'No'");
 
             dataGridView1.DataSource = dt;
         }

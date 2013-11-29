@@ -73,7 +73,7 @@ namespace SCM
             {
                 try
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 'NO'", conexion);
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 'No' AND Eliminada = 'No'", conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
@@ -131,7 +131,7 @@ namespace SCM
         {
             using (MySqlConnection cn = DataConections.conectaConBD())
             {
-                string query = @"DELETE FROM FALLAS WHERE NumFalla = @Numfalla";
+                string query = @"UPDATE FALLAS SET Eliminada = 'Si' WHERE idFalla = @Numfalla";
                MySqlCommand cm = new MySqlCommand(query,cn);
                 cm.Parameters.AddWithValue("@Numfalla",numFalla);
                 try
