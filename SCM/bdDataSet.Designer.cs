@@ -32,7 +32,7 @@ namespace SCM {
         
         private BuscaFallaEntreFechasDataTable tableBuscaFallaEntreFechas;
         
-        private BuscaPorNumComputadoraDataTable tableBuscaPorNumComputadora;
+        private BuscaFallaPorNumCompDataTable tableBuscaFallaPorNumComp;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -74,8 +74,8 @@ namespace SCM {
                 if ((ds.Tables["BuscaFallaEntreFechas"] != null)) {
                     base.Tables.Add(new BuscaFallaEntreFechasDataTable(ds.Tables["BuscaFallaEntreFechas"]));
                 }
-                if ((ds.Tables["BuscaPorNumComputadora"] != null)) {
-                    base.Tables.Add(new BuscaPorNumComputadoraDataTable(ds.Tables["BuscaPorNumComputadora"]));
+                if ((ds.Tables["BuscaFallaPorNumComp"] != null)) {
+                    base.Tables.Add(new BuscaFallaPorNumCompDataTable(ds.Tables["BuscaFallaPorNumComp"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -139,9 +139,9 @@ namespace SCM {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BuscaPorNumComputadoraDataTable BuscaPorNumComputadora {
+        public BuscaFallaPorNumCompDataTable BuscaFallaPorNumComp {
             get {
-                return this.tableBuscaPorNumComputadora;
+                return this.tableBuscaFallaPorNumComp;
             }
         }
         
@@ -224,8 +224,8 @@ namespace SCM {
                 if ((ds.Tables["BuscaFallaEntreFechas"] != null)) {
                     base.Tables.Add(new BuscaFallaEntreFechasDataTable(ds.Tables["BuscaFallaEntreFechas"]));
                 }
-                if ((ds.Tables["BuscaPorNumComputadora"] != null)) {
-                    base.Tables.Add(new BuscaPorNumComputadoraDataTable(ds.Tables["BuscaPorNumComputadora"]));
+                if ((ds.Tables["BuscaFallaPorNumComp"] != null)) {
+                    base.Tables.Add(new BuscaFallaPorNumCompDataTable(ds.Tables["BuscaFallaPorNumComp"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -284,10 +284,10 @@ namespace SCM {
                     this.tableBuscaFallaEntreFechas.InitVars();
                 }
             }
-            this.tableBuscaPorNumComputadora = ((BuscaPorNumComputadoraDataTable)(base.Tables["BuscaPorNumComputadora"]));
+            this.tableBuscaFallaPorNumComp = ((BuscaFallaPorNumCompDataTable)(base.Tables["BuscaFallaPorNumComp"]));
             if ((initTable == true)) {
-                if ((this.tableBuscaPorNumComputadora != null)) {
-                    this.tableBuscaPorNumComputadora.InitVars();
+                if ((this.tableBuscaFallaPorNumComp != null)) {
+                    this.tableBuscaFallaPorNumComp.InitVars();
                 }
             }
         }
@@ -308,8 +308,8 @@ namespace SCM {
             base.Tables.Add(this.tableSeleccionarTodos);
             this.tableBuscaFallaEntreFechas = new BuscaFallaEntreFechasDataTable();
             base.Tables.Add(this.tableBuscaFallaEntreFechas);
-            this.tableBuscaPorNumComputadora = new BuscaPorNumComputadoraDataTable();
-            base.Tables.Add(this.tableBuscaPorNumComputadora);
+            this.tableBuscaFallaPorNumComp = new BuscaFallaPorNumCompDataTable();
+            base.Tables.Add(this.tableBuscaFallaPorNumComp);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -338,7 +338,7 @@ namespace SCM {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeBuscaPorNumComputadora() {
+        private bool ShouldSerializeBuscaFallaPorNumComp() {
             return false;
         }
         
@@ -410,7 +410,7 @@ namespace SCM {
         public delegate void BuscaFallaEntreFechasRowChangeEventHandler(object sender, BuscaFallaEntreFechasRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void BuscaPorNumComputadoraRowChangeEventHandler(object sender, BuscaPorNumComputadoraRowChangeEvent e);
+        public delegate void BuscaFallaPorNumCompRowChangeEventHandler(object sender, BuscaFallaPorNumCompRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1803,7 +1803,7 @@ namespace SCM {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class BuscaPorNumComputadoraDataTable : global::System.Data.TypedTableBase<BuscaPorNumComputadoraRow> {
+        public partial class BuscaFallaPorNumCompDataTable : global::System.Data.TypedTableBase<BuscaFallaPorNumCompRow> {
             
             private global::System.Data.DataColumn columnidFalla;
             
@@ -1823,8 +1823,8 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuscaPorNumComputadoraDataTable() {
-                this.TableName = "BuscaPorNumComputadora";
+            public BuscaFallaPorNumCompDataTable() {
+                this.TableName = "BuscaFallaPorNumComp";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1832,7 +1832,7 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BuscaPorNumComputadoraDataTable(global::System.Data.DataTable table) {
+            internal BuscaFallaPorNumCompDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1849,7 +1849,7 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected BuscaPorNumComputadoraDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BuscaFallaPorNumCompDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1929,34 +1929,34 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuscaPorNumComputadoraRow this[int index] {
+            public BuscaFallaPorNumCompRow this[int index] {
                 get {
-                    return ((BuscaPorNumComputadoraRow)(this.Rows[index]));
+                    return ((BuscaFallaPorNumCompRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuscaPorNumComputadoraRowChangeEventHandler BuscaPorNumComputadoraRowChanging;
+            public event BuscaFallaPorNumCompRowChangeEventHandler BuscaFallaPorNumCompRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuscaPorNumComputadoraRowChangeEventHandler BuscaPorNumComputadoraRowChanged;
+            public event BuscaFallaPorNumCompRowChangeEventHandler BuscaFallaPorNumCompRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuscaPorNumComputadoraRowChangeEventHandler BuscaPorNumComputadoraRowDeleting;
+            public event BuscaFallaPorNumCompRowChangeEventHandler BuscaFallaPorNumCompRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuscaPorNumComputadoraRowChangeEventHandler BuscaPorNumComputadoraRowDeleted;
+            public event BuscaFallaPorNumCompRowChangeEventHandler BuscaFallaPorNumCompRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddBuscaPorNumComputadoraRow(BuscaPorNumComputadoraRow row) {
+            public void AddBuscaFallaPorNumCompRow(BuscaFallaPorNumCompRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuscaPorNumComputadoraRow AddBuscaPorNumComputadoraRow(int idFalla, string NumComputadora, string DescripcionFalla, System.DateTime FechaAlta, System.DateTime FechaBaja, string Solucionada, string Categoria, string Eliminada) {
-                BuscaPorNumComputadoraRow rowBuscaPorNumComputadoraRow = ((BuscaPorNumComputadoraRow)(this.NewRow()));
+            public BuscaFallaPorNumCompRow AddBuscaFallaPorNumCompRow(int idFalla, string NumComputadora, string DescripcionFalla, System.DateTime FechaAlta, System.DateTime FechaBaja, string Solucionada, string Categoria, string Eliminada) {
+                BuscaFallaPorNumCompRow rowBuscaFallaPorNumCompRow = ((BuscaFallaPorNumCompRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idFalla,
                         NumComputadora,
@@ -1966,22 +1966,22 @@ namespace SCM {
                         Solucionada,
                         Categoria,
                         Eliminada};
-                rowBuscaPorNumComputadoraRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBuscaPorNumComputadoraRow);
-                return rowBuscaPorNumComputadoraRow;
+                rowBuscaFallaPorNumCompRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBuscaFallaPorNumCompRow);
+                return rowBuscaFallaPorNumCompRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuscaPorNumComputadoraRow FindByidFalla(int idFalla) {
-                return ((BuscaPorNumComputadoraRow)(this.Rows.Find(new object[] {
+            public BuscaFallaPorNumCompRow FindByidFalla(int idFalla) {
+                return ((BuscaFallaPorNumCompRow)(this.Rows.Find(new object[] {
                             idFalla})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                BuscaPorNumComputadoraDataTable cln = ((BuscaPorNumComputadoraDataTable)(base.Clone()));
+                BuscaFallaPorNumCompDataTable cln = ((BuscaFallaPorNumCompDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1989,7 +1989,7 @@ namespace SCM {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new BuscaPorNumComputadoraDataTable();
+                return new BuscaFallaPorNumCompDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2037,28 +2037,28 @@ namespace SCM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuscaPorNumComputadoraRow NewBuscaPorNumComputadoraRow() {
-                return ((BuscaPorNumComputadoraRow)(this.NewRow()));
+            public BuscaFallaPorNumCompRow NewBuscaFallaPorNumCompRow() {
+                return ((BuscaFallaPorNumCompRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new BuscaPorNumComputadoraRow(builder);
+                return new BuscaFallaPorNumCompRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(BuscaPorNumComputadoraRow);
+                return typeof(BuscaFallaPorNumCompRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.BuscaPorNumComputadoraRowChanged != null)) {
-                    this.BuscaPorNumComputadoraRowChanged(this, new BuscaPorNumComputadoraRowChangeEvent(((BuscaPorNumComputadoraRow)(e.Row)), e.Action));
+                if ((this.BuscaFallaPorNumCompRowChanged != null)) {
+                    this.BuscaFallaPorNumCompRowChanged(this, new BuscaFallaPorNumCompRowChangeEvent(((BuscaFallaPorNumCompRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2066,8 +2066,8 @@ namespace SCM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.BuscaPorNumComputadoraRowChanging != null)) {
-                    this.BuscaPorNumComputadoraRowChanging(this, new BuscaPorNumComputadoraRowChangeEvent(((BuscaPorNumComputadoraRow)(e.Row)), e.Action));
+                if ((this.BuscaFallaPorNumCompRowChanging != null)) {
+                    this.BuscaFallaPorNumCompRowChanging(this, new BuscaFallaPorNumCompRowChangeEvent(((BuscaFallaPorNumCompRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2075,8 +2075,8 @@ namespace SCM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.BuscaPorNumComputadoraRowDeleted != null)) {
-                    this.BuscaPorNumComputadoraRowDeleted(this, new BuscaPorNumComputadoraRowChangeEvent(((BuscaPorNumComputadoraRow)(e.Row)), e.Action));
+                if ((this.BuscaFallaPorNumCompRowDeleted != null)) {
+                    this.BuscaFallaPorNumCompRowDeleted(this, new BuscaFallaPorNumCompRowChangeEvent(((BuscaFallaPorNumCompRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2084,14 +2084,14 @@ namespace SCM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.BuscaPorNumComputadoraRowDeleting != null)) {
-                    this.BuscaPorNumComputadoraRowDeleting(this, new BuscaPorNumComputadoraRowChangeEvent(((BuscaPorNumComputadoraRow)(e.Row)), e.Action));
+                if ((this.BuscaFallaPorNumCompRowDeleting != null)) {
+                    this.BuscaFallaPorNumCompRowDeleting(this, new BuscaFallaPorNumCompRowChangeEvent(((BuscaFallaPorNumCompRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveBuscaPorNumComputadoraRow(BuscaPorNumComputadoraRow row) {
+            public void RemoveBuscaFallaPorNumCompRow(BuscaFallaPorNumCompRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2118,7 +2118,7 @@ namespace SCM {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "BuscaPorNumComputadoraDataTable";
+                attribute2.FixedValue = "BuscaFallaPorNumCompDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2947,25 +2947,25 @@ namespace SCM {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class BuscaPorNumComputadoraRow : global::System.Data.DataRow {
+        public partial class BuscaFallaPorNumCompRow : global::System.Data.DataRow {
             
-            private BuscaPorNumComputadoraDataTable tableBuscaPorNumComputadora;
+            private BuscaFallaPorNumCompDataTable tableBuscaFallaPorNumComp;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BuscaPorNumComputadoraRow(global::System.Data.DataRowBuilder rb) : 
+            internal BuscaFallaPorNumCompRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBuscaPorNumComputadora = ((BuscaPorNumComputadoraDataTable)(this.Table));
+                this.tableBuscaFallaPorNumComp = ((BuscaFallaPorNumCompDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int idFalla {
                 get {
-                    return ((int)(this[this.tableBuscaPorNumComputadora.idFallaColumn]));
+                    return ((int)(this[this.tableBuscaFallaPorNumComp.idFallaColumn]));
                 }
                 set {
-                    this[this.tableBuscaPorNumComputadora.idFallaColumn] = value;
+                    this[this.tableBuscaFallaPorNumComp.idFallaColumn] = value;
                 }
             }
             
@@ -2974,15 +2974,15 @@ namespace SCM {
             public string NumComputadora {
                 get {
                     try {
-                        return ((string)(this[this.tableBuscaPorNumComputadora.NumComputadoraColumn]));
+                        return ((string)(this[this.tableBuscaFallaPorNumComp.NumComputadoraColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumComputadora\' de la tabla \'BuscaPorNumComputadora\' es D" +
-                                "BNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NumComputadora\' de la tabla \'BuscaFallaPorNumComp\' es DBN" +
+                                "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuscaPorNumComputadora.NumComputadoraColumn] = value;
+                    this[this.tableBuscaFallaPorNumComp.NumComputadoraColumn] = value;
                 }
             }
             
@@ -2991,15 +2991,15 @@ namespace SCM {
             public string DescripcionFalla {
                 get {
                     try {
-                        return ((string)(this[this.tableBuscaPorNumComputadora.DescripcionFallaColumn]));
+                        return ((string)(this[this.tableBuscaFallaPorNumComp.DescripcionFallaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DescripcionFalla\' de la tabla \'BuscaPorNumComputadora\' es" +
-                                " DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DescripcionFalla\' de la tabla \'BuscaFallaPorNumComp\' es D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuscaPorNumComputadora.DescripcionFallaColumn] = value;
+                    this[this.tableBuscaFallaPorNumComp.DescripcionFallaColumn] = value;
                 }
             }
             
@@ -3008,15 +3008,14 @@ namespace SCM {
             public System.DateTime FechaAlta {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuscaPorNumComputadora.FechaAltaColumn]));
+                        return ((global::System.DateTime)(this[this.tableBuscaFallaPorNumComp.FechaAltaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaAlta\' de la tabla \'BuscaPorNumComputadora\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaAlta\' de la tabla \'BuscaFallaPorNumComp\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuscaPorNumComputadora.FechaAltaColumn] = value;
+                    this[this.tableBuscaFallaPorNumComp.FechaAltaColumn] = value;
                 }
             }
             
@@ -3025,15 +3024,14 @@ namespace SCM {
             public System.DateTime FechaBaja {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuscaPorNumComputadora.FechaBajaColumn]));
+                        return ((global::System.DateTime)(this[this.tableBuscaFallaPorNumComp.FechaBajaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaBaja\' de la tabla \'BuscaPorNumComputadora\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaBaja\' de la tabla \'BuscaFallaPorNumComp\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuscaPorNumComputadora.FechaBajaColumn] = value;
+                    this[this.tableBuscaFallaPorNumComp.FechaBajaColumn] = value;
                 }
             }
             
@@ -3042,15 +3040,15 @@ namespace SCM {
             public string Solucionada {
                 get {
                     try {
-                        return ((string)(this[this.tableBuscaPorNumComputadora.SolucionadaColumn]));
+                        return ((string)(this[this.tableBuscaFallaPorNumComp.SolucionadaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Solucionada\' de la tabla \'BuscaPorNumComputadora\' es DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Solucionada\' de la tabla \'BuscaFallaPorNumComp\' es DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableBuscaPorNumComputadora.SolucionadaColumn] = value;
+                    this[this.tableBuscaFallaPorNumComp.SolucionadaColumn] = value;
                 }
             }
             
@@ -3059,15 +3057,14 @@ namespace SCM {
             public string Categoria {
                 get {
                     try {
-                        return ((string)(this[this.tableBuscaPorNumComputadora.CategoriaColumn]));
+                        return ((string)(this[this.tableBuscaFallaPorNumComp.CategoriaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Categoria\' de la tabla \'BuscaPorNumComputadora\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Categoria\' de la tabla \'BuscaFallaPorNumComp\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuscaPorNumComputadora.CategoriaColumn] = value;
+                    this[this.tableBuscaFallaPorNumComp.CategoriaColumn] = value;
                 }
             }
             
@@ -3076,100 +3073,99 @@ namespace SCM {
             public string Eliminada {
                 get {
                     try {
-                        return ((string)(this[this.tableBuscaPorNumComputadora.EliminadaColumn]));
+                        return ((string)(this[this.tableBuscaFallaPorNumComp.EliminadaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Eliminada\' de la tabla \'BuscaPorNumComputadora\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Eliminada\' de la tabla \'BuscaFallaPorNumComp\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuscaPorNumComputadora.EliminadaColumn] = value;
+                    this[this.tableBuscaFallaPorNumComp.EliminadaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNumComputadoraNull() {
-                return this.IsNull(this.tableBuscaPorNumComputadora.NumComputadoraColumn);
+                return this.IsNull(this.tableBuscaFallaPorNumComp.NumComputadoraColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNumComputadoraNull() {
-                this[this.tableBuscaPorNumComputadora.NumComputadoraColumn] = global::System.Convert.DBNull;
+                this[this.tableBuscaFallaPorNumComp.NumComputadoraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDescripcionFallaNull() {
-                return this.IsNull(this.tableBuscaPorNumComputadora.DescripcionFallaColumn);
+                return this.IsNull(this.tableBuscaFallaPorNumComp.DescripcionFallaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDescripcionFallaNull() {
-                this[this.tableBuscaPorNumComputadora.DescripcionFallaColumn] = global::System.Convert.DBNull;
+                this[this.tableBuscaFallaPorNumComp.DescripcionFallaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFechaAltaNull() {
-                return this.IsNull(this.tableBuscaPorNumComputadora.FechaAltaColumn);
+                return this.IsNull(this.tableBuscaFallaPorNumComp.FechaAltaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFechaAltaNull() {
-                this[this.tableBuscaPorNumComputadora.FechaAltaColumn] = global::System.Convert.DBNull;
+                this[this.tableBuscaFallaPorNumComp.FechaAltaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFechaBajaNull() {
-                return this.IsNull(this.tableBuscaPorNumComputadora.FechaBajaColumn);
+                return this.IsNull(this.tableBuscaFallaPorNumComp.FechaBajaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFechaBajaNull() {
-                this[this.tableBuscaPorNumComputadora.FechaBajaColumn] = global::System.Convert.DBNull;
+                this[this.tableBuscaFallaPorNumComp.FechaBajaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSolucionadaNull() {
-                return this.IsNull(this.tableBuscaPorNumComputadora.SolucionadaColumn);
+                return this.IsNull(this.tableBuscaFallaPorNumComp.SolucionadaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSolucionadaNull() {
-                this[this.tableBuscaPorNumComputadora.SolucionadaColumn] = global::System.Convert.DBNull;
+                this[this.tableBuscaFallaPorNumComp.SolucionadaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCategoriaNull() {
-                return this.IsNull(this.tableBuscaPorNumComputadora.CategoriaColumn);
+                return this.IsNull(this.tableBuscaFallaPorNumComp.CategoriaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCategoriaNull() {
-                this[this.tableBuscaPorNumComputadora.CategoriaColumn] = global::System.Convert.DBNull;
+                this[this.tableBuscaFallaPorNumComp.CategoriaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEliminadaNull() {
-                return this.IsNull(this.tableBuscaPorNumComputadora.EliminadaColumn);
+                return this.IsNull(this.tableBuscaFallaPorNumComp.EliminadaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEliminadaNull() {
-                this[this.tableBuscaPorNumComputadora.EliminadaColumn] = global::System.Convert.DBNull;
+                this[this.tableBuscaFallaPorNumComp.EliminadaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3313,22 +3309,22 @@ namespace SCM {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class BuscaPorNumComputadoraRowChangeEvent : global::System.EventArgs {
+        public class BuscaFallaPorNumCompRowChangeEvent : global::System.EventArgs {
             
-            private BuscaPorNumComputadoraRow eventRow;
+            private BuscaFallaPorNumCompRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuscaPorNumComputadoraRowChangeEvent(BuscaPorNumComputadoraRow row, global::System.Data.DataRowAction action) {
+            public BuscaFallaPorNumCompRowChangeEvent(BuscaFallaPorNumCompRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuscaPorNumComputadoraRow Row {
+            public BuscaFallaPorNumCompRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5159,7 +5155,7 @@ namespace SCM.bdDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class BuscaPorNumComputadoraTableAdapter : global::System.ComponentModel.Component {
+    public partial class BuscaFallaPorNumCompTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -5173,7 +5169,7 @@ namespace SCM.bdDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public BuscaPorNumComputadoraTableAdapter() {
+        public BuscaFallaPorNumCompTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5270,7 +5266,7 @@ namespace SCM.bdDataSetTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "BuscaPorNumComputadora";
+            tableMapping.DataSetTable = "BuscaFallaPorNumComp";
             tableMapping.ColumnMappings.Add("idFalla", "idFalla");
             tableMapping.ColumnMappings.Add("NumComputadora", "NumComputadora");
             tableMapping.ColumnMappings.Add("DescripcionFalla", "DescripcionFalla");
@@ -5295,13 +5291,13 @@ namespace SCM.bdDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "`bd`.`BuscaPorNumComputadora`";
+            this._commandCollection[0].CommandText = "`bd`.`BuscaFallaPorNumComp`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "numcomp";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 15;
+            param.Size = 10;
             param.IsNullable = true;
             this._commandCollection[0].Parameters.Add(param);
         }
@@ -5310,7 +5306,7 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bdDataSet.BuscaPorNumComputadoraDataTable dataTable, string numcomp) {
+        public virtual int Fill(bdDataSet.BuscaFallaPorNumCompDataTable dataTable, string numcomp) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((numcomp == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -5329,7 +5325,7 @@ namespace SCM.bdDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bdDataSet.BuscaPorNumComputadoraDataTable GetData(string numcomp) {
+        public virtual bdDataSet.BuscaFallaPorNumCompDataTable GetData(string numcomp) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((numcomp == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -5337,7 +5333,7 @@ namespace SCM.bdDataSetTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(numcomp));
             }
-            bdDataSet.BuscaPorNumComputadoraDataTable dataTable = new bdDataSet.BuscaPorNumComputadoraDataTable();
+            bdDataSet.BuscaFallaPorNumCompDataTable dataTable = new bdDataSet.BuscaFallaPorNumCompDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

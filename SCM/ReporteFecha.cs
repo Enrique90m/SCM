@@ -29,11 +29,12 @@ namespace SCM
         private void ReporteFecha_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'bdDataSet.BuscaFallaEntreFechas' Puede moverla o quitarla según sea necesario.
-            this.BuscaFallaEntreFechasTableAdapter.Fill(this.bdDataSet.BuscaFallaEntreFechas,fecha1, fecha2);          
-            
+            this.BuscaFallaEntreFechasTableAdapter.Fill(this.bdDataSet.BuscaFallaEntreFechas,fecha1, fecha2);
+            //this.seleccionarTodosTableAdapter1.Fill(this.bdDataSet.SeleccionarTodos);
 
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
+
     }
 }

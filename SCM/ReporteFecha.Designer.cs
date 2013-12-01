@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.BuscaFallaEntreFechasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bdDataSet = new SCM.bdDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.BuscaFallaEntreFechasTableAdapter = new SCM.bdDataSetTableAdapters.BuscaFallaEntreFechasTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
+            this.seleccionarTodosTableAdapter1 = new SCM.bdDataSetTableAdapters.SeleccionarTodosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.BuscaFallaEntreFechasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdDataSet)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // 
             this.BuscaFallaEntreFechasBindingSource.DataMember = "BuscaFallaEntreFechas";
             this.BuscaFallaEntreFechasBindingSource.DataSource = this.bdDataSet;
+            //this.BuscaFallaEntreFechasBindingSource.CurrentChanged += new System.EventHandler(this.BuscaFallaEntreFechasBindingSource_CurrentChanged);
             // 
             // bdDataSet
             // 
@@ -52,9 +54,9 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.BuscaFallaEntreFechasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.BuscaFallaEntreFechasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SCM.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -75,6 +77,10 @@
             this.label1.Size = new System.Drawing.Size(103, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
+            // 
+            // seleccionarTodosTableAdapter1
+            // 
+            this.seleccionarTodosTableAdapter1.ClearBeforeFill = true;
             // 
             // ReporteFecha
             // 
@@ -101,6 +107,7 @@
         private bdDataSet bdDataSet;
         private bdDataSetTableAdapters.BuscaFallaEntreFechasTableAdapter BuscaFallaEntreFechasTableAdapter;
         private System.Windows.Forms.Label label1;
+        private bdDataSetTableAdapters.SeleccionarTodosTableAdapter seleccionarTodosTableAdapter1;
 
     }
 }
