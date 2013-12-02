@@ -85,10 +85,6 @@
     <Compile Include="AgregarFalla.Designer.cs">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </Compile>
-    <Compile Include="bdDataSet.cs">
-      <DependentUpon>bdDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="bdDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,12 +145,6 @@
     <Compile Include="ReportesPorNumComp.Designer.cs">
       <DependentUpon>ReportesPorNumComp.cs</DependentUpon>
     </Compile>
-    <Compile Include="TEMPORAL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TEMPORAL.Designer.cs">
-      <DependentUpon>TEMPORAL.cs</DependentUpon>
-    </Compile>
     <Compile Include="TodasFallas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,7 +157,6 @@
     <EmbeddedResource Include="AgregarFalla.resx">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuscaPorNumComp_REPORTE.rdlc" />
     <EmbeddedResource Include="EquiposFormulario.resx">
       <DependentUpon>EquiposFormulario.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,9 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportesPorNumComp.resx">
       <DependentUpon>ReportesPorNumComp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TEMPORAL.resx">
-      <DependentUpon>TEMPORAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TodasFallas.resx">
       <DependentUpon>TodasFallas.cs</DependentUpon>

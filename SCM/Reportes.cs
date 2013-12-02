@@ -81,23 +81,108 @@ namespace SCM
         {
             if (mensualGroupBox.Enabled)
             {
-                //calcula el mes  anterior
                 DateTime mesAnetior;
-                mesAnetior = dateTimePicker4.Value.AddDays(-30);
-                ReporteFecha rp = new ReporteFecha(mesAnetior, dateTimePicker4.Value, 1);
-                rp.Show();
+
+                 //NO INCLUYE NI ELIMINADAS NI SOLUCIONADAS
+                if (checkBox1.Checked == false &&  checkBox2.Checked == false)
+                {
+                    mesAnetior = dateTimePicker4.Value.AddDays(-30);
+                    ReporteFecha rp2 = new ReporteFecha(mesAnetior, dateTimePicker4.Value, 1);
+                    rp2.bandera = "0";
+                    rp2.Show();
+                }
+                //INCLUYE ELIMINADAS Y SOLUCIONADAS
+                else if (checkBox1.Checked == true && checkBox2.Checked == true)
+                {
+                    mesAnetior = dateTimePicker4.Value.AddDays(-30);
+                    ReporteFecha rp2 = new ReporteFecha(mesAnetior, dateTimePicker4.Value, 1);
+                    rp2.bandera = "3";
+                    rp2.Show();
+                }             
+                //INCLUYE ELIMINADAS Y NO SOLUCIONADAS
+                else if (checkBox1.Checked == true)
+                {
+                    mesAnetior = dateTimePicker4.Value.AddDays(-30);
+                    ReporteFecha rp = new ReporteFecha(mesAnetior, dateTimePicker4.Value, 1);
+                    rp.bandera = "1";
+                    rp.Show();                
+                }
+                //INCLUYE SOLUCIONADAS Y NO ELIMINADAS
+                else if (checkBox2.Checked == true)
+                {                                  
+                    mesAnetior = dateTimePicker4.Value.AddDays(-30);
+                    ReporteFecha rp2 = new ReporteFecha(mesAnetior, dateTimePicker4.Value, 1);
+                    rp2.bandera = "2";
+                    rp2.Show();
+                }               
             }
             else
                 if (fechasGroupBox.Enabled)
-                {
-                    ReporteFecha rp = new ReporteFecha(dateTimePicker1.Value,dateTimePicker2.Value,0);
-                    rp.Show();
+                {  
+
+                    //NO INCLUYE NI ELIMINADAS NI SOLUCIONADAS
+                    if (checkBox1.Checked == false && checkBox2.Checked == false)
+                    {
+                        ReporteFecha rp = new ReporteFecha(dateTimePicker1.Value, dateTimePicker2.Value, 0);
+                        rp.bandera = "0";
+                        rp.Show();
+                    }
+                    //INCLUYE ELIMINADAS Y SOLUCIONADAS
+                    else if (checkBox1.Checked == true && checkBox2.Checked == true)
+                    {
+                        ReporteFecha rp = new ReporteFecha(dateTimePicker1.Value, dateTimePicker2.Value, 0);
+                        rp.bandera = "3";
+                        rp.Show();
+                    }
+                    //INCLUYE ELIMINADAS Y NO SOLUCIONADAS
+                    else if (checkBox1.Checked == true)
+                    {
+                        ReporteFecha rp = new ReporteFecha(dateTimePicker1.Value, dateTimePicker2.Value, 0);
+                        rp.bandera = "1";
+                        rp.Show();
+                    }
+                    //INCLUYE SOLUCIONADAS Y NO ELIMINADAS
+                    else if (checkBox2.Checked == true)
+                    {
+                        ReporteFecha rp = new ReporteFecha(dateTimePicker1.Value, dateTimePicker2.Value, 0);
+                        rp.bandera = "2";
+                        rp.Show();
+                    }   
                 }
                 else
-                {
-                    ReportesPorNumComp rp = new ReportesPorNumComp();
-                    rp.numComp = numComptxtBox.Text;
-                    rp.Show();
+                {                   
+                    //NO INCLUYE NI ELIMINADAS NI SOLUCIONADAS
+                    if (checkBox1.Checked == false && checkBox2.Checked == false)
+                    {
+                        ReportesPorNumComp rp = new ReportesPorNumComp();
+                        rp.numComp = numComptxtBox.Text;
+                        rp.bandera = "0";
+                        rp.Show();
+                    }
+                    //INCLUYE ELIMINADAS Y SOLUCIONADAS
+                    else if (checkBox1.Checked == true && checkBox2.Checked == true)
+                    {
+                        ReportesPorNumComp rp = new ReportesPorNumComp();
+                        rp.numComp = numComptxtBox.Text;
+                        rp.bandera = "3";
+                        rp.Show();
+                    }
+                    //INCLUYE ELIMINADAS Y NO SOLUCIONADAS
+                    else if (checkBox1.Checked == true)
+                    {
+                        ReportesPorNumComp rp = new ReportesPorNumComp();
+                        rp.numComp = numComptxtBox.Text;
+                        rp.bandera = "1";
+                        rp.Show();
+                    }
+                    //INCLUYE SOLUCIONADAS Y NO ELIMINADAS
+                    else if (checkBox2.Checked == true)
+                    {
+                        ReportesPorNumComp rp = new ReportesPorNumComp();
+                        rp.numComp = numComptxtBox.Text;
+                        rp.bandera = "2";
+                        rp.Show();
+                    } 
                 }
         }     
         

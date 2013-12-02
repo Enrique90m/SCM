@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.bdDataSet = new SCM.bdDataSet();
             this.BuscaFallaPorNumCompBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BuscaFallaPorNumCompTableAdapter = new SCM.bdDataSetTableAdapters.BuscaFallaPorNumCompTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bdDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuscaFallaPorNumCompBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -41,9 +39,6 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.BuscaFallaPorNumCompBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SCM.BuscaPorNumComp_REPORTE.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -52,17 +47,12 @@
             // 
             // bdDataSet
             // 
-            this.bdDataSet.DataSetName = "bdDataSet";
             this.bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // BuscaFallaPorNumCompBindingSource
             // 
             this.BuscaFallaPorNumCompBindingSource.DataMember = "BuscaFallaPorNumComp";
             this.BuscaFallaPorNumCompBindingSource.DataSource = this.bdDataSet;
-            // 
-            // BuscaFallaPorNumCompTableAdapter
-            // 
-            this.BuscaFallaPorNumCompTableAdapter.ClearBeforeFill = true;
             // 
             // ReportesPorNumComp
             // 
@@ -81,9 +71,9 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource BuscaFallaPorNumCompBindingSource;
-        private bdDataSet bdDataSet;
         private bdDataSetTableAdapters.BuscaFallaPorNumCompTableAdapter BuscaFallaPorNumCompTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private bdDataSet bdDataSet;
+        private System.Windows.Forms.BindingSource BuscaFallaPorNumCompBindingSource;
     }
 }

@@ -19,5 +19,4 @@ C:\SCM\SCM\obj\x86\Debug\SCM.AcercaDe.resources
 C:\SCM\SCM\obj\x86\Debug\RdlCompile.cache
 C:\SCM\SCM\obj\x86\Debug\RdlCompile.compiled
 C:\SCM\SCM\obj\x86\Debug\SCM.ReporteFecha.resources
-C:\SCM\SCM\obj\x86\Debug\SCM.TEMPORAL.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.ReportesPorNumComp.resources
