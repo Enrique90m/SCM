@@ -42,13 +42,19 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.verTodos = new System.Windows.Forms.Button();
+            this.Regresar = new System.Windows.Forms.Button();
             this.NumEquipo_Radiobtn = new System.Windows.Forms.RadioButton();
             this.Sala_RadioBtn = new System.Windows.Forms.RadioButton();
+            this.buscar = new System.Windows.Forms.Button();
             this.datoABuscar = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
@@ -56,6 +62,11 @@
             this.numEquipoTextBox = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.Eiminar = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.regresarButtom = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.ActualizarTextbox = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.salaTextBox1 = new System.Windows.Forms.TextBox();
             this.numEquipoTextBox1 = new System.Windows.Forms.TextBox();
@@ -72,17 +83,6 @@
             this.inventarioDeEquiposYModificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regresarAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verTodos = new System.Windows.Forms.Button();
-            this.Regresar = new System.Windows.Forms.Button();
-            this.buscar = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.Eiminar = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.regresarButtom = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.ActualizarTextbox = new System.Windows.Forms.Button();
             numEquipoLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
@@ -259,6 +259,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por:";
             // 
+            // verTodos
+            // 
+            this.verTodos.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verTodos.ForeColor = System.Drawing.Color.Black;
+            this.verTodos.Image = global::SCM.Properties.Resources.Line_Chart;
+            this.verTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.verTodos.Location = new System.Drawing.Point(502, 52);
+            this.verTodos.Name = "verTodos";
+            this.verTodos.Size = new System.Drawing.Size(145, 37);
+            this.verTodos.TabIndex = 17;
+            this.verTodos.Text = "Ver todos";
+            this.verTodos.UseVisualStyleBackColor = true;
+            this.verTodos.Click += new System.EventHandler(this.verTodos_Click);
+            // 
+            // Regresar
+            // 
+            this.Regresar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.ForeColor = System.Drawing.Color.Black;
+            this.Regresar.Image = global::SCM.Properties.Resources.back__1_;
+            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Regresar.Location = new System.Drawing.Point(653, 54);
+            this.Regresar.Name = "Regresar";
+            this.Regresar.Size = new System.Drawing.Size(117, 37);
+            this.Regresar.TabIndex = 16;
+            this.Regresar.Text = "Regresar";
+            this.Regresar.UseVisualStyleBackColor = true;
+            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
+            // 
             // NumEquipo_Radiobtn
             // 
             this.NumEquipo_Radiobtn.AutoSize = true;
@@ -285,6 +313,20 @@
             this.Sala_RadioBtn.TabStop = true;
             this.Sala_RadioBtn.Text = "Sala";
             this.Sala_RadioBtn.UseVisualStyleBackColor = true;
+            // 
+            // buscar
+            // 
+            this.buscar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buscar.ForeColor = System.Drawing.Color.Black;
+            this.buscar.Image = ((System.Drawing.Image)(resources.GetObject("buscar.Image")));
+            this.buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buscar.Location = new System.Drawing.Point(371, 52);
+            this.buscar.Name = "buscar";
+            this.buscar.Size = new System.Drawing.Size(125, 37);
+            this.buscar.TabIndex = 15;
+            this.buscar.Text = "Buscar";
+            this.buscar.UseVisualStyleBackColor = true;
+            this.buscar.Click += new System.EventHandler(this.buscar_Click);
             // 
             // datoABuscar
             // 
@@ -340,6 +382,48 @@
             this.groupBox5.TabIndex = 346;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Agregar equipo";
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.Black;
+            this.button10.Image = global::SCM.Properties.Resources.list_remove;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button10.Location = new System.Drawing.Point(512, 300);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(221, 71);
+            this.button10.TabIndex = 12;
+            this.button10.Text = "Borrar datos";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.Image = global::SCM.Properties.Resources.file_add;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.Location = new System.Drawing.Point(49, 300);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(196, 71);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.Black;
+            this.button12.Image = global::SCM.Properties.Resources.back__1_;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button12.Location = new System.Drawing.Point(265, 300);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(218, 71);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "Regresar";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // groupBox3
             // 
@@ -419,6 +503,76 @@
             this.groupBox6.TabIndex = 344;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Modificacion de equipo";
+            // 
+            // Eiminar
+            // 
+            this.Eiminar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eiminar.ForeColor = System.Drawing.Color.Black;
+            this.Eiminar.Image = global::SCM.Properties.Resources.mail_delete;
+            this.Eiminar.Location = new System.Drawing.Point(240, 359);
+            this.Eiminar.Name = "Eiminar";
+            this.Eiminar.Size = new System.Drawing.Size(151, 46);
+            this.Eiminar.TabIndex = 362;
+            this.Eiminar.Text = "Eliminar equipo";
+            this.Eiminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eiminar.UseVisualStyleBackColor = true;
+            this.Eiminar.Click += new System.EventHandler(this.Eiminar_Click);
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Image = global::SCM.Properties.Resources.google_earth;
+            this.button9.Location = new System.Drawing.Point(624, 359);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(151, 46);
+            this.button9.TabIndex = 361;
+            this.button9.Text = "Enviar correo";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // regresarButtom
+            // 
+            this.regresarButtom.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regresarButtom.ForeColor = System.Drawing.Color.Black;
+            this.regresarButtom.Image = global::SCM.Properties.Resources.back__1_;
+            this.regresarButtom.Location = new System.Drawing.Point(781, 359);
+            this.regresarButtom.Name = "regresarButtom";
+            this.regresarButtom.Size = new System.Drawing.Size(154, 46);
+            this.regresarButtom.TabIndex = 359;
+            this.regresarButtom.Text = "Regresar";
+            this.regresarButtom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.regresarButtom.UseVisualStyleBackColor = true;
+            this.regresarButtom.Click += new System.EventHandler(this.regresarButtom_Click);
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.Black;
+            this.button11.Image = global::SCM.Properties.Resources.edit_clear;
+            this.button11.Location = new System.Drawing.Point(397, 359);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(151, 46);
+            this.button11.TabIndex = 360;
+            this.button11.Text = "Limpiar datos";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // ActualizarTextbox
+            // 
+            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualizarTextbox.ForeColor = System.Drawing.Color.Black;
+            this.ActualizarTextbox.Image = global::SCM.Properties.Resources.system_software_update;
+            this.ActualizarTextbox.Location = new System.Drawing.Point(25, 359);
+            this.ActualizarTextbox.Name = "ActualizarTextbox";
+            this.ActualizarTextbox.Size = new System.Drawing.Size(209, 46);
+            this.ActualizarTextbox.TabIndex = 358;
+            this.ActualizarTextbox.Text = "Actualizar informacion";
+            this.ActualizarTextbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ActualizarTextbox.UseVisualStyleBackColor = true;
+            this.ActualizarTextbox.Click += new System.EventHandler(this.ActualizarTextbox_Click_1);
             // 
             // groupBox7
             // 
@@ -564,160 +718,6 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(324, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // verTodos
-            // 
-            this.verTodos.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verTodos.ForeColor = System.Drawing.Color.Black;
-            this.verTodos.Image = global::SCM.Properties.Resources.Line_Chart;
-            this.verTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.verTodos.Location = new System.Drawing.Point(502, 52);
-            this.verTodos.Name = "verTodos";
-            this.verTodos.Size = new System.Drawing.Size(145, 37);
-            this.verTodos.TabIndex = 17;
-            this.verTodos.Text = "Ver todos";
-            this.verTodos.UseVisualStyleBackColor = true;
-            this.verTodos.Click += new System.EventHandler(this.verTodos_Click);
-            // 
-            // Regresar
-            // 
-            this.Regresar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ForeColor = System.Drawing.Color.Black;
-            this.Regresar.Image = global::SCM.Properties.Resources.back__1_;
-            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Regresar.Location = new System.Drawing.Point(653, 54);
-            this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(117, 37);
-            this.Regresar.TabIndex = 16;
-            this.Regresar.Text = "Regresar";
-            this.Regresar.UseVisualStyleBackColor = true;
-            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
-            // 
-            // buscar
-            // 
-            this.buscar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buscar.ForeColor = System.Drawing.Color.Black;
-            this.buscar.Image = ((System.Drawing.Image)(resources.GetObject("buscar.Image")));
-            this.buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buscar.Location = new System.Drawing.Point(371, 52);
-            this.buscar.Name = "buscar";
-            this.buscar.Size = new System.Drawing.Size(125, 37);
-            this.buscar.TabIndex = 15;
-            this.buscar.Text = "Buscar";
-            this.buscar.UseVisualStyleBackColor = true;
-            this.buscar.Click += new System.EventHandler(this.buscar_Click);
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Image = global::SCM.Properties.Resources.list_remove;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(512, 300);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(221, 71);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "Borrar datos";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Image = global::SCM.Properties.Resources.file_add;
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(49, 300);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(196, 71);
-            this.btnAgregar.TabIndex = 10;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Image = global::SCM.Properties.Resources.back__1_;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.Location = new System.Drawing.Point(265, 300);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(218, 71);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "Regresar";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // Eiminar
-            // 
-            this.Eiminar.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eiminar.ForeColor = System.Drawing.Color.Black;
-            this.Eiminar.Image = global::SCM.Properties.Resources.mail_delete;
-            this.Eiminar.Location = new System.Drawing.Point(240, 359);
-            this.Eiminar.Name = "Eiminar";
-            this.Eiminar.Size = new System.Drawing.Size(151, 46);
-            this.Eiminar.TabIndex = 362;
-            this.Eiminar.Text = "Eliminar equipo";
-            this.Eiminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eiminar.UseVisualStyleBackColor = true;
-            this.Eiminar.Click += new System.EventHandler(this.Eiminar_Click);
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Image = global::SCM.Properties.Resources.google_earth;
-            this.button9.Location = new System.Drawing.Point(624, 359);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(151, 46);
-            this.button9.TabIndex = 361;
-            this.button9.Text = "Enviar correo";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // regresarButtom
-            // 
-            this.regresarButtom.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regresarButtom.ForeColor = System.Drawing.Color.Black;
-            this.regresarButtom.Image = global::SCM.Properties.Resources.back__1_;
-            this.regresarButtom.Location = new System.Drawing.Point(781, 359);
-            this.regresarButtom.Name = "regresarButtom";
-            this.regresarButtom.Size = new System.Drawing.Size(154, 46);
-            this.regresarButtom.TabIndex = 359;
-            this.regresarButtom.Text = "Regresar";
-            this.regresarButtom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.regresarButtom.UseVisualStyleBackColor = true;
-            this.regresarButtom.Click += new System.EventHandler(this.regresarButtom_Click);
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Image = global::SCM.Properties.Resources.edit_clear;
-            this.button11.Location = new System.Drawing.Point(397, 359);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(151, 46);
-            this.button11.TabIndex = 360;
-            this.button11.Text = "Limpiar datos";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // ActualizarTextbox
-            // 
-            this.ActualizarTextbox.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActualizarTextbox.ForeColor = System.Drawing.Color.Black;
-            this.ActualizarTextbox.Image = global::SCM.Properties.Resources.system_software_update;
-            this.ActualizarTextbox.Location = new System.Drawing.Point(25, 359);
-            this.ActualizarTextbox.Name = "ActualizarTextbox";
-            this.ActualizarTextbox.Size = new System.Drawing.Size(209, 46);
-            this.ActualizarTextbox.TabIndex = 358;
-            this.ActualizarTextbox.Text = "Actualizar informacion";
-            this.ActualizarTextbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ActualizarTextbox.UseVisualStyleBackColor = true;
-            this.ActualizarTextbox.Click += new System.EventHandler(this.ActualizarTextbox_Click_1);
             // 
             // EquiposFormulario
             // 

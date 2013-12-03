@@ -44,7 +44,6 @@
             // 
             this.BuscaFallaEntreFechasBindingSource.DataMember = "BuscaFallaEntreFechas";
             this.BuscaFallaEntreFechasBindingSource.DataSource = this.bdDataSet;
-            //this.BuscaFallaEntreFechasBindingSource.CurrentChanged += new System.EventHandler(this.BuscaFallaEntreFechasBindingSource_CurrentChanged);
             // 
             // bdDataSet
             // 
@@ -92,6 +91,7 @@
             this.Name = "ReporteFecha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteFecha";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ReporteFecha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BuscaFallaEntreFechasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdDataSet)).EndInit();

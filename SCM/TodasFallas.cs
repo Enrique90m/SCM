@@ -49,9 +49,9 @@ namespace SCM
                     return;
                 }
                 if (checkBox1.Checked == true)
-                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumFalla = " + textBox1.Text);
+                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE idFalla = " + textBox1.Text);
                 else
-                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE NumFalla = " + textBox1.Text + " AND Solucionada = 0");
+                    FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE idFalla = " + textBox1.Text + " AND Solucionada = 0");
             }
             else
                 if (checkBox1.Checked == true)
@@ -68,10 +68,7 @@ namespace SCM
         {
             FallasDAL fl = new FallasDAL();
             DataTable dt = new DataTable();
-            if (checkBox1.Checked == true)
-                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
-            else
-                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 0");
+            FallasDAL.buscaFalla(dt,"SELECT * FROM fallas WHERE Solucionada = 'No' AND Eliminada = 'No'");
             dataGridView1.DataSource = dt;
         }
 
@@ -104,7 +101,7 @@ namespace SCM
 
             if (checkBox1.Checked == false && checkBox2.Checked == true)
             {
-                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Eliminada = 'Si' AND Solucionada = 'No'");
+                FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 'No'");
                 dataGridView1.DataSource = dt;
                 return;
             }

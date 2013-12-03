@@ -139,12 +139,6 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportesPorNumComp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportesPorNumComp.Designer.cs">
-      <DependentUpon>ReportesPorNumComp.cs</DependentUpon>
-    </Compile>
     <Compile Include="TodasFallas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,11 +180,9 @@
     <EmbeddedResource Include="ReporteFecha.resx">
       <DependentUpon>ReporteFecha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportePorNumComp.rdlc" />
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportesPorNumComp.resx">
-      <DependentUpon>ReportesPorNumComp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TodasFallas.resx">
       <DependentUpon>TodasFallas.cs</DependentUpon>

@@ -26,7 +26,7 @@ namespace SCM
         {
             tabControl1.SelectTab(1);
             fechasGroupBox.Enabled = false;
-            numCompGroupBox.Enabled = false;
+            RepAnualgroupBox.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,22 +59,22 @@ namespace SCM
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             mensualGroupBox.Enabled = true; 
-            fechasGroupBox.Enabled = false;      
-            numCompGroupBox.Enabled = false;
+            fechasGroupBox.Enabled = false;
+            RepAnualgroupBox.Enabled = false;
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             mensualGroupBox.Enabled = false;
             fechasGroupBox.Enabled = true;
-            numCompGroupBox.Enabled = false;
+            RepAnualgroupBox.Enabled = false;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            RepAnualgroupBox.Enabled = true;
             mensualGroupBox.Enabled = false;
             fechasGroupBox.Enabled = false;
-            numCompGroupBox.Enabled = true;
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace SCM
             }
             else
                 if (fechasGroupBox.Enabled)
-                {  
+                {
 
                     //NO INCLUYE NI ELIMINADAS NI SOLUCIONADAS
                     if (checkBox1.Checked == false && checkBox2.Checked == false)
@@ -147,42 +147,41 @@ namespace SCM
                         ReporteFecha rp = new ReporteFecha(dateTimePicker1.Value, dateTimePicker2.Value, 0);
                         rp.bandera = "2";
                         rp.Show();
-                    }   
+                    }
                 }
                 else
-                {                   
+                {
+                    DateTime AnoAnterior;
+                    AnoAnterior = dateTimePicker4.Value.AddDays(-365);
+
                     //NO INCLUYE NI ELIMINADAS NI SOLUCIONADAS
                     if (checkBox1.Checked == false && checkBox2.Checked == false)
-                    {
-                        ReportesPorNumComp rp = new ReportesPorNumComp();
-                        rp.numComp = numComptxtBox.Text;
-                        rp.bandera = "0";
-                        rp.Show();
+                    {                        
+                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 1);
+                        rp2.bandera = "0";
+                        rp2.Show();
                     }
                     //INCLUYE ELIMINADAS Y SOLUCIONADAS
                     else if (checkBox1.Checked == true && checkBox2.Checked == true)
                     {
-                        ReportesPorNumComp rp = new ReportesPorNumComp();
-                        rp.numComp = numComptxtBox.Text;
-                        rp.bandera = "3";
-                        rp.Show();
+                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 1);
+                        rp2.bandera = "3";
+                        rp2.Show();
                     }
                     //INCLUYE ELIMINADAS Y NO SOLUCIONADAS
                     else if (checkBox1.Checked == true)
                     {
-                        ReportesPorNumComp rp = new ReportesPorNumComp();
-                        rp.numComp = numComptxtBox.Text;
+                        ReporteFecha rp = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 1);
                         rp.bandera = "1";
                         rp.Show();
                     }
                     //INCLUYE SOLUCIONADAS Y NO ELIMINADAS
                     else if (checkBox2.Checked == true)
                     {
-                        ReportesPorNumComp rp = new ReportesPorNumComp();
-                        rp.numComp = numComptxtBox.Text;
-                        rp.bandera = "2";
-                        rp.Show();
-                    } 
+                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 1);
+                        rp2.bandera = "2";
+                        rp2.Show();
+                    }               
                 }
         }     
         

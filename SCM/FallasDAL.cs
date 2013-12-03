@@ -73,7 +73,7 @@ namespace SCM
             {
                 try
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 'No' AND Eliminada = 'No'", conexion);
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 'No' AND Eliminada = 'No' ORDER BY FechaAlta DESC", conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)

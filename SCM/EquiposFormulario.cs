@@ -93,6 +93,44 @@ namespace SCM
                 }
             }
 
+            //Valida que solo sean numeros el numero de serie
+            try
+            {
+                int.Parse(numSerieTextBox1.Text);
+            }
+            catch (Exception q)
+            {
+                MessageBox.Show("El numero de serie solo debe de contener numeros, porfavor verifique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                numSerieTextBox.Focus();
+                return;
+            }
+
+            //VALIDA QUE NO SEA DEMACIADO LARGO LOS DATOS
+            if (numEquipoTextBox1.Text.Length > 3)
+            {
+                MessageBox.Show("Sobrepaso el limite de caracteres posibles en el NUMERO DE EQUIPO,recuerde lo siguiente: \n\n -El numero de equipo contiene numeros y/o letras \n -No debe ser mayor a 6 caracteres", "Eror de ingreso de carcateres", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+
+            if (marcaTextBox1.Text.Length > 10)
+            {
+                MessageBox.Show("Sobrepaso el limite de caracteres en la MARCA del equipo, porfavor verifique, recuerde lo siguiente: \n\n -La marca contiene numeros y/o letras \n -No debe ser mayor a 15", "Eror de ingreso de carcateres", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+
+            if (numSerieTextBox1.Text.Length > 15)
+            {
+                MessageBox.Show("Sobrepaso el limite de caracteres en el numero de serie, porfavor verifique, recuerde lo siguiente: \n\n -El numero de serie contiene solo numeros \n -No debe ser mayor a 30", "Eror de ingreso de carcateres", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+
+            if (salaTextBox1.Text.Length > 2)
+            {
+                MessageBox.Show("Sobrepaso el limite de caracteres en la sala,recuerde lo siguiente: \n\n -La sala del equipo contiene solo letras \n -No debe ser mayor a 2 ", "Eror de ingreso de carcateres", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+
+
             Equipos oEquipo = new Equipos();
             oEquipo.NumEquipo = numEquipoTextBox1.Text;
             oEquipo.sala = salaTextBox1.Text;
@@ -110,6 +148,7 @@ namespace SCM
             }
             DataTable dt = new DataTable();
             dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
+            tabControl1.SelectTab(1);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -120,11 +159,49 @@ namespace SCM
                 MessageBox.Show("Falta capturar datos basicos, minimo se tiene que capturar:\n\n -Numero de equipo \n -Sala", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            
+            //Valida que solo sean numeros el numero de serie
+            try
+            {
+                int.Parse(numSerieTextBox.Text);
+            }
+            catch (Exception q)
+            {
+                MessageBox.Show("El numero de serie solo debe de contener numeros, porfavor verifique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                numSerieTextBox.Focus();
+                return;
+            }
+
 
             //Ya capturo datos minimos, ahora valida que no halla capturado un NumEquipo que ya exista
             if (EquiposDAL.existe(numEquipoTextBox.Text))
             {
                 MessageBox.Show("El Numero de equipo: " + numEquipoTextBox.Text + " ya esta registrado anteriormente y debe ser unico, porfavor verifique sus datos", "Eror de duplicacion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            
+            //VALIDA QUE NO SEA DEMACIADO LARGO LOS DATOS
+            if(numEquipoTextBox.Text.Length>6)                
+            {
+                MessageBox.Show("Sobrepaso el limite de caracteres posibles en el NUMERO DE EQUIPO,recuerde lo siguiente: \n\n -El numero de equipo contiene numeros y/o letras \n -No debe ser mayor a 6 caracteres", "Eror de ingreso de carcateres", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            
+            if(marcaTextBox.Text.Length>15)
+            {
+                MessageBox.Show("Sobrepaso el limite de caracteres en la MARCA del equipo, porfavor verifique, recuerde lo siguiente: \n\n -La marca contiene numeros y/o letras \n -No debe ser mayor a 15", "Eror de ingreso de carcateres", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            
+            if(numSerieTextBox.Text.Length >30)
+            {                
+                MessageBox.Show("Sobrepaso el limite de caracteres en el numero de serie, porfavor verifique, recuerde lo siguiente: \n\n -El numero de serie contiene solo numeros \n -No debe ser mayor a 30", "Eror de ingreso de carcateres", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            
+            if(salaTextBox.Text.Length>2)
+            {
+                MessageBox.Show("Sobrepaso el limite de caracteres en la sala,recuerde lo siguiente: \n\n -La sala del equipo contiene solo letras \n -No debe ser mayor a 2 ", "Eror de ingreso de carcateres", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
 
@@ -149,6 +226,7 @@ namespace SCM
             marcaTextBox.Text = null;
             salaTextBox.Text = null;
             numSerieTextBox.Text = null;
+            numEquipoTextBox.Focus();
         }
 
         private void button12_Click(object sender, EventArgs e)
