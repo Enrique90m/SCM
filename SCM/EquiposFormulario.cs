@@ -163,7 +163,7 @@ namespace SCM
             //Valida que solo sean numeros el numero de serie
             try
             {
-                int.Parse(numSerieTextBox.Text);
+                long.Parse(numSerieTextBox.Text);
             }
             catch (Exception q)
             {
@@ -211,6 +211,7 @@ namespace SCM
             Equipo.Marca = marcaTextBox.Text;
             Equipo.NumSerie = numSerieTextBox.Text;
             Equipo.sala = salaTextBox.Text;
+            Equipo.estado = comboBox1.Text;
 
             int resultado = EquiposDAL.AgregarEquipo(Equipo);
             if (resultado > 0)

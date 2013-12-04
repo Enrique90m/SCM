@@ -39,6 +39,7 @@ namespace SCM
             objetoFalla.descripcionFalla = txtDescripFalla.Text;
             objetoFalla.fechaAlta = DateTime.Now;
 
+
             if (radioButton1.Checked)
                 objetoFalla.categoria = radioButton1.Text;
             else

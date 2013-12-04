@@ -32,7 +32,7 @@ namespace SCM
         }
         public static int AgregarEquipo(Equipos oEquipo)
         {
-            string sql = @"INSERT INTO EQUIPOS VALUES(@NumEquipo,@Marca,@NumSerie,@Sala)";
+            string sql = @"INSERT INTO EQUIPOS VALUES(@NumEquipo,@Marca,@NumSerie,@Sala,@Estado)";
 
             using (MySqlConnection cn = DataConections.conectaConBD())
             {
@@ -42,7 +42,8 @@ namespace SCM
                 cm.Parameters.AddWithValue("@Marca",oEquipo.Marca);
                 cm.Parameters.AddWithValue("@NumSerie",oEquipo.NumSerie);
                 cm.Parameters.AddWithValue("@Sala",oEquipo.sala);
-              
+                cm.Parameters.AddWithValue("@Estado", oEquipo.estado);
+
                 int resultado = cm.ExecuteNonQuery();
                 return resultado;
             }

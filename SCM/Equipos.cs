@@ -12,5 +12,6 @@ namespace SCM
         public string Marca;
         public string NumSerie;
         public string sala;
+        public string estado;
     }
 }

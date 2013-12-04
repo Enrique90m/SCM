@@ -21,7 +21,7 @@ namespace SCM
             FallasDAL lb = new FallasDAL();
             DataTable dt = new DataTable();
             lb.obtieneTodasLasFallas(dt);
-            dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dt;            
             textBox1.Focus();
             dataGridView1.ForeColor = Color.Black;
         }
