@@ -36,18 +36,15 @@
             System.Windows.Forms.Label marcaLabel1;
             System.Windows.Forms.Label numSerieLabel1;
             System.Windows.Forms.Label salaLabel1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EquiposFormulario));
             System.Windows.Forms.Label label1;
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.verTodos = new System.Windows.Forms.Button();
             this.Regresar = new System.Windows.Forms.Button();
             this.NumEquipo_Radiobtn = new System.Windows.Forms.RadioButton();
             this.Sala_RadioBtn = new System.Windows.Forms.RadioButton();
-            this.buscar = new System.Windows.Forms.Button();
             this.datoABuscar = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -57,6 +54,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
@@ -84,7 +82,6 @@
             this.inventarioDeEquiposYModificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regresarAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             numEquipoLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
@@ -197,6 +194,17 @@
             salaLabel1.TabIndex = 6;
             salaLabel1.Text = "Sala:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            label1.Location = new System.Drawing.Point(30, 194);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(86, 24);
+            label1.TabIndex = 10;
+            label1.Text = "Estado: ";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -247,11 +255,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.verTodos);
             this.groupBox1.Controls.Add(this.Regresar);
             this.groupBox1.Controls.Add(this.NumEquipo_Radiobtn);
             this.groupBox1.Controls.Add(this.Sala_RadioBtn);
-            this.groupBox1.Controls.Add(this.buscar);
             this.groupBox1.Controls.Add(this.datoABuscar);
             this.groupBox1.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -262,29 +268,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por:";
             // 
-            // verTodos
-            // 
-            this.verTodos.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verTodos.ForeColor = System.Drawing.Color.Black;
-            this.verTodos.Image = global::SCM.Properties.Resources.Line_Chart;
-            this.verTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.verTodos.Location = new System.Drawing.Point(502, 52);
-            this.verTodos.Name = "verTodos";
-            this.verTodos.Size = new System.Drawing.Size(145, 37);
-            this.verTodos.TabIndex = 17;
-            this.verTodos.Text = "Ver todos";
-            this.verTodos.UseVisualStyleBackColor = true;
-            this.verTodos.Click += new System.EventHandler(this.verTodos_Click);
-            // 
             // Regresar
             // 
             this.Regresar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Regresar.ForeColor = System.Drawing.Color.Black;
             this.Regresar.Image = global::SCM.Properties.Resources.back__1_;
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Regresar.Location = new System.Drawing.Point(653, 54);
+            this.Regresar.Location = new System.Drawing.Point(442, 52);
             this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(117, 37);
+            this.Regresar.Size = new System.Drawing.Size(285, 37);
             this.Regresar.TabIndex = 16;
             this.Regresar.Text = "Regresar";
             this.Regresar.UseVisualStyleBackColor = true;
@@ -317,26 +309,13 @@
             this.Sala_RadioBtn.Text = "Sala";
             this.Sala_RadioBtn.UseVisualStyleBackColor = true;
             // 
-            // buscar
-            // 
-            this.buscar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buscar.ForeColor = System.Drawing.Color.Black;
-            this.buscar.Image = ((System.Drawing.Image)(resources.GetObject("buscar.Image")));
-            this.buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buscar.Location = new System.Drawing.Point(371, 52);
-            this.buscar.Name = "buscar";
-            this.buscar.Size = new System.Drawing.Size(125, 37);
-            this.buscar.TabIndex = 15;
-            this.buscar.Text = "Buscar";
-            this.buscar.UseVisualStyleBackColor = true;
-            this.buscar.Click += new System.EventHandler(this.buscar_Click);
-            // 
             // datoABuscar
             // 
             this.datoABuscar.Location = new System.Drawing.Point(11, 58);
             this.datoABuscar.Name = "datoABuscar";
             this.datoABuscar.Size = new System.Drawing.Size(346, 26);
             this.datoABuscar.TabIndex = 13;
+            this.datoABuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.datoABuscar_KeyUp);
             // 
             // groupBox2
             // 
@@ -356,7 +335,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(18, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(553, 234);
+            this.dataGridView1.Size = new System.Drawing.Size(560, 234);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick_1);
             // 
@@ -448,6 +427,18 @@
             this.groupBox3.TabIndex = 345;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del equipo";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Desabilitado",
+            "Habilitado"});
+            this.comboBox1.Location = new System.Drawing.Point(106, 189);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 29);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.Text = "Habilitado";
             // 
             // marcaTextBox
             // 
@@ -658,7 +649,6 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -666,7 +656,7 @@
             this.toolStripDropDownButton1,
             this.toolStripSeparator2,
             this.toolStripDropDownButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 472);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1055, 27);
             this.toolStrip1.TabIndex = 4;
@@ -724,29 +714,6 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(324, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            label1.Location = new System.Drawing.Point(30, 194);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(86, 24);
-            label1.TabIndex = 10;
-            label1.Text = "Estado: ";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Desabilitado",
-            "Habilitado"});
-            this.comboBox1.Location = new System.Drawing.Point(106, 189);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 29);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "Habilitado";
             // 
             // EquiposFormulario
             // 
@@ -812,10 +779,8 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button verTodos;
         private System.Windows.Forms.RadioButton NumEquipo_Radiobtn;
         private System.Windows.Forms.RadioButton Sala_RadioBtn;
-        private System.Windows.Forms.Button buscar;
         private System.Windows.Forms.TextBox datoABuscar;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox3;

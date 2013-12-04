@@ -157,5 +157,60 @@ namespace SCM
                 }
             }
         }
+        public static void DesabilitaEquipo(string numEquipo)
+        {
+            /*
+             Actualiza el estado del equipo cuando se agrega una falla indicando su NumEquipo
+             Lo unico que hace es buscar el registro por su numero de equipo y cambiarle el campo Estado a Desabilitado
+             */ 
+            string query = " UPDATE EQUIPOS SET Estado = 'Desabilitado' WHERE NumEquipo=@ne";
+            int error;
+
+            using (MySqlConnection cn = DataConections.conectaConBD())
+            {
+               MySqlCommand cm = new MySqlCommand(query, cn);
+                cm.Parameters.AddWithValue("@ne", numEquipo);
+
+                try
+                {
+                    error = cm.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error al intentar actualizar el estado del equipo", "Error interno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }             
+        }
+        public static void HabilitaEquipo(string numEquipo)
+        {
+            /*
+             Actualiza el registro de la computadora, cambia el campo Estado a Habilitado
+             */
+            string query = " UPDATE EQUIPOS SET Estado = 'Habilitado' WHERE NumEquipo=@ne";
+            int error;
+
+            using (MySqlConnection cn = DataConections.conectaConBD())
+            {
+                MySqlCommand cm = new MySqlCommand(query, cn);
+                cm.Parameters.AddWithValue("@ne", numEquipo);
+
+                try
+                {
+                    error = cm.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error al intentar actualizar el estado del equipo", "Error interno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
+        }
     }
 }

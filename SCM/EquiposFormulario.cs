@@ -15,6 +15,7 @@ namespace SCM
     public partial class EquiposFormulario : Form
     {
         string RespNumEquipo;
+        public DataTable dt = new DataTable();
 
         public EquiposFormulario()
         {
@@ -30,15 +31,22 @@ namespace SCM
         private void EquiposFormulario_Load(object sender, EventArgs e)
         {
            
-
         }
+
 
         private void inventarioDeEquiposYModificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
+            dt = EquiposDAL.MostrarTodosLosEquipos(dt);
             tabControl1.SelectTab(1);
             dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
-            datoABuscar.Focus();
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                if (dataGridView1.Rows[i].Cells[4].Value.ToString() == "Habilitado")
+                    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
+                else
+                    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
+
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+                datoABuscar.Focus();
         }
 
         private void regresarAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -148,6 +156,12 @@ namespace SCM
             }
             DataTable dt = new DataTable();
             dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                if (dataGridView1.Rows[i].Cells[4].Value.ToString() == "Habilitado")
+                    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
+                else
+                    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
+            datoABuscar.Text = null;
             tabControl1.SelectTab(1);
         }
 
@@ -254,11 +268,28 @@ namespace SCM
         private void buscar_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            if (NumEquipo_Radiobtn.Checked == true)            
-                dataGridView1.DataSource = EquiposDAL.buscaEquipo(dt,"SELECT * FROM EQUIPOS WHERE NumEquipo = '" + datoABuscar.Text+"'");
+            DataView dataView = dt.DefaultView;
+
+            if (NumEquipo_Radiobtn.Checked == true)
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    if (dataGridView1.Rows[i].Cells[0].Value.ToString() == datoABuscar.Text)
+                    {                      
+                        dataView.RowFilter = string.Format("NumEquipo LIKE '{0}%'", datoABuscar.Text);
+                        dataGridView1.DataSource = dataView;
+                        return;
+                    }
+                   
+                 MessageBox.Show("No se encontro el numero de equipo buscado!", "No se encontro registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
             else
-                dataGridView1.DataSource = EquiposDAL.buscaEquipo(dt, "SELECT * FROM EQUIPOS WHERE Sala = '" + datoABuscar.Text+"'");
-            
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                if (dataGridView1.Rows[i].Cells[0].Value.ToString() == datoABuscar.Text)
+                    dataGridView1.DataSource = dataGridView1.Rows[i];
+                else
+                    MessageBox.Show("No se encontraron registros!", "No se encontro registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
 
         private void verTodos_Click(object sender, EventArgs e)
@@ -345,6 +376,33 @@ namespace SCM
             AcercaDe ab = new AcercaDe();
             ab.Show();
         }
+
+        private void datoABuscar_KeyUp(object sender, KeyEventArgs e)
+        {          
+            DataView dataView = dt.DefaultView;
+            if (NumEquipo_Radiobtn.Checked)
+            {
+                dataView.RowFilter = string.Format("NumEquipo LIKE '{0}%'", datoABuscar.Text);
+                dataGridView1.DataSource = dataView;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    if (dataGridView1.Rows[i].Cells[4].Value.ToString() == "Habilitado")
+                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
+                    else
+                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
+            }
+            else
+            {
+                dataView.RowFilter = string.Format("Sala LIKE '{0}%'", datoABuscar.Text);
+                dataGridView1.DataSource = dataView;
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    if (dataGridView1.Rows[i].Cells[4].Value.ToString() == "Habilitado")
+                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
+                    else
+                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
+            }
+
+            return;
+        }        
 
     }
 }

@@ -38,6 +38,7 @@ namespace SCM
             objetoFalla.NumComputadora = txtNumEqui.Text;
             objetoFalla.descripcionFalla = txtDescripFalla.Text;
             objetoFalla.fechaAlta = DateTime.Now;
+            EquiposDAL.DesabilitaEquipo(objetoFalla.NumComputadora);
 
 
             if (radioButton1.Checked)

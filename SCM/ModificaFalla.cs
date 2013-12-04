@@ -48,8 +48,9 @@ namespace SCM
 
             if (solucionadaCheckBox.Checked == true)
             {
-                falla.Solucionada = "Si";
+                falla.Solucionada = "Si"; 
                 falla.fechaBaja = DateTime.Now;
+                EquiposDAL.HabilitaEquipo(falla.NumComputadora);
             }
             else
             {

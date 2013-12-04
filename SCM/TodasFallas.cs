@@ -16,10 +16,11 @@ namespace SCM
             InitializeComponent();
         }
 
+        DataTable dt = new DataTable();
+
         private void TodasFallas_Load(object sender, EventArgs e)
         {
-            FallasDAL lb = new FallasDAL();
-            DataTable dt = new DataTable();
+            FallasDAL lb = new FallasDAL();         
             lb.obtieneTodasLasFallas(dt);
             dataGridView1.DataSource = dt;            
             textBox1.Focus();
@@ -138,6 +139,22 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 'No' AND Eliminada = 'No'");
 
             dataGridView1.DataSource = dt;
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {           
+            DataView dataView = dt.DefaultView;
+            dataView.RowFilter = "Convert(idFalla, 'System.String')LIKE '" + textBox1.Text + "%'";
+            dataGridView1.DataSource = dataView;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
+                    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                else
+                    if (dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
+                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
+                    else
+                        dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
+           
         }
 
     }
