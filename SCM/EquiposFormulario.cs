@@ -225,7 +225,7 @@ namespace SCM
             Equipo.Marca = marcaTextBox.Text;
             Equipo.NumSerie = numSerieTextBox.Text;
             Equipo.sala = salaTextBox.Text;
-            Equipo.estado = comboBox1.Text;
+            Equipo.estado = "Habilitado";
 
             int resultado = EquiposDAL.AgregarEquipo(Equipo);
             if (resultado > 0)
@@ -402,7 +402,8 @@ namespace SCM
             }
 
             return;
-        }        
+        }
+        
 
     }
 }

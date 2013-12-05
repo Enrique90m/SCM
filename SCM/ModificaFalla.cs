@@ -14,6 +14,8 @@ namespace SCM
     public partial class ModificaFalla : Form
     {
         DataGridViewRow row = new DataGridViewRow();
+        public string respnumequipo;
+
         public ModificaFalla(DataGridViewRow row1)
         {
             InitializeComponent();
@@ -73,6 +75,7 @@ namespace SCM
             //Pone datos de la falla en textbox
             numFallaTextBox.Text = row.Cells[0].Value.ToString();
             numComputadoraTextBox.Text = row.Cells[1].Value.ToString();
+            respnumequipo = numComputadoraTextBox.Text;
             descripcionFallaTextBox.Text = row.Cells[2].Value.ToString();
             fechaAltaTextbx.Text = row.Cells[3].Value.ToString();
 
@@ -166,6 +169,7 @@ namespace SCM
                 return;
 
             FallasDAL.EliminaFalla(long.Parse(numFallaTextBox.Text));
+            EquiposDAL.HabilitaEquipo(respnumequipo);
             TodasFallas td = new TodasFallas();
             td.Show();
             this.Dispose();

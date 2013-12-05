@@ -36,7 +36,6 @@
             System.Windows.Forms.Label marcaLabel1;
             System.Windows.Forms.Label numSerieLabel1;
             System.Windows.Forms.Label salaLabel1;
-            System.Windows.Forms.Label label1;
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -54,7 +53,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.salaTextBox = new System.Windows.Forms.TextBox();
             this.numSerieTextBox = new System.Windows.Forms.TextBox();
@@ -90,7 +88,6 @@
             marcaLabel1 = new System.Windows.Forms.Label();
             numSerieLabel1 = new System.Windows.Forms.Label();
             salaLabel1 = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -193,17 +190,6 @@
             salaLabel1.Size = new System.Drawing.Size(50, 20);
             salaLabel1.TabIndex = 6;
             salaLabel1.Text = "Sala:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            label1.Location = new System.Drawing.Point(30, 194);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(86, 24);
-            label1.TabIndex = 10;
-            label1.Text = "Estado: ";
             // 
             // tabControl1
             // 
@@ -409,8 +395,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(label1);
             this.groupBox3.Controls.Add(salaLabel);
             this.groupBox3.Controls.Add(this.marcaTextBox);
             this.groupBox3.Controls.Add(this.salaTextBox);
@@ -423,22 +407,10 @@
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.groupBox3.Location = new System.Drawing.Point(24, 35);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(709, 232);
+            this.groupBox3.Size = new System.Drawing.Size(709, 259);
             this.groupBox3.TabIndex = 345;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del equipo";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Desabilitado",
-            "Habilitado"});
-            this.comboBox1.Location = new System.Drawing.Point(106, 189);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 29);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "Habilitado";
             // 
             // marcaTextBox
             // 
@@ -649,6 +621,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -656,7 +629,7 @@
             this.toolStripDropDownButton1,
             this.toolStripSeparator2,
             this.toolStripDropDownButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 472);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1055, 27);
             this.toolStrip1.TabIndex = 4;
@@ -795,7 +768,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button Regresar;
-        private System.Windows.Forms.ComboBox comboBox1;
 
     }
 }
