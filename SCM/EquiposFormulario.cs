@@ -312,8 +312,10 @@ namespace SCM
 
             EquiposDAL.EliminaEquipo(RespNumEquipo);
             DataTable dt = new DataTable();
+            dt = EquiposDAL.MostrarTodosLosEquipos(dt);
             tabControl1.SelectTab(1);
-            dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.Refresh();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -402,7 +404,7 @@ namespace SCM
             }
 
             return;
-        }
+        }        
         
 
     }

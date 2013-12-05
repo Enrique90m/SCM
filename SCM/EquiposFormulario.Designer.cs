@@ -301,6 +301,7 @@
             this.datoABuscar.Name = "datoABuscar";
             this.datoABuscar.Size = new System.Drawing.Size(346, 26);
             this.datoABuscar.TabIndex = 13;
+            //this.datoABuscar.TextChanged += new System.EventHandler(this.datoABuscar_TextChanged);
             this.datoABuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.datoABuscar_KeyUp);
             // 
             // groupBox2

@@ -38,10 +38,10 @@ namespace SCM
             {
 
                MySqlCommand cm = new MySqlCommand(sql,cn);
-                cm.Parameters.AddWithValue("@NumEquipo", oEquipo.NumEquipo);
-                cm.Parameters.AddWithValue("@Marca",oEquipo.Marca);
+                cm.Parameters.AddWithValue("@NumEquipo", oEquipo.NumEquipo.ToUpper());
+                cm.Parameters.AddWithValue("@Marca",oEquipo.Marca.ToUpper());
                 cm.Parameters.AddWithValue("@NumSerie",oEquipo.NumSerie);
-                cm.Parameters.AddWithValue("@Sala",oEquipo.sala);
+                cm.Parameters.AddWithValue("@Sala",oEquipo.sala.ToUpper());
                 cm.Parameters.AddWithValue("@Estado", oEquipo.estado);
 
                 int resultado = cm.ExecuteNonQuery();
