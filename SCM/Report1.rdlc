@@ -65,16 +65,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.78981in</Width>
+              <Width>0.51898in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.78981in</Width>
+              <Width>0.83148in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.78981in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>2.77939in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.98425in</Width>
@@ -83,10 +80,13 @@
               <Width>0.98425in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>0.79675in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>1.0155in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.65092in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -102,7 +102,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id Falla</Value>
+                              <Value>ID</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -132,7 +132,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Num Computadora</Value>
+                              <Value>Num Comp.</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -192,7 +192,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha Alta</Value>
+                              <Value>Fecha De Alta</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -222,7 +222,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha Baja</Value>
+                              <Value>Fecha De Baja</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -608,7 +608,7 @@
         <Top>2.34632cm</Top>
         <Left>1.04986cm</Left>
         <Height>1.80853cm</Height>
-        <Width>26.13832cm</Width>
+        <Width>21.74624cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
