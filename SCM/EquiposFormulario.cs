@@ -37,8 +37,9 @@ namespace SCM
         private void inventarioDeEquiposYModificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dt = EquiposDAL.MostrarTodosLosEquipos(dt);
+            DataView dv = dt.DefaultView;
             tabControl1.SelectTab(1);
-            dataGridView1.DataSource = EquiposDAL.MostrarTodosLosEquipos(dt);
+            dataGridView1.DataSource = dv;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 if (dataGridView1.Rows[i].Cells[4].Value.ToString() == "Habilitado")
                     dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
@@ -380,7 +381,7 @@ namespace SCM
         }
 
         private void datoABuscar_KeyUp(object sender, KeyEventArgs e)
-        {          
+        {
             DataView dataView = dt.DefaultView;
             if (NumEquipo_Radiobtn.Checked)
             {
