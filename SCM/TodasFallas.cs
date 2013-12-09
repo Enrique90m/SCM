@@ -25,8 +25,8 @@ namespace SCM
             lb.obtieneTodasLasFallas(dt);
             dataGridView1.DataSource = dt;
             dataView = dt.DefaultView;
-            textBox1.Focus();
-            dataGridView1.ForeColor = Color.Black;           
+            dataGridView1.ForeColor = Color.Black;     
+            textBox1.Focus();                  
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -61,6 +61,7 @@
             // NumComp_Radiobtn
             // 
             this.NumComp_Radiobtn.AutoSize = true;
+            this.NumComp_Radiobtn.Checked = true;
             this.NumComp_Radiobtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumComp_Radiobtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.NumComp_Radiobtn.Location = new System.Drawing.Point(87, 29);
@@ -74,14 +75,12 @@
             // NumFalla_Radiobtn
             // 
             this.NumFalla_Radiobtn.AutoSize = true;
-            this.NumFalla_Radiobtn.Checked = true;
             this.NumFalla_Radiobtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumFalla_Radiobtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.NumFalla_Radiobtn.Location = new System.Drawing.Point(11, 29);
             this.NumFalla_Radiobtn.Name = "NumFalla_Radiobtn";
             this.NumFalla_Radiobtn.Size = new System.Drawing.Size(70, 23);
             this.NumFalla_Radiobtn.TabIndex = 10;
-            this.NumFalla_Radiobtn.TabStop = true;
             this.NumFalla_Radiobtn.Text = "# Falla";
             this.NumFalla_Radiobtn.UseVisualStyleBackColor = true;
             // 

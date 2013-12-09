@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -147,6 +147,29 @@ namespace SCM
                 {
                     cn.Close();
                 }
+            }
+        }
+        public static bool VerificaSiExisteOtraFalla(string pNumFalla)
+        {
+            /*
+             Saca total de fallas de un equipo, se utiliza cuando se soluciona o elimina una falla, de tal manera que antes de habilitar
+             el equipo, checa si tiene otra falla de ese mismo equipo, de ser asi, no lo habilita. 
+             Si no tiene fallas, lo habilita
+             */ 
+            using (MySqlConnection cn = DataConections.conectaConBD())
+            {
+                string query = @"SELECT COUNT(*) FROM FALLAS WHERE NumComputadora = @nc AND Eliminada = 'No' AND Solucionada = 'No' ";
+                bool existefallas = false;
+
+                MySqlCommand cm = new MySqlCommand(query,cn);
+                cm.Parameters.AddWithValue("@nc", pNumFalla);
+
+                long totalFallas = Convert.ToInt64(cm.ExecuteScalar());
+                
+                if (totalFallas > 0)
+                    existefallas = true;
+                
+                return existefallas;
             }
         }
 

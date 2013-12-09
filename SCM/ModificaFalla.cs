@@ -49,15 +49,15 @@ namespace SCM
             falla.numFalla = int.Parse(numFallaTextBox.Text);
 
             if (solucionadaCheckBox.Checked == true)
-            {
-                falla.Solucionada = "Si"; 
+            {                
+                falla.Solucionada = "Si";
                 falla.fechaBaja = DateTime.Now;
-                EquiposDAL.HabilitaEquipo(falla.NumComputadora);
             }
             else
             {
                 falla.fechaBaja = DateTime.MinValue;
                 falla.Solucionada = "No";
+                EquiposDAL.DesabilitaEquipo(respnumequipo);
             }
 
             if (radioButton1.Checked == true)
@@ -67,6 +67,16 @@ namespace SCM
 
 
             FallasDAL.ActualizaInformacion(falla);
+
+            if (solucionadaCheckBox.Checked == true)
+            {
+                bool existeOtraFalla = false;
+                existeOtraFalla = FallasDAL.VerificaSiExisteOtraFalla(respnumequipo);
+
+                if (existeOtraFalla == false)
+                    EquiposDAL.HabilitaEquipo(respnumequipo);
+            }
+
         }       
        
 
@@ -164,12 +174,17 @@ namespace SCM
         private void button4_Click(object sender, EventArgs e)
         {
             DialogResult respuesta = MessageBox.Show("Esta seguro de que desea eliminar la falla?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            bool existeOtraFalla = false;
 
             if (respuesta.Equals(DialogResult.No))
                 return;
 
             FallasDAL.EliminaFalla(long.Parse(numFallaTextBox.Text));
+            existeOtraFalla = FallasDAL.VerificaSiExisteOtraFalla(respnumequipo);
+
+            if(existeOtraFalla == false)           
             EquiposDAL.HabilitaEquipo(respnumequipo);
+
             TodasFallas td = new TodasFallas();
             td.Show();
             this.Dispose();
