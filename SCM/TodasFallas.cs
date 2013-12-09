@@ -225,7 +225,38 @@ namespace SCM
                         dataGridView1.DataSource = dataView;
                         for (int i = 0; i < dataGridView1.Rows.Count; i++)
                             if (dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
-                                dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;    
+                                dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
+                    }
+            }
+            else
+            {
+                if (checkBox1.Checked == true && checkBox2.Checked == true)
+                {
+                    dataView.RowFilter = "Convert(NumComputadora, 'System.String')LIKE '" + textBox1.Text + "%'";
+                    dataGridView1.DataSource = dataView;
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
+                            dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                        else
+                            if (dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
+                                dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
+                }
+                else
+                    if (checkBox2.Checked == true)
+                    {
+                        dataView.RowFilter = "Convert(NumComputadora, 'System.String')LIKE '" + textBox1.Text + "%'";
+                        dataGridView1.DataSource = dataView;
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                            if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
+                                dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                    }
+                    else
+                    {
+                        dataView.RowFilter = "Convert(NumComputadora, 'System.String')LIKE '" + textBox1.Text + "%'";
+                        dataGridView1.DataSource = dataView;
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                            if (dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
+                                dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
                     }
             }
                        
