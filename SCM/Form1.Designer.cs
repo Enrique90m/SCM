@@ -83,7 +83,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de control de fallas - Menu principal - Version 1.0";
+            this.Text = "Sistema de control de fallas - Menu principal - Version 1.4";
             this.ResumeLayout(false);
 
         }
