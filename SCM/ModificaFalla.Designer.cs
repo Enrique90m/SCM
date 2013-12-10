@@ -45,6 +45,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.FechaBajaTextBox = new System.Windows.Forms.TextBox();
             this.fechaAltaTextbx = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -173,6 +174,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button1);
@@ -244,16 +246,30 @@
             this.FechaBajaTextBox.Location = new System.Drawing.Point(146, 279);
             this.FechaBajaTextBox.Name = "FechaBajaTextBox";
             this.FechaBajaTextBox.ReadOnly = true;
-            this.FechaBajaTextBox.Size = new System.Drawing.Size(201, 26);
+            this.FechaBajaTextBox.Size = new System.Drawing.Size(98, 26);
             this.FechaBajaTextBox.TabIndex = 349;
             // 
             // fechaAltaTextbx
             // 
-            this.fechaAltaTextbx.Location = new System.Drawing.Point(146, 250);
+            this.fechaAltaTextbx.Location = new System.Drawing.Point(146, 251);
             this.fechaAltaTextbx.Name = "fechaAltaTextbx";
             this.fechaAltaTextbx.ReadOnly = true;
-            this.fechaAltaTextbx.Size = new System.Drawing.Size(201, 26);
+            this.fechaAltaTextbx.Size = new System.Drawing.Size(98, 26);
             this.fechaAltaTextbx.TabIndex = 347;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Image = global::SCM.Properties.Resources.gnome_document_revert;
+            this.button5.Location = new System.Drawing.Point(500, 361);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(159, 46);
+            this.button5.TabIndex = 358;
+            this.button5.Text = "Recuperar falla";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -262,7 +278,7 @@
             this.button4.Image = global::SCM.Properties.Resources.mail_delete;
             this.button4.Location = new System.Drawing.Point(224, 361);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(151, 46);
+            this.button4.Size = new System.Drawing.Size(132, 46);
             this.button4.TabIndex = 357;
             this.button4.Text = "Eliminar falla";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -274,9 +290,9 @@
             this.button3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Image = global::SCM.Properties.Resources.google_earth;
-            this.button3.Location = new System.Drawing.Point(608, 361);
+            this.button3.Location = new System.Drawing.Point(665, 361);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 46);
+            this.button3.Size = new System.Drawing.Size(152, 46);
             this.button3.TabIndex = 356;
             this.button3.Text = "Reenviar correo";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -288,9 +304,9 @@
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::SCM.Properties.Resources.back__1_;
-            this.button1.Location = new System.Drawing.Point(765, 361);
+            this.button1.Location = new System.Drawing.Point(823, 361);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 46);
+            this.button1.Size = new System.Drawing.Size(96, 46);
             this.button1.TabIndex = 340;
             this.button1.Text = "Regresar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -302,9 +318,9 @@
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::SCM.Properties.Resources.edit_clear;
-            this.button2.Location = new System.Drawing.Point(381, 361);
+            this.button2.Location = new System.Drawing.Point(362, 361);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 46);
+            this.button2.Size = new System.Drawing.Size(132, 46);
             this.button2.TabIndex = 353;
             this.button2.Text = "Limpiar datos";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -361,5 +377,6 @@
         private System.Windows.Forms.TextBox fechaAltaTextbx;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

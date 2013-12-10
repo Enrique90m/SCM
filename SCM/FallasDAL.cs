@@ -127,13 +127,15 @@ namespace SCM
                 }
             }
         }
-        public static void EliminaFalla(long numFalla)
+        public static void EliminaFalla(long numFalla, DateTime fechabaja)
         {
             using (MySqlConnection cn = DataConections.conectaConBD())
             {
-                string query = @"UPDATE FALLAS SET Eliminada = 'Si' WHERE idFalla = @Numfalla";
-               MySqlCommand cm = new MySqlCommand(query,cn);
+                string query = @"UPDATE FALLAS SET Eliminada = 'Si', FechaBaja = @fb WHERE idFalla = @Numfalla";
+                MySqlCommand cm = new MySqlCommand(query,cn);
                 cm.Parameters.AddWithValue("@Numfalla",numFalla);
+                cm.Parameters.AddWithValue("@fb",fechabaja);
+
                 try
                 {
                     cm.ExecuteNonQuery();
@@ -142,6 +144,30 @@ namespace SCM
                 catch (Exception e)
                 {
                     MessageBox.Show("Error al borrar la falla por el siguiente error \n\n" + e.ToString() , "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
+        }
+        public static void RecuperaFalla(long numFalla)
+        {
+            using (MySqlConnection cn = DataConections.conectaConBD())
+            {
+                string query = @"UPDATE FALLAS SET Eliminada = 'No', FechaBaja = @fechaBaja WHERE idFalla = @Numfalla";
+                MySqlCommand cm = new MySqlCommand(query, cn);
+                cm.Parameters.AddWithValue("@fechaBaja", DBNull.Value);
+                cm.Parameters.AddWithValue("@Numfalla", numFalla);
+
+                try
+                {
+                    cm.ExecuteNonQuery();
+                    MessageBox.Show("Falla Recuperada correctamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Error al borrar la falla por el siguiente error \n\n" + e.ToString(), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

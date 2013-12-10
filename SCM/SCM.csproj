@@ -213,6 +213,7 @@
     <Content Include="BD.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\gnome_document_revert.png" />
     <None Include="Resources\itnl.jpg" />
     <None Include="Resources\mail_delete.ico" />
     <None Include="Resources\google_earth.png" />

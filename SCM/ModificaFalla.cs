@@ -81,13 +81,15 @@ namespace SCM
        
 
         private void ModificaFalla_Load(object sender, EventArgs e)
-        {
+        {           
+
             //Pone datos de la falla en textbox
             numFallaTextBox.Text = row.Cells[0].Value.ToString();
             numComputadoraTextBox.Text = row.Cells[1].Value.ToString();
             respnumequipo = numComputadoraTextBox.Text;
             descripcionFallaTextBox.Text = row.Cells[2].Value.ToString();
             fechaAltaTextbx.Text = row.Cells[3].Value.ToString();
+                       
 
             //Verifica si esta activa la falla
             if (string.IsNullOrEmpty(row.Cells[4].Value.ToString()))
@@ -109,6 +111,17 @@ namespace SCM
                 radioButton1.Checked = true;
             else
                 radioButton2.Checked = true;
+
+            //Si esta eliminada, mustra texto y checkbox de que esta eliminada
+            if (row.Cells[7].Value.ToString() == "Si")
+            {
+                groupBox3.Enabled = false;
+                ActualizarTextbox.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                return;
+            }
 
         }
 
@@ -178,13 +191,22 @@ namespace SCM
 
             if (respuesta.Equals(DialogResult.No))
                 return;
-
-            FallasDAL.EliminaFalla(long.Parse(numFallaTextBox.Text));
+                
+         
+            FallasDAL.EliminaFalla(long.Parse(numFallaTextBox.Text),DateTime.Now);
             existeOtraFalla = FallasDAL.VerificaSiExisteOtraFalla(respnumequipo);
 
             if(existeOtraFalla == false)           
             EquiposDAL.HabilitaEquipo(respnumequipo);
 
+            TodasFallas td = new TodasFallas();
+            td.Show();
+            this.Dispose();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FallasDAL.RecuperaFalla(long.Parse(numFallaTextBox.Text));
             TodasFallas td = new TodasFallas();
             td.Show();
             this.Dispose();
