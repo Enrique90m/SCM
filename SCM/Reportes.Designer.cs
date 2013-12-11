@@ -33,13 +33,16 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.RepAnualgroupBox = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.fechasGroupBox = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.mensualGroupBox = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -52,9 +55,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -131,6 +131,17 @@
             this.RepAnualgroupBox.TabStop = false;
             this.RepAnualgroupBox.Text = "Reporte Anual";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label5.Location = new System.Drawing.Point(363, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(366, 80);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "El reporte anual se genera tomando como valor inicial\r\nla fecha seleccionada, y a" +
+                "partir de hay, se tomaran los\r\nregistros de un año atras.\r\n\r\n";
+            // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.CalendarForeColor = System.Drawing.Color.DarkCyan;
@@ -155,6 +166,17 @@
             this.fechasGroupBox.TabIndex = 10;
             this.fechasGroupBox.TabStop = false;
             this.fechasGroupBox.Text = "Generar reporte de fallas por fechas";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label4.Location = new System.Drawing.Point(219, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(348, 60);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Seleccione la fecha inicial y la fecha final en la que\r\nel sistema desarrollara e" +
+                "l reporte de fallas.\r\n\r\n";
             // 
             // label3
             // 
@@ -206,6 +228,17 @@
             this.mensualGroupBox.TabStop = false;
             this.mensualGroupBox.Text = "Reporte mensual";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.Location = new System.Drawing.Point(432, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(296, 60);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Apartir de la fecha seleccionada el sistema \r\ntomara 30 dias antes y generara el " +
+                "reporte\r\n mensual ";
+            // 
             // dateTimePicker4
             // 
             this.dateTimePicker4.CalendarForeColor = System.Drawing.Color.DarkCyan;
@@ -249,6 +282,7 @@
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Incluir eliminadas";
             this.checkBox1.UseVisualStyleBackColor = true;
+            //this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -349,39 +383,6 @@
             this.radioButton1.Text = "Reporte de fallas";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(432, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 60);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Apartir de la fecha seleccionada el sistema \r\ntomara 30 dias antes y generara el " +
-                "reporte\r\n mensual ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label4.Location = new System.Drawing.Point(219, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(348, 60);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Seleccione la fecha inicial y la fecha final en la que\r\nel sistema desarrollara e" +
-                "l reporte de fallas.\r\n\r\n";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label5.Location = new System.Drawing.Point(363, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(366, 80);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "El reporte anual se genera tomando como valor inicial\r\nla fecha seleccionada, y a" +
-                "partir de hay, se tomaran los\r\nregistros de un año atras.\r\n\r\n";
             // 
             // Reportes
             // 

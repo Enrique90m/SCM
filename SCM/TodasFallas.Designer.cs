@@ -108,6 +108,7 @@
             this.groupBox1.TabIndex = 68;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por:";
+            //this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button2
             // 
@@ -147,6 +148,7 @@
             this.groupBox3.TabIndex = 70;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Opciones de filtrado";
+            //this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // checkBox2
             // 
@@ -173,6 +175,7 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Inventario de fallas";
             this.groupBox4.UseCompatibleTextRendering = true;
+            //this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // groupBox2
             // 
@@ -185,6 +188,7 @@
             this.groupBox2.TabIndex = 69;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar por:";
+            //this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // TodasFallas
             // 

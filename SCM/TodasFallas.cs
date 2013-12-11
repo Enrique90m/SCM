@@ -293,5 +293,6 @@ namespace SCM
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
                     e.Handled = true;
         }
+        
     }
 }

@@ -77,6 +77,8 @@ namespace SCM
                     EquiposDAL.HabilitaEquipo(respnumequipo);
             }
 
+
+
         }       
        
 
