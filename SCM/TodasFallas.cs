@@ -102,6 +102,7 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
                 dataGridView1.DataSource = dt;
                 dataView = dt.DefaultView;
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
 
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si" && dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
@@ -120,6 +121,8 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 'No'");
                 dataGridView1.DataSource = dt;
                 dataView = dt.DefaultView;
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
                         dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
@@ -131,6 +134,8 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Eliminada = 'No'");
                 dataGridView1.DataSource = dt;
                 dataView = dt.DefaultView;
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     if (dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
                         dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkGreen;
@@ -140,6 +145,7 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada ='No' AND Eliminada = 'No'");
                 dataView = dt.DefaultView;
                 dataGridView1.DataSource = dt;
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
             }
 
           
@@ -154,6 +160,7 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS");
                 dataGridView1.DataSource = dt;
                 dataView = dt.DefaultView;
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si" && dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
                         dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
@@ -171,6 +178,7 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Eliminada = 'No'");
                 dataGridView1.DataSource = dt;
                 dataView = dt.DefaultView;
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     if (dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
                         dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkGreen;
@@ -182,6 +190,7 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 'No'");
                 dataGridView1.DataSource = dt;
                 dataView = dt.DefaultView;
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
                         dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
@@ -192,6 +201,7 @@ namespace SCM
                 FallasDAL.buscaFalla(dt, "SELECT * FROM FALLAS WHERE Solucionada = 'No' AND Eliminada = 'No'");
                 dataGridView1.DataSource = dt;
                 dataView = dt.DefaultView;
+                dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
             }
            
         }
@@ -205,6 +215,8 @@ namespace SCM
                 {
                     dataView.RowFilter = "Convert(idFalla, 'System.String')LIKE '" + textBox1.Text + "%'";
                     dataGridView1.DataSource = dataView;
+                    dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+
                     for (int i = 0; i < dataGridView1.Rows.Count; i++)
                         if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
                             dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
@@ -217,6 +229,8 @@ namespace SCM
                     {
                         dataView.RowFilter = "Convert(idFalla, 'System.String')LIKE '" + textBox1.Text + "%'";
                         dataGridView1.DataSource = dataView;
+                        dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
+
                         for (int i = 0; i < dataGridView1.Rows.Count; i++)
                             if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
                                 dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
@@ -225,6 +239,7 @@ namespace SCM
                     {
                         dataView.RowFilter = "Convert(idFalla, 'System.String')LIKE '" + textBox1.Text + "%'";
                         dataGridView1.DataSource = dataView;
+                        dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
                         for (int i = 0; i < dataGridView1.Rows.Count; i++)
                             if (dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
                                 dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
@@ -236,6 +251,7 @@ namespace SCM
                 {
                     dataView.RowFilter = "Convert(NumComputadora, 'System.String')LIKE '" + textBox1.Text + "%'";
                     dataGridView1.DataSource = dataView;
+                    dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
                     for (int i = 0; i < dataGridView1.Rows.Count; i++)
                         if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
                             dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
@@ -248,6 +264,7 @@ namespace SCM
                     {
                         dataView.RowFilter = "Convert(NumComputadora, 'System.String')LIKE '" + textBox1.Text + "%'";
                         dataGridView1.DataSource = dataView;
+                        dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
                         for (int i = 0; i < dataGridView1.Rows.Count; i++)
                             if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "Si")
                                 dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
@@ -256,6 +273,7 @@ namespace SCM
                     {
                         dataView.RowFilter = "Convert(NumComputadora, 'System.String')LIKE '" + textBox1.Text + "%'";
                         dataGridView1.DataSource = dataView;
+                        dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
                         for (int i = 0; i < dataGridView1.Rows.Count; i++)
                             if (dataGridView1.Rows[i].Cells[5].Value.ToString() == "Si")
                                 dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;

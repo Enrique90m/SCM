@@ -261,40 +261,7 @@ namespace SCM
             marcaTextBox1.Text = null;
             salaTextBox1.Text = null;
             numSerieTextBox1.Text = null;
-        }
-
-        private void buscar_Click(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            DataView dataView = dt.DefaultView;
-
-            if (NumEquipo_Radiobtn.Checked == true)
-            {
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                    if (dataGridView1.Rows[i].Cells[0].Value.ToString() == datoABuscar.Text)
-                    {                      
-                        dataView.RowFilter = string.Format("NumEquipo LIKE '{0}%'", datoABuscar.Text);
-                        dataGridView1.DataSource = dataView;
-                        return;
-                    }
-                   
-                 MessageBox.Show("No se encontro el numero de equipo buscado!", "No se encontro registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            else
-            {
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                if (dataGridView1.Rows[i].Cells[0].Value.ToString() == datoABuscar.Text)
-                    dataGridView1.DataSource = dataGridView1.Rows[i];
-                else
-                    MessageBox.Show("No se encontraron registros!", "No se encontro registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-        }
-
-        private void verTodos_Click(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dataGridView1.DataSource = EquiposDAL.buscaEquipo(dt,"SELECT * FROM EQUIPOS");
-        }
+        }        
 
         private void Regresar_Click(object sender, EventArgs e)
         {
@@ -384,6 +351,7 @@ namespace SCM
             {
                 dataView.RowFilter = string.Format("NumEquipo LIKE '{0}%'", datoABuscar.Text);
                 dataGridView1.DataSource = dataView;
+
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     if (dataGridView1.Rows[i].Cells[4].Value.ToString() == "Habilitado")
                         dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
@@ -394,6 +362,7 @@ namespace SCM
             {
                 dataView.RowFilter = string.Format("Sala LIKE '{0}%'", datoABuscar.Text);
                 dataGridView1.DataSource = dataView;
+
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     if (dataGridView1.Rows[i].Cells[4].Value.ToString() == "Habilitado")
                         dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
