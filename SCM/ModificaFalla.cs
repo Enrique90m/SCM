@@ -126,6 +126,8 @@ namespace SCM
                 return;
             }
 
+            button5.Visible = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

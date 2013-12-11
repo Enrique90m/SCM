@@ -119,12 +119,6 @@
     <Compile Include="ModificaFalla.Designer.cs">
       <DependentUpon>ModificaFalla.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModificarEquipos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarEquipos.Designer.cs">
-      <DependentUpon>ModificarEquipos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporteFecha.cs">
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificaFalla.resx">
       <DependentUpon>ModificaFalla.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarEquipos.resx">
-      <DependentUpon>ModificarEquipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

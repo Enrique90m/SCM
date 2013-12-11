@@ -2,7 +2,6 @@ C:\SCM\SCM\bin\Debug\SCM.exe.config
 C:\SCM\SCM\obj\x86\Debug\SCM.AgregarFalla.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.Fallas.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.Form1.resources
-C:\SCM\SCM\obj\x86\Debug\SCM.ModificarEquipos.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.Properties.Resources.resources
 C:\SCM\SCM\bin\Debug\BD.sdf
 C:\SCM\SCM\bin\Debug\SCM.exe
