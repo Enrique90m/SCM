@@ -28,11 +28,6 @@ namespace SCM
             numEquipoTextBox.Focus();
         }
 
-        private void EquiposFormulario_Load(object sender, EventArgs e)
-        {
-           
-        }
-
 
         private void inventarioDeEquiposYModificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -47,7 +42,9 @@ namespace SCM
                     dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
 
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
-                datoABuscar.Focus();
+            datoABuscar.Focus();
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
         private void regresarAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)

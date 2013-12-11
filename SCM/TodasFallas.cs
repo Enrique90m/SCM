@@ -21,12 +21,14 @@ namespace SCM
 
         private void TodasFallas_Load(object sender, EventArgs e)
         {
-            FallasDAL lb = new FallasDAL();         
+            FallasDAL lb = new FallasDAL();
             lb.obtieneTodasLasFallas(dt);
             dataGridView1.DataSource = dt;
             dataView = dt.DefaultView;
-            dataGridView1.ForeColor = Color.Black;     
-            textBox1.Focus();                  
+            dataGridView1.ForeColor = Color.Black;
+            textBox1.Focus();
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
         private void button1_Click(object sender, EventArgs e)

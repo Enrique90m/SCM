@@ -301,7 +301,6 @@
             this.datoABuscar.Name = "datoABuscar";
             this.datoABuscar.Size = new System.Drawing.Size(346, 26);
             this.datoABuscar.TabIndex = 13;
-            //this.datoABuscar.TextChanged += new System.EventHandler(this.datoABuscar_TextChanged);
             this.datoABuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.datoABuscar_KeyUp);
             // 
             // groupBox2
@@ -622,7 +621,6 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -630,7 +628,7 @@
             this.toolStripDropDownButton1,
             this.toolStripSeparator2,
             this.toolStripDropDownButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 472);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1055, 27);
             this.toolStrip1.TabIndex = 4;
@@ -700,7 +698,7 @@
             this.Name = "EquiposFormulario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EquiposFormulario";
-            this.Load += new System.EventHandler(this.EquiposFormulario_Load);
+            //this.Load += new System.EventHandler(this.EquiposFormulario_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);

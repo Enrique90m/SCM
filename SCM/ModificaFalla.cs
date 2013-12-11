@@ -115,6 +115,9 @@ namespace SCM
             //Si esta eliminada, mustra texto y checkbox de que esta eliminada
             if (row.Cells[7].Value.ToString() == "Si")
             {
+                solucionadaCheckBox.Enabled = false;
+                radioButton1.Enabled = false;
+                radioButton2.Enabled = false;
                 groupBox3.Enabled = false;
                 ActualizarTextbox.Enabled = false;
                 button2.Enabled = false;
