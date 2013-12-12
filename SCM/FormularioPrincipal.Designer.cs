@@ -1,6 +1,6 @@
 ﻿namespace SCM
 {
-    partial class EquiposFormulario
+    partial class FormularioPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -1134,6 +1134,7 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "Regresar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // NumFalla_Radiobtn
             // 
@@ -1664,7 +1665,6 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -1678,7 +1678,7 @@
             this.toolStripDropDownButton2,
             this.toolStripSeparator5,
             this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 546);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1099, 27);
             this.toolStrip1.TabIndex = 4;
@@ -1796,15 +1796,15 @@
             this.toolStripButton1.Text = "Salir del sistema";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // EquiposFormulario
+            // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1099, 573);
+            this.ClientSize = new System.Drawing.Size(1099, 537);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tabControl1);
-            this.Name = "EquiposFormulario";
+            this.Name = "FormularioPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EquiposFormulario";
             this.tabControl1.ResumeLayout(false);

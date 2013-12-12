@@ -11,10 +11,10 @@ C:\SCM\SCM\obj\x86\Debug\SCM.pdb
 C:\SCM\SCM\obj\x86\Debug\SCM.TodasFallas.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.ModificaFalla.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.Reportes.resources
-C:\SCM\SCM\obj\x86\Debug\SCM.EquiposFormulario.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.csprojResolveAssemblyReference.cache
 C:\SCM\SCM\obj\x86\Debug\SCM.csproj.GenerateResource.Cache
 C:\SCM\SCM\obj\x86\Debug\SCM.AcercaDe.resources
 C:\SCM\SCM\obj\x86\Debug\RdlCompile.cache
 C:\SCM\SCM\obj\x86\Debug\RdlCompile.compiled
 C:\SCM\SCM\obj\x86\Debug\SCM.ReporteFecha.resources
+C:\SCM\SCM\obj\x86\Debug\SCM.FormularioPrincipal.resources

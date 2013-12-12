@@ -12,13 +12,13 @@ using System.Net.Mime;
 
 namespace SCM
 {
-    public partial class EquiposFormulario : Form
+    public partial class FormularioPrincipal : Form
     {
         string RespNumEquipo;
         public DataTable dt = new DataTable();
         DataView dataView = new DataView();
 
-        public EquiposFormulario()
+        public FormularioPrincipal()
         {
             InitializeComponent();
         }
@@ -34,6 +34,7 @@ namespace SCM
         private void inventarioDeEquiposYModificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStripLabel1.Text = "SCRF - Inventario de equipos";
+            dt = new DataTable();
             dt = EquiposDAL.MostrarTodosLosEquipos(dt);
             DataView dv = dt.DefaultView;
             tabControl1.SelectTab(1);
@@ -1071,6 +1072,11 @@ namespace SCM
                     }               
                 }
             
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
         }
 
     }
