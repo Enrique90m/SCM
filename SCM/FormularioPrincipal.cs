@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Net.Mail;
-using System.Net.Mime;
 
 
 namespace SCM
@@ -52,10 +48,7 @@ namespace SCM
         }
 
         private void regresarAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form1 f = new Form1();
-            f.Show();
-            this.Hide();
+        {           
         }
         
         private void dataGridView1_RowHeaderMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)

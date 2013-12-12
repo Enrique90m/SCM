@@ -93,11 +93,11 @@
     <Compile Include="DataConections.cs" />
     <Compile Include="Equipos.cs" />
     <Compile Include="EquiposDAL.cs" />
-    <Compile Include="EquiposFormulario.cs">
+    <Compile Include="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EquiposFormulario.Designer.cs">
-      <DependentUpon>EquiposFormulario.cs</DependentUpon>
+    <Compile Include="FormularioPrincipal.Designer.cs">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Falla.cs" />
     <Compile Include="Fallas.cs">
@@ -107,12 +107,6 @@
       <DependentUpon>Fallas.cs</DependentUpon>
     </Compile>
     <Compile Include="FallasDAL.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="ModificaFalla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,14 +139,11 @@
     <EmbeddedResource Include="AgregarFalla.resx">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EquiposFormulario.resx">
-      <DependentUpon>EquiposFormulario.cs</DependentUpon>
+    <EmbeddedResource Include="FormularioPrincipal.resx">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fallas.resx">
       <DependentUpon>Fallas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificaFalla.resx">
       <DependentUpon>ModificaFalla.cs</DependentUpon>

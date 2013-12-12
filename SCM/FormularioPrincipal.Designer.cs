@@ -155,7 +155,6 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.usarElSistemaComoAdministradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioDeEquiposYModificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regresarAlMenuPrincipalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.inventarioDeFallasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1696,8 +1695,7 @@
             // 
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usarElSistemaComoAdministradorToolStripMenuItem,
-            this.inventarioDeEquiposYModificacionToolStripMenuItem,
-            this.regresarAlMenuPrincipalToolStripMenuItem});
+            this.inventarioDeEquiposYModificacionToolStripMenuItem});
             this.toolStripDropDownButton1.Image = global::SCM.Properties.Resources.virtual_pc;
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -1719,14 +1717,6 @@
             this.inventarioDeEquiposYModificacionToolStripMenuItem.Size = new System.Drawing.Size(324, 24);
             this.inventarioDeEquiposYModificacionToolStripMenuItem.Text = "Inventario de equipos y modificacion";
             this.inventarioDeEquiposYModificacionToolStripMenuItem.Click += new System.EventHandler(this.inventarioDeEquiposYModificacionToolStripMenuItem_Click);
-            // 
-            // regresarAlMenuPrincipalToolStripMenuItem
-            // 
-            this.regresarAlMenuPrincipalToolStripMenuItem.Image = global::SCM.Properties.Resources.back_2;
-            this.regresarAlMenuPrincipalToolStripMenuItem.Name = "regresarAlMenuPrincipalToolStripMenuItem";
-            this.regresarAlMenuPrincipalToolStripMenuItem.Size = new System.Drawing.Size(324, 24);
-            this.regresarAlMenuPrincipalToolStripMenuItem.Text = "Regresar al menu principal";
-            this.regresarAlMenuPrincipalToolStripMenuItem.Click += new System.EventHandler(this.regresarAlMenuPrincipalToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -1882,7 +1872,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem usarElSistemaComoAdministradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioDeEquiposYModificacionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regresarAlMenuPrincipalToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem contactenosToolStripMenuItem;

@@ -31,10 +31,7 @@ namespace SCM
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            Form1 fm = new Form1();
-            fm.Show();
-            this.Hide();
+        {           
         }
 
     }
