@@ -11,9 +11,9 @@ namespace SCM
 {
     public class DataConections
     {
-        public static MySqlConnection conectaConBD()
+        public static  SqlCeConnection conectaConBD()
         {
-            MySqlConnection conn = new MySqlConnection(@"Server=localhost;Database=bd;Uid=root;Pwd=elkike_;");
+            SqlCeConnection conn = new SqlCeConnection(@"Data Source=C:\SCM\SCM\BDNUEVA.sdf");
             try
             {                
                 conn.Open();

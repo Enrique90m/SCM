@@ -307,7 +307,7 @@
             this.radioButton5.TabIndex = 4;
             this.radioButton5.Text = "De fecha a fecha";
             this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            //this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -321,7 +321,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Mensual";
             this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+           // this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -333,7 +333,7 @@
             this.radioButton3.TabIndex = 2;
             this.radioButton3.Text = "Reporte Anual";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+          //  this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // button4
             // 
@@ -347,7 +347,7 @@
             this.button4.TabIndex = 2;
             this.button4.Text = "Generar reporte";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+          //  this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // groupBox5
             // 
@@ -369,7 +369,7 @@
             this.radioButton2.Text = "Reporte de equipos computacionales";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.Visible = false;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+         //   this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -382,7 +382,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Reporte de fallas";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+           // this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // Reportes
             // 
@@ -416,9 +416,6 @@
 
         #endregion
 
-        private bdDataSet bdDataSet;
-        private bdDataSetTableAdapters.equiposTableAdapter equiposTableAdapter;
-        private bdDataSetTableAdapters.SeleccionarTodosTableAdapter SeleccionarTodosTableAdapter;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.RadioButton radioButton1;

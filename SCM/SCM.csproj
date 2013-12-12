@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -85,10 +85,10 @@
     <Compile Include="AgregarFalla.Designer.cs">
       <DependentUpon>AgregarFalla.cs</DependentUpon>
     </Compile>
-    <Compile Include="bdDataSet.Designer.cs">
+    <Compile Include="BDNUEVADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bdDataSet.xsd</DependentUpon>
+      <DependentUpon>BDNUEVADataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataConections.cs" />
     <Compile Include="Equipos.cs" />
@@ -115,12 +115,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReporteFecha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteFecha.Designer.cs">
-      <DependentUpon>ReporteFecha.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,11 +152,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="ReporteFecha.resx">
-      <DependentUpon>ReporteFecha.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportePorNumComp.rdlc" />
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,16 +159,16 @@
       <DependentUpon>TodasFallas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="bdDataSet.xsc">
-      <DependentUpon>bdDataSet.xsd</DependentUpon>
+    <None Include="BDNUEVADataSet.xsc">
+      <DependentUpon>BDNUEVADataSet.xsd</DependentUpon>
     </None>
-    <None Include="bdDataSet.xsd">
+    <None Include="BDNUEVADataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bdDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BDNUEVADataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="bdDataSet.xss">
-      <DependentUpon>bdDataSet.xsd</DependentUpon>
+    <None Include="BDNUEVADataSet.xss">
+      <DependentUpon>BDNUEVADataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -193,6 +182,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BD.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BDNUEVA.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\gnome_document_revert.png" />
@@ -229,7 +221,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

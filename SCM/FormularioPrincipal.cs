@@ -964,6 +964,7 @@ namespace SCM
 
         private void button4_Click(object sender, EventArgs e)
         {
+            /*
             if (mensualGroupBox.Enabled)
             {
                 DateTime mesAnetior;
@@ -1068,6 +1069,7 @@ namespace SCM
                         rp2.Show();
                     }               
                 }
+             */ 
             
         }
 

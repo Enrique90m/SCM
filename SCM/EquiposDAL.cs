@@ -18,9 +18,9 @@ namespace SCM
                                FROM EQUIPOS 
                                WHERE NumEquipo = @NumEquipo";
 
-            using (MySqlConnection cn = DataConections.conectaConBD())
+            using ( SqlCeConnection cn = DataConections.conectaConBD())
             {
-               MySqlCommand comm = new MySqlCommand(SqlComand,cn);
+               SqlCeCommand comm = new SqlCeCommand(SqlComand,cn);
                 comm.Parameters.AddWithValue("@NumEquipo",pNumEquipo);               
                 int TotalRegistros = Convert.ToInt32(comm.ExecuteScalar());
 
@@ -34,10 +34,10 @@ namespace SCM
         {
             string sql = @"INSERT INTO EQUIPOS VALUES(@NumEquipo,@Marca,@NumSerie,@Sala,@Estado)";
 
-            using (MySqlConnection cn = DataConections.conectaConBD())
+            using ( SqlCeConnection cn = DataConections.conectaConBD())
             {
 
-               MySqlCommand cm = new MySqlCommand(sql,cn);
+               SqlCeCommand cm = new SqlCeCommand(sql,cn);
                 cm.Parameters.AddWithValue("@NumEquipo", oEquipo.NumEquipo.ToUpper());
                 cm.Parameters.AddWithValue("@Marca",oEquipo.Marca.ToUpper());
                 cm.Parameters.AddWithValue("@NumSerie",oEquipo.NumSerie);
@@ -52,11 +52,11 @@ namespace SCM
         {
             string query = @"SELECT * FROM EQUIPOS";
 
-            using (MySqlConnection cn = DataConections.conectaConBD())
+            using ( SqlCeConnection cn = DataConections.conectaConBD())
             {
                 try
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, cn);
+                    SqlCeDataAdapter da = new SqlCeDataAdapter(query, cn);
                     da.Fill(dt);
                     return dt;
                 }
@@ -76,9 +76,9 @@ namespace SCM
             string query = " UPDATE EQUIPOS SET NumEquipo=@ne, Marca=@marca, NumSerie=@ns, Sala=@sala WHERE NumEquipo=@NumeroEquipo";
             int error;
 
-            using (MySqlConnection cn = DataConections.conectaConBD())
+            using ( SqlCeConnection cn = DataConections.conectaConBD())
             {
-               MySqlCommand cm = new MySqlCommand(query, cn);
+               SqlCeCommand cm = new SqlCeCommand(query, cn);
                 cm.Parameters.AddWithValue("@ne", oEquipo.NumEquipo);
                 cm.Parameters.AddWithValue("@marca", oEquipo.Marca);
                 cm.Parameters.AddWithValue("@ns", oEquipo.NumSerie);
@@ -94,13 +94,13 @@ namespace SCM
         public static Equipos BuscaDatosEquipo(string pNumEquipo)
         {
             Equipos equipo = new Equipos();
-            using (MySqlConnection cnn = DataConections.conectaConBD())
+            using ( SqlCeConnection cnn = DataConections.conectaConBD())
             {
                 string query = @" SELECT Marca, NumSerie, Sala FROM EQUIPOS WHERE NumEquipo = @NumEquipo";
-               MySqlCommand cm = new MySqlCommand(query,cnn);
+               SqlCeCommand cm = new SqlCeCommand(query,cnn);
                 cm.Parameters.AddWithValue("@NumEquipo",pNumEquipo);
 
-                MySqlDataReader rd = cm.ExecuteReader();
+                SqlCeDataReader rd = cm.ExecuteReader();
                 bool EncontroEquipo = false;
                
                 while (rd.Read())
@@ -120,11 +120,11 @@ namespace SCM
         }
         public static DataTable buscaEquipo(DataTable dt, string comando)
         {
-            using (MySqlConnection conexion = DataConections.conectaConBD())
+            using ( SqlCeConnection conexion = DataConections.conectaConBD())
             {
                 try
                 {
-                    MySqlDataAdapter da = new MySqlDataAdapter(comando, conexion);
+                    SqlCeDataAdapter da = new SqlCeDataAdapter(comando, conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
@@ -137,10 +137,10 @@ namespace SCM
         }
         public static void EliminaEquipo(string numEquipo)
         {
-            using (MySqlConnection cn = DataConections.conectaConBD())
+            using ( SqlCeConnection cn = DataConections.conectaConBD())
             {
                 string query = @"DELETE FROM EQUIPOS WHERE NumEquipo = @Numeq";
-               MySqlCommand cm = new MySqlCommand(query, cn);
+               SqlCeCommand cm = new SqlCeCommand(query, cn);
                 cm.Parameters.AddWithValue("@Numeq", numEquipo);
                 try
                 {
@@ -166,9 +166,9 @@ namespace SCM
             string query = " UPDATE EQUIPOS SET Estado = 'Desabilitado' WHERE NumEquipo=@ne";
             int error;
 
-            using (MySqlConnection cn = DataConections.conectaConBD())
+            using ( SqlCeConnection cn = DataConections.conectaConBD())
             {
-               MySqlCommand cm = new MySqlCommand(query, cn);
+               SqlCeCommand cm = new SqlCeCommand(query, cn);
                 cm.Parameters.AddWithValue("@ne", numEquipo);
 
                 try
@@ -193,9 +193,9 @@ namespace SCM
             string query = " UPDATE EQUIPOS SET Estado = 'Habilitado' WHERE NumEquipo=@ne";
             int error;
 
-            using (MySqlConnection cn = DataConections.conectaConBD())
+            using ( SqlCeConnection cn = DataConections.conectaConBD())
             {
-                MySqlCommand cm = new MySqlCommand(query, cn);
+                SqlCeCommand cm = new SqlCeCommand(query, cn);
                 cm.Parameters.AddWithValue("@ne", numEquipo);
 
                 try

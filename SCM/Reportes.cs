@@ -29,6 +29,7 @@ namespace SCM
             RepAnualgroupBox.Enabled = false;
         }
 
+        /*
         private void button1_Click(object sender, EventArgs e)
         {
             //ReporteFecha rp = new ReporteFecha(dateTimePicker1.Value, dateTimePicker2.Value,0);
@@ -79,6 +80,7 @@ namespace SCM
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            
             if (mensualGroupBox.Enabled)
             {
                 DateTime mesAnetior;
@@ -184,6 +186,6 @@ namespace SCM
                     }               
                 }
         }    
-        
+      */
     }
 }

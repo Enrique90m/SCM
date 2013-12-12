@@ -53,5 +53,15 @@ namespace SCM.Properties {
                 return ((string)(this["bdConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|\\BDNUEVA.sdf")]
+        public string BDNUEVAConnectionString {
+            get {
+                return ((string)(this["BDNUEVAConnectionString"]));
+            }
+        }
     }
 }
