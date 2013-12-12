@@ -536,6 +536,9 @@ namespace SCM
                     dataGridView2.Sort(dataGridView2.Columns[3], ListSortDirection.Descending);
 
                     for (int i = 0; i < dataGridView2.Rows.Count; i++)
+                        if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si" && dataGridView2.Rows[i].Cells[5].Value.ToString() == "Si")
+                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
+                    else
                         if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
                             dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
                         else
@@ -571,6 +574,9 @@ namespace SCM
                     dataGridView2.DataSource = dataView;
                     dataGridView2.Sort(dataGridView2.Columns[3], ListSortDirection.Descending);
                     for (int i = 0; i < dataGridView2.Rows.Count; i++)
+                        if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si" && dataGridView2.Rows[i].Cells[5].Value.ToString() == "Si")
+                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
+                        else
                         if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
                             dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
                         else
@@ -852,7 +858,6 @@ namespace SCM
 
             TodasFallas td = new TodasFallas();
             td.Show();
-            this.Dispose();
         }
 
         private void LimpiarDatos_button_Click(object sender, EventArgs e)
@@ -867,7 +872,6 @@ namespace SCM
             FallasDAL.RecuperaFalla(long.Parse(numFallaTextBox.Text));
             TodasFallas td = new TodasFallas();
             td.Show();
-            this.Dispose();
         }
 
         private void ReenviarCorreo_button_Click(object sender, EventArgs e)
@@ -1070,6 +1074,18 @@ namespace SCM
         private void button5_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (NumComp_Radiobtn.Checked)
+            {
+                if (!char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+                    e.Handled = true;
+            }
+            else
+                if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+                    e.Handled = true;
         }
 
     }

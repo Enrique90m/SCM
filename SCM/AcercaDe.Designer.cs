@@ -128,9 +128,8 @@
             this.textBoxDescription.Size = new System.Drawing.Size(440, 171);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "Descripcion\r\n\r\nSistema desarrollado para el registro y control de fallas, asi com" +
-                "o\r\npara los equipos del centro de computo del instituto tecnologico\r\n de nuevo l" +
-                "eon\r\n\r\n";
+            this.textBoxDescription.Text = "Descripcion\r\n\r\nSistema desarrollado para el registro y control de fallas de los e" +
+                "quipos de computo del instituto tecnologico de nuevo leon\r\n";
             // 
             // label1
             // 

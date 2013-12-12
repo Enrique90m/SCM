@@ -1167,6 +1167,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(580, 26);
             this.textBox4.TabIndex = 13;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             this.textBox4.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyUp);
             // 
             // groupBox17
@@ -1254,10 +1255,10 @@
             this.label6.ForeColor = System.Drawing.Color.Goldenrod;
             this.label6.Location = new System.Drawing.Point(363, 14);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(366, 80);
+            this.label6.Size = new System.Drawing.Size(374, 80);
             this.label6.TabIndex = 8;
-            this.label6.Text = "El reporte anual se genera tomando como valor inicial\r\nla fecha seleccionada, y a" +
-                "partir de hay, se tomaran los\r\nregistros de un año atras.\r\n\r\n";
+            this.label6.Text = "El reporte anual se genera tomando como valor inicial\r\nla fecha seleccionada, tom" +
+                "ando los registros de un año \r\natras.\r\n\r\n";
             // 
             // dateTimePicker3
             // 
@@ -1292,8 +1293,8 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(348, 60);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Seleccione la fecha inicial y la fecha final en la que\r\nel sistema desarrollara e" +
-                "l reporte de fallas.\r\n\r\n";
+            this.label7.Text = "Seleccione la fecha inicial y la fecha final en la que\r\nel sistema generara el re" +
+                "porte de fallas.\r\n\r\n";
             // 
             // label8
             // 
