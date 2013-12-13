@@ -764,7 +764,7 @@ namespace SCM
                 return;
             }
 
-            button5.Visible = false;
+            RecuperarFalla_button.Visible = false;
         }
 
         private void ActualizarInfo_button_Click(object sender, EventArgs e)
