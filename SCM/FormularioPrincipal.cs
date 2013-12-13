@@ -856,8 +856,6 @@ namespace SCM
             if (existeOtraFalla == false)
                 EquiposDAL.HabilitaEquipo(RespNumEquipo);
 
-            TodasFallas td = new TodasFallas();
-            td.Show();
         }
 
         private void LimpiarDatos_button_Click(object sender, EventArgs e)
@@ -870,8 +868,6 @@ namespace SCM
         private void RecuperarFalla_button_Click(object sender, EventArgs e)
         {
             FallasDAL.RecuperaFalla(long.Parse(numFallaTextBox.Text));
-            TodasFallas td = new TodasFallas();
-            td.Show();
         }
 
         private void ReenviarCorreo_button_Click(object sender, EventArgs e)
