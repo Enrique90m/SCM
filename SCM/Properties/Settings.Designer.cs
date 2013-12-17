@@ -53,5 +53,15 @@ namespace SCM.Properties {
                 return ((string)(this["bdConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local)\\SQLServer;Initial Catalog=bd;Integrated Security=True")]
+        public string ConexionSQLServer {
+            get {
+                return ((string)(this["ConexionSQLServer"]));
+            }
+        }
     }
 }

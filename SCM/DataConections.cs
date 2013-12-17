@@ -7,6 +7,8 @@ using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using System.Configuration;
+using SCM.Properties;
 
 namespace SCM
 {
@@ -14,7 +16,7 @@ namespace SCM
     {
         public static SqlConnection conectaConBD()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(local)\SQLServer;Initial Catalog=bd;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(Settings.Default.ConexionSQLServer.ToString());
             try
             {                
                 conn.Open();
