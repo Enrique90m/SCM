@@ -1634,7 +1634,6 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -1648,7 +1647,7 @@
             this.toolStripDropDownButton2,
             this.toolStripSeparator5,
             this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 510);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1099, 27);
             this.toolStrip1.TabIndex = 4;
