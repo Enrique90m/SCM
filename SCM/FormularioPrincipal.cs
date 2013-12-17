@@ -764,7 +764,7 @@ namespace SCM
                 return;
             }
 
-            button5.Visible = false;
+            RecuperarFalla_button.Enabled = false;
         }
 
         private void ActualizarInfo_button_Click(object sender, EventArgs e)
@@ -1082,6 +1082,10 @@ namespace SCM
             else
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
                     e.Handled = true;
+        }
+
+        private void numEquipoTextBox_Leave(object sender, EventArgs e)
+        {
         }
 
     }

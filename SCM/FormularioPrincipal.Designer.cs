@@ -53,7 +53,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Regresar = new System.Windows.Forms.Button();
             this.NumEquipo_Radiobtn = new System.Windows.Forms.RadioButton();
             this.Sala_RadioBtn = new System.Windows.Forms.RadioButton();
             this.datoABuscar = new System.Windows.Forms.TextBox();
@@ -103,7 +102,6 @@
             this.solucionadasCheckbox = new System.Windows.Forms.CheckBox();
             this.EliminadasCheckbox = new System.Windows.Forms.CheckBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.NumFalla_Radiobtn = new System.Windows.Forms.RadioButton();
             this.NumComp_Radiobtn = new System.Windows.Forms.RadioButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -493,7 +491,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Regresar);
             this.groupBox1.Controls.Add(this.NumEquipo_Radiobtn);
             this.groupBox1.Controls.Add(this.Sala_RadioBtn);
             this.groupBox1.Controls.Add(this.datoABuscar);
@@ -505,20 +502,6 @@
             this.groupBox1.TabIndex = 70;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar por:";
-            // 
-            // Regresar
-            // 
-            this.Regresar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ForeColor = System.Drawing.Color.Black;
-            this.Regresar.Image = global::SCM.Properties.Resources.back__1_;
-            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Regresar.Location = new System.Drawing.Point(442, 52);
-            this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(285, 37);
-            this.Regresar.TabIndex = 16;
-            this.Regresar.Text = "Regresar";
-            this.Regresar.UseVisualStyleBackColor = true;
-            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
             // 
             // NumEquipo_Radiobtn
             // 
@@ -607,13 +590,13 @@
             // 
             this.button10.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Image = global::SCM.Properties.Resources.list_remove;
+            this.button10.Image = global::SCM.Properties.Resources.edit_clear;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button10.Location = new System.Drawing.Point(512, 300);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(221, 71);
             this.button10.TabIndex = 12;
-            this.button10.Text = "Borrar datos";
+            this.button10.Text = "Limpiar datos";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -695,6 +678,7 @@
             this.numEquipoTextBox.Name = "numEquipoTextBox";
             this.numEquipoTextBox.Size = new System.Drawing.Size(294, 29);
             this.numEquipoTextBox.TabIndex = 3;
+            this.numEquipoTextBox.Leave += new System.EventHandler(this.numEquipoTextBox_Leave);
             // 
             // tabPage4
             // 
@@ -1108,7 +1092,6 @@
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.button5);
             this.groupBox16.Controls.Add(this.NumFalla_Radiobtn);
             this.groupBox16.Controls.Add(this.NumComp_Radiobtn);
             this.groupBox16.Controls.Add(this.textBox4);
@@ -1120,20 +1103,6 @@
             this.groupBox16.TabIndex = 71;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Buscar por:";
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Image = global::SCM.Properties.Resources.back__1_;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(653, 54);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(117, 37);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Regresar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // NumFalla_Radiobtn
             // 
@@ -1665,6 +1634,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -1678,7 +1648,7 @@
             this.toolStripDropDownButton2,
             this.toolStripSeparator5,
             this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 510);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1099, 27);
             this.toolStrip1.TabIndex = 4;
@@ -1895,7 +1865,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button Regresar;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
@@ -1936,7 +1905,6 @@
         private System.Windows.Forms.CheckBox solucionadasCheckbox;
         private System.Windows.Forms.CheckBox EliminadasCheckbox;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.RadioButton NumFalla_Radiobtn;
         private System.Windows.Forms.RadioButton NumComp_Radiobtn;
         private System.Windows.Forms.TextBox textBox4;
