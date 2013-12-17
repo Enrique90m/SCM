@@ -482,9 +482,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Instalador"
+        "ProductName" = "8:SCM"
         "ProductCode" = "8:{4FECA2ED-7117-4F70-BDEE-812FB337CA2E}"
-        "PackageCode" = "8:{04B0CBC5-188C-4692-AFA9-D72B933B1B7B}"
+        "PackageCode" = "8:{CF1E12A3-E681-44AA-9EE5-037659650E3E}"
         "UpgradeCode" = "8:{ECCB1B6C-48C8-4C5C-8231-20176646D873}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
