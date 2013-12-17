@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM", "SCM\SCM.csproj", "{CD47ED85-A854-47FD-B88A-E85D8540F69E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador", "Instalador\Instalador.vdproj", "{135BD01D-EAFF-4235-AD9A-A9ECCD33F2FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,8 @@ Global
 		{CD47ED85-A854-47FD-B88A-E85D8540F69E}.Debug|x86.Build.0 = Debug|x86
 		{CD47ED85-A854-47FD-B88A-E85D8540F69E}.Release|x86.ActiveCfg = Release|x86
 		{CD47ED85-A854-47FD-B88A-E85D8540F69E}.Release|x86.Build.0 = Release|x86
+		{135BD01D-EAFF-4235-AD9A-A9ECCD33F2FE}.Debug|x86.ActiveCfg = Debug
+		{135BD01D-EAFF-4235-AD9A-A9ECCD33F2FE}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

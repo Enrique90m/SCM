@@ -6,14 +6,15 @@ using System.Data.SqlServerCe;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace SCM
 {
     public class DataConections
     {
-        public static MySqlConnection conectaConBD()
+        public static SqlConnection conectaConBD()
         {
-            MySqlConnection conn = new MySqlConnection(@"Server=localhost;Database=bd;Uid=root;Pwd=elkike_;");
+            SqlConnection conn = new SqlConnection(@"Data Source=(local)\SQLServer;Initial Catalog=bd;Integrated Security=True");
             try
             {                
                 conn.Open();
