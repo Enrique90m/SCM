@@ -153,6 +153,11 @@
                     "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 y x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
                     }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5.SP1"
+                    {
+                    "Name" = "8:.NET Framework 3.5 SP1"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5.SP1"
+                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Sql.Server.Express.10.0"
                     {
                     "Name" = "8:SQL Server 2008 Express Edition"
@@ -484,7 +489,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SCM"
         "ProductCode" = "8:{4FECA2ED-7117-4F70-BDEE-812FB337CA2E}"
-        "PackageCode" = "8:{CF1E12A3-E681-44AA-9EE5-037659650E3E}"
+        "PackageCode" = "8:{C7CFC97C-4A1E-489E-A44C-9216516F799B}"
         "UpgradeCode" = "8:{ECCB1B6C-48C8-4C5C-8231-20176646D873}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
