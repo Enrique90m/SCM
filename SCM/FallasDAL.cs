@@ -14,12 +14,12 @@ namespace SCM
     {
         public void AgregaFalla(Falla objetoFalla)
         {
-            using (SqlConnection conn = DataConections.conectaConBD())
+            using (MySqlConnection conn = DataConections.conectaConBD())
             {
                 try
                 {
                     string query = "INSERT INTO FALLAS VALUES(@numfalla,@numcompu,@desc,@fechaAlta,@fechaBaja,@solucionada,@categoria,@elim)";
-                   SqlCommand comando = new SqlCommand(query, conn);
+                   MySqlCommand comando = new MySqlCommand(query, conn);
                     comando.Parameters.AddWithValue("@numfalla", objetoFalla.numFalla);
                     comando.Parameters.AddWithValue("@numcompu", objetoFalla.NumComputadora);
                     comando.Parameters.AddWithValue("@desc", objetoFalla.descripcionFalla);
@@ -48,11 +48,11 @@ namespace SCM
         {
             DataTable dt = new DataTable();
 
-            using (SqlConnection conexion = DataConections.conectaConBD())
+            using (MySqlConnection conexion = DataConections.conectaConBD())
             {
                 try
                 {
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM FALLAS", conexion);
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM FALLAS", conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
@@ -70,11 +70,11 @@ namespace SCM
         public DataTable obtieneTodasLasFallas(DataTable dt)
         {
             DataConections bd = new DataConections();
-            using (SqlConnection conexion = DataConections.conectaConBD())
+            using (MySqlConnection conexion = DataConections.conectaConBD())
             {
                 try
                 {
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 'No' AND Eliminada = 'No' ORDER BY FechaAlta DESC", conexion);
+                    MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM FALLAS WHERE Solucionada = 'No' AND Eliminada = 'No' ORDER BY FechaAlta DESC", conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
@@ -86,11 +86,11 @@ namespace SCM
         }
         public static DataTable buscaFalla(DataTable dt, string comando)
         {
-            using (SqlConnection conexion = DataConections.conectaConBD())
+            using (MySqlConnection conexion = DataConections.conectaConBD())
             {
                 try
                 {
-                    SqlDataAdapter da = new SqlDataAdapter(comando, conexion);
+                    MySqlDataAdapter da = new MySqlDataAdapter(comando, conexion);
                     da.Fill(dt);
                 }
                 catch (Exception e)
@@ -103,9 +103,9 @@ namespace SCM
         }
         public static void ActualizaInformacion(Falla falla)
         {
-            using (SqlConnection conn = DataConections.conectaConBD())
+            using (MySqlConnection conn = DataConections.conectaConBD())
             {
-               SqlCommand comm = new SqlCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol, Categoria=@cat, FechaBaja=@fbaja WHERE idFalla = @numfalla", conn);
+               MySqlCommand comm = new MySqlCommand("UPDATE FALLAS SET NumComputadora=@numcomp, descripcionFalla=@descrip, Solucionada=@sol, Categoria=@cat, FechaBaja=@fbaja WHERE idFalla = @numfalla", conn);
                 comm.Parameters.AddWithValue("@numcomp",falla.NumComputadora);
                 comm.Parameters.AddWithValue("@descrip",falla.descripcionFalla);
                 comm.Parameters.AddWithValue("@sol",falla.Solucionada);
@@ -130,10 +130,10 @@ namespace SCM
         }
         public static void EliminaFalla(long numFalla, DateTime fechabaja)
         {
-            using (SqlConnection cn = DataConections.conectaConBD())
+            using (MySqlConnection cn = DataConections.conectaConBD())
             {
                 string query = @"UPDATE FALLAS SET Eliminada = 'Si', FechaBaja = @fb WHERE idFalla = @Numfalla";
-                SqlCommand cm = new SqlCommand(query,cn);
+                MySqlCommand cm = new MySqlCommand(query,cn);
                 cm.Parameters.AddWithValue("@Numfalla",numFalla);
                 cm.Parameters.AddWithValue("@fb",fechabaja);
 
@@ -154,10 +154,10 @@ namespace SCM
         }
         public static void RecuperaFalla(long numFalla)
         {
-            using (SqlConnection cn = DataConections.conectaConBD())
+            using (MySqlConnection cn = DataConections.conectaConBD())
             {
                 string query = @"UPDATE FALLAS SET Eliminada = 'No', FechaBaja = @fechaBaja WHERE idFalla = @Numfalla";
-                SqlCommand cm = new SqlCommand(query, cn);
+                MySqlCommand cm = new MySqlCommand(query, cn);
                 cm.Parameters.AddWithValue("@fechaBaja", DBNull.Value);
                 cm.Parameters.AddWithValue("@Numfalla", numFalla);
 
@@ -183,12 +183,12 @@ namespace SCM
              el equipo, checa si tiene otra falla de ese mismo equipo, de ser asi, no lo habilita. 
              Si no tiene fallas, lo habilita
              */ 
-            using (SqlConnection cn = DataConections.conectaConBD())
+            using (MySqlConnection cn = DataConections.conectaConBD())
             {
                 string query = @"SELECT COUNT(*) FROM FALLAS WHERE NumComputadora = @nc AND Eliminada = 'No' AND Solucionada = 'No' ";
                 bool existefallas = false;
 
-                SqlCommand cm = new SqlCommand(query,cn);
+                MySqlCommand cm = new MySqlCommand(query,cn);
                 cm.Parameters.AddWithValue("@nc", pNumFalla);
 
                 long totalFallas = Convert.ToInt64(cm.ExecuteScalar());

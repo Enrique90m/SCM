@@ -14,9 +14,9 @@ namespace SCM
 {
     public class DataConections
     {
-        public static SqlConnection conectaConBD()
+        public static MySqlConnection conectaConBD()
         {
-            SqlConnection conn = new SqlConnection(Settings.Default.ConexionSQLServer.ToString());
+            MySqlConnection conn = new MySqlConnection(Settings.Default.ConexionSQLServer.ToString());
             try
             {                
                 conn.Open();
