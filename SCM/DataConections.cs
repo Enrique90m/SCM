@@ -16,7 +16,7 @@ namespace SCM
     {
         public static MySqlConnection conectaConBD()
         {
-            MySqlConnection conn = new MySqlConnection(Settings.Default.ConexionSQLServer.ToString());
+            MySqlConnection conn = new MySqlConnection(@"Server=localhost;Database=bd;Uid=root;Pwd=elkike_;");
             try
             {                
                 conn.Open();
