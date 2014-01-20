@@ -22,9 +22,11 @@ namespace SCM
 
             //si bandera = 0 es reporte de fecha a fecha, si no es reporte mensual
             if (flag == 0)
-                label1.Text = "Reporte del   " + fecha1.ToShortDateString() + "    a     " + fecha2.ToShortDateString();
+                label1.Text = "REPORTE DE " + fecha1.ToShortDateString() + " A " + fecha2.ToShortDateString();
+            else if (flag == 1)
+                label1.Text = "REPORTE MENSUAL";
             else
-                label1.Text = "Reporte mensual";
+                label1.Text = "REPORTE ANUAL";
 
         }
 
@@ -34,7 +36,6 @@ namespace SCM
             this.BuscaFallaEntreFechasTableAdapter.Fill(this.bdDataSet.BuscaFallaEntreFechas,fecha1, fecha2,bandera);
             //this.seleccionarTodosTableAdapter1.Fill(this.bdDataSet.SeleccionarTodos);
 
-            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
 

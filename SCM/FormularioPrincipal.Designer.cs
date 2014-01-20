@@ -1674,7 +1674,7 @@
             // 
             // usarElSistemaComoAdministradorToolStripMenuItem
             // 
-            this.usarElSistemaComoAdministradorToolStripMenuItem.Image = global::SCM.Properties.Resources.symbol_add;
+            this.usarElSistemaComoAdministradorToolStripMenuItem.Image = global::SCM.Properties.Resources.add1;
             this.usarElSistemaComoAdministradorToolStripMenuItem.Name = "usarElSistemaComoAdministradorToolStripMenuItem";
             this.usarElSistemaComoAdministradorToolStripMenuItem.Size = new System.Drawing.Size(324, 24);
             this.usarElSistemaComoAdministradorToolStripMenuItem.Text = "Agregar equipo";
@@ -1708,15 +1708,15 @@
             // 
             this.inventarioDeFallasToolStripMenuItem.Image = global::SCM.Properties.Resources.Line_Chart;
             this.inventarioDeFallasToolStripMenuItem.Name = "inventarioDeFallasToolStripMenuItem";
-            this.inventarioDeFallasToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
-            this.inventarioDeFallasToolStripMenuItem.Text = "Inventario de fallas";
+            this.inventarioDeFallasToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
+            this.inventarioDeFallasToolStripMenuItem.Text = "Registro total de fallas";
             this.inventarioDeFallasToolStripMenuItem.Click += new System.EventHandler(this.inventarioDeFallasToolStripMenuItem_Click);
             // 
             // registrarFallaToolStripMenuItem
             // 
-            this.registrarFallaToolStripMenuItem.Image = global::SCM.Properties.Resources._27_edit_text;
+            this.registrarFallaToolStripMenuItem.Image = global::SCM.Properties.Resources.add1;
             this.registrarFallaToolStripMenuItem.Name = "registrarFallaToolStripMenuItem";
-            this.registrarFallaToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
+            this.registrarFallaToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
             this.registrarFallaToolStripMenuItem.Text = "Registrar falla";
             this.registrarFallaToolStripMenuItem.Click += new System.EventHandler(this.registrarFallaToolStripMenuItem_Click);
             // 

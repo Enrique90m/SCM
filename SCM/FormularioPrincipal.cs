@@ -1038,28 +1038,28 @@ namespace SCM
                     //NO INCLUYE NI ELIMINADAS NI SOLUCIONADAS
                     if (checkBox1.Checked == false && checkBox2.Checked == false)
                     {                        
-                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 1);
+                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 3);
                         rp2.bandera = "0";
                         rp2.Show();
                     }
                     //INCLUYE ELIMINADAS Y SOLUCIONADAS
                     else if (checkBox1.Checked == true && checkBox2.Checked == true)
                     {
-                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 1);
+                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 3);
                         rp2.bandera = "3";
                         rp2.Show();
                     }
                     //INCLUYE ELIMINADAS Y NO SOLUCIONADAS
                     else if (checkBox1.Checked == true)
                     {
-                        ReporteFecha rp = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 1);
+                        ReporteFecha rp = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 3);
                         rp.bandera = "1";
                         rp.Show();
                     }
                     //INCLUYE SOLUCIONADAS Y NO ELIMINADAS
                     else if (checkBox2.Checked == true)
                     {
-                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 1);
+                        ReporteFecha rp2 = new ReporteFecha(AnoAnterior, dateTimePicker4.Value, 3);
                         rp2.bandera = "2";
                         rp2.Show();
                     }               

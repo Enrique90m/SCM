@@ -16,3 +16,5 @@ C:\SCM\SCM\obj\x86\Debug\RdlCompile.cache
 C:\SCM\SCM\obj\x86\Debug\RdlCompile.compiled
 C:\SCM\SCM\obj\x86\Debug\SCM.ReporteFecha.resources
 C:\SCM\SCM\obj\x86\Debug\SCM.FormularioPrincipal.resources
+C:\SCM\SCM\bin\Debug\MySql.Data.dll
+C:\SCM\SCM\obj\x86\Debug\SCM.csprojResolveAssemblyReference.cache
