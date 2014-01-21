@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM", "SCM.csproj", "{CD47ED85-A854-47FD-B88A-E85D8540F69E}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SCRF", "..\Setup1\Setup1.vdproj", "{08B77C35-B32E-45A5-9052-736EEAFFCFBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,8 @@ Global
 		{CD47ED85-A854-47FD-B88A-E85D8540F69E}.Debug|x86.Build.0 = Debug|x86
 		{CD47ED85-A854-47FD-B88A-E85D8540F69E}.Release|x86.ActiveCfg = Release|x86
 		{CD47ED85-A854-47FD-B88A-E85D8540F69E}.Release|x86.Build.0 = Release|x86
+		{08B77C35-B32E-45A5-9052-736EEAFFCFBB}.Debug|x86.ActiveCfg = Debug
+		{08B77C35-B32E-45A5-9052-736EEAFFCFBB}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
