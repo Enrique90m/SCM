@@ -149,7 +149,6 @@
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.contactenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.usarElSistemaComoAdministradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioDeEquiposYModificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -162,6 +161,8 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             numEquipoLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
@@ -1646,20 +1647,13 @@
             this.toolStripDropDownButton2,
             this.toolStripSeparator5,
             this.toolStripButton1,
+            this.toolStripSeparator6,
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1099, 27);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel1.Image = global::SCM.Properties.Resources.utilities_system_monitor;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(156, 24);
-            this.toolStripLabel1.Text = " SCRF-Menu principal";
             // 
             // toolStripDropDownButton1
             // 
@@ -1755,6 +1749,19 @@
             this.toolStripButton1.Size = new System.Drawing.Size(137, 24);
             this.toolStripButton1.Text = "Salir del sistema";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.Image = global::SCM.Properties.Resources.utilities_system_monitor;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(156, 24);
+            this.toolStripLabel1.Text = " SCRF-Menu principal";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
             // FormularioPrincipal
             // 
@@ -1937,6 +1944,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.TextBox txtNumEqui;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 
     }
 }

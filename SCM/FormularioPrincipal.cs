@@ -170,15 +170,18 @@ namespace SCM
             }
             
             //Valida que solo sean numeros el numero de serie
-            try
+            if (!string.IsNullOrWhiteSpace(numSerieTextBox.Text))
             {
-                long.Parse(numSerieTextBox.Text);
-            }
-            catch (Exception q)
-            {
-                MessageBox.Show("El numero de serie solo debe de contener numeros, porfavor verifique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                numSerieTextBox.Focus();
-                return;
+                try
+                {
+                    long.Parse(numSerieTextBox.Text);
+                }
+                catch (Exception q)
+                {
+                    MessageBox.Show("El numero de serie solo debe de contener numeros, porfavor verifique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    numSerieTextBox.Focus();
+                    return;
+                }
             }
 
 
@@ -1086,6 +1089,15 @@ namespace SCM
 
         private void numEquipoTextBox_Leave(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(numEquipoTextBox.Text))
+            {
+                salaTextBox.Text = null;
+                return;
+            }
+
+            char [] arreglo =  new char[numEquipoTextBox.Text.Length];
+            arreglo = numEquipoTextBox.Text.ToCharArray();
+            salaTextBox.Text = arreglo[(numEquipoTextBox.Text.Length - 1)].ToString();
         }
 
     }
