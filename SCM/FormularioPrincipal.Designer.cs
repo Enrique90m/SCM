@@ -146,23 +146,21 @@
             this.t3 = new System.Windows.Forms.TextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.contactenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.usarElSistemaComoAdministradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioDeEquiposYModificacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.inventarioDeFallasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarFallaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventarioDeFallasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.desarrollarReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             numEquipoLabel = new System.Windows.Forms.Label();
             marcaLabel = new System.Windows.Forms.Label();
             numSerieLabel = new System.Windows.Forms.Label();
@@ -184,6 +182,7 @@
             label13 = new System.Windows.Forms.Label();
             solucionadaLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -216,6 +215,7 @@
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // numEquipoLabel
@@ -457,12 +457,13 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1097, 512);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "pctu";
             // 
             // tabPage2
             // 
@@ -1388,11 +1389,11 @@
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.ForeColor = System.Drawing.Color.CadetBlue;
-            this.radioButton5.Location = new System.Drawing.Point(159, 24);
+            this.radioButton5.Location = new System.Drawing.Point(174, 24);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(139, 24);
+            this.radioButton5.Size = new System.Drawing.Size(97, 24);
             this.radioButton5.TabIndex = 4;
-            this.radioButton5.Text = "De fecha a fecha";
+            this.radioButton5.Text = "Por fechas";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
@@ -1493,13 +1494,13 @@
             // 
             this.button3.Font = new System.Drawing.Font("Franklin Gothic Demi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::SCM.Properties.Resources.list_remove;
+            this.button3.Image = global::SCM.Properties.Resources.edit_clear;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.Location = new System.Drawing.Point(652, 189);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(178, 38);
             this.button3.TabIndex = 68;
-            this.button3.Text = "Borrar datos";
+            this.button3.Text = "Limpiar datos";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
@@ -1617,22 +1618,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contactenosToolStripMenuItem});
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(88, 24);
-            this.toolStripDropDownButton2.Text = "Acerca de";
-            // 
-            // contactenosToolStripMenuItem
-            // 
-            this.contactenosToolStripMenuItem.Name = "contactenosToolStripMenuItem";
-            this.contactenosToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.contactenosToolStripMenuItem.Text = "Detalles del sistema";
-            this.contactenosToolStripMenuItem.Click += new System.EventHandler(this.contactenosToolStripMenuItem_Click);
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1644,8 +1629,6 @@
             this.toolStripSeparator2,
             this.toolStripDropDownButton4,
             this.toolStripSeparator4,
-            this.toolStripDropDownButton2,
-            this.toolStripSeparator5,
             this.toolStripButton1,
             this.toolStripSeparator6,
             this.toolStripLabel1});
@@ -1690,21 +1673,13 @@
             // toolStripDropDownButton3
             // 
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inventarioDeFallasToolStripMenuItem,
-            this.registrarFallaToolStripMenuItem});
+            this.registrarFallaToolStripMenuItem,
+            this.inventarioDeFallasToolStripMenuItem});
             this.toolStripDropDownButton3.Image = global::SCM.Properties.Resources.report_check;
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             this.toolStripDropDownButton3.Size = new System.Drawing.Size(147, 24);
             this.toolStripDropDownButton3.Text = "Control de fallas";
-            // 
-            // inventarioDeFallasToolStripMenuItem
-            // 
-            this.inventarioDeFallasToolStripMenuItem.Image = global::SCM.Properties.Resources.Line_Chart;
-            this.inventarioDeFallasToolStripMenuItem.Name = "inventarioDeFallasToolStripMenuItem";
-            this.inventarioDeFallasToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
-            this.inventarioDeFallasToolStripMenuItem.Text = "Registro total de fallas";
-            this.inventarioDeFallasToolStripMenuItem.Click += new System.EventHandler(this.inventarioDeFallasToolStripMenuItem_Click);
             // 
             // registrarFallaToolStripMenuItem
             // 
@@ -1713,6 +1688,14 @@
             this.registrarFallaToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
             this.registrarFallaToolStripMenuItem.Text = "Registrar falla";
             this.registrarFallaToolStripMenuItem.Click += new System.EventHandler(this.registrarFallaToolStripMenuItem_Click);
+            // 
+            // inventarioDeFallasToolStripMenuItem
+            // 
+            this.inventarioDeFallasToolStripMenuItem.Image = global::SCM.Properties.Resources.Line_Chart;
+            this.inventarioDeFallasToolStripMenuItem.Name = "inventarioDeFallasToolStripMenuItem";
+            this.inventarioDeFallasToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
+            this.inventarioDeFallasToolStripMenuItem.Text = "Registro total de fallas";
+            this.inventarioDeFallasToolStripMenuItem.Click += new System.EventHandler(this.inventarioDeFallasToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton4
             // 
@@ -1736,11 +1719,6 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = global::SCM.Properties.Resources.exit;
@@ -1750,6 +1728,11 @@
             this.toolStripButton1.Text = "Salir del sistema";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1758,10 +1741,16 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(156, 24);
             this.toolStripLabel1.Text = " SCRF-Menu principal";
             // 
-            // toolStripSeparator6
+            // pictureBox1
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            this.pictureBox1.Image = global::SCM.Properties.Resources.LogoITNL;
+            this.pictureBox1.Location = new System.Drawing.Point(479, 146);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormularioPrincipal
             // 
@@ -1773,8 +1762,9 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "FormularioPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EquiposFormulario";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1823,6 +1813,7 @@
             this.groupBox9.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1850,8 +1841,6 @@
         private System.Windows.Forms.ToolStripMenuItem usarElSistemaComoAdministradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioDeEquiposYModificacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.ToolStripMenuItem contactenosToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1940,11 +1929,11 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton4;
         private System.Windows.Forms.ToolStripMenuItem desarrollarReporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.TextBox txtNumEqui;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
     }
 }

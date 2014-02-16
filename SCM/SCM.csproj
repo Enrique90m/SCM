@@ -76,18 +76,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcercaDe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AcercaDe.Designer.cs">
-      <DependentUpon>AcercaDe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarFalla.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarFalla.Designer.cs">
-      <DependentUpon>AgregarFalla.cs</DependentUpon>
-    </Compile>
     <Compile Include="bdDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,19 +91,7 @@
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Falla.cs" />
-    <Compile Include="Fallas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fallas.Designer.cs">
-      <DependentUpon>Fallas.cs</DependentUpon>
-    </Compile>
     <Compile Include="FallasDAL.cs" />
-    <Compile Include="ModificaFalla.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificaFalla.Designer.cs">
-      <DependentUpon>ModificaFalla.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporteFecha.cs">
@@ -136,31 +112,13 @@
     <Compile Include="TodasFallas.Designer.cs">
       <DependentUpon>TodasFallas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AcercaDe.resx">
-      <DependentUpon>AcercaDe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarFalla.resx">
-      <DependentUpon>AgregarFalla.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fallas.resx">
-      <DependentUpon>Fallas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificaFalla.resx">
-      <DependentUpon>ModificaFalla.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReporteFecha.resx">
       <DependentUpon>ReporteFecha.cs</DependentUpon>
@@ -198,6 +156,7 @@
     <Content Include="BD.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\logoITNL1.gif" />
     <None Include="Resources\LogoITNL.gif" />
     <None Include="Resources\gnome_document_revert.png" />
     <None Include="Resources\itnl.jpg" />

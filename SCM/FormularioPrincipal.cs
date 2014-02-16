@@ -97,6 +97,7 @@ namespace SCM
             }
 
             //Valida que solo sean numeros el numero de serie
+            if(!string.IsNullOrEmpty(numSerieTextBox1.Text))
             try
             {
                 int.Parse(numSerieTextBox1.Text);
@@ -295,14 +296,14 @@ namespace SCM
             //envia correo    
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient();
-            SmtpServer.Credentials = new System.Net.NetworkCredential("enrique.19m@gmail.com", "elkike_9");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("fallascentrocomputoitnl@gmail.com", "FallasITNL14");
             SmtpServer.Port = 587;
             SmtpServer.Host = "smtp.gmail.com";
             SmtpServer.EnableSsl = true;
 
             try
             {
-                mail.From = new MailAddress("enrique.19m@gmail.com", "SCRF - Registro de equipo " + numEquipoTextBox1.Text, System.Text.Encoding.UTF8);
+                mail.From = new MailAddress("fallascentrocomputoitnl@gmail.com", "SCRF - Registro de equipo " + numEquipoTextBox1.Text, System.Text.Encoding.UTF8);
                 mail.To.Add("enrique_90m@hotmail.com");
                 mail.Subject = "Notificacion de actualizacion de falla";
                 mail.Body = " <div align=\"center\" style=\"border:2px solid blue\"><h2>Nuevo equipo en el sistema</h2></div></br></br>";
@@ -340,8 +341,7 @@ namespace SCM
 
         private void contactenosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AcercaDe ab = new AcercaDe();
-            ab.Show();
+          
         }
 
         private void datoABuscar_KeyUp(object sender, KeyEventArgs e)
@@ -460,14 +460,14 @@ namespace SCM
             //envia correo    
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient();
-            SmtpServer.Credentials = new System.Net.NetworkCredential("enrique.19m@gmail.com", "elkike_9");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("fallascentrocomputoitnl@gmail.com", "FallasITNL14");
             SmtpServer.Port = 587;
             SmtpServer.Host = "smtp.gmail.com";
             SmtpServer.EnableSsl = true;
 
             try
             {
-                mail.From = new MailAddress("enrique.19m@gmail.com", "SCRF - Registro de falla: " + objetoFalla.numFalla, System.Text.Encoding.UTF8);
+                mail.From = new MailAddress("fallascentrocomputoitnl@gmail.com", "SCRF - Registro de falla: " + objetoFalla.numFalla, System.Text.Encoding.UTF8);
                 mail.To.Add("enrique_90m@hotmail.com");
                 mail.Subject = "Notificacion de falla";
                 mail.Body = " <div align=\"center\" style=\"border:2px solid blue\"><h2>Nueva falla registrada en el sistema</h2></div></br></br>";
@@ -543,7 +543,7 @@ namespace SCM
                             dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                     else
                         if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
-                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
                         else
                             if (dataGridView2.Rows[i].Cells[5].Value.ToString() == "Si")
                                 dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
@@ -557,7 +557,7 @@ namespace SCM
 
                         for (int i = 0; i < dataGridView2.Rows.Count; i++)
                             if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
-                                dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                                dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
                     }
                     else
                     {
@@ -581,7 +581,7 @@ namespace SCM
                             dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                         else
                         if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
-                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
                         else
                             if (dataGridView2.Rows[i].Cells[5].Value.ToString() == "Si")
                                 dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.ForestGreen;
@@ -594,7 +594,7 @@ namespace SCM
                         dataGridView2.Sort(dataGridView2.Columns[3], ListSortDirection.Descending);
                         for (int i = 0; i < dataGridView2.Rows.Count; i++)
                             if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
-                                dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                                dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
                     }
                     else
                     {
@@ -623,7 +623,7 @@ namespace SCM
                         dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                     else
                         if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
-                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
                         else
                             if (dataGridView2.Rows[i].Cells[5].Value.ToString() == "Si")
                                 dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkGreen;
@@ -650,7 +650,7 @@ namespace SCM
                 dataGridView2.Sort(dataGridView2.Columns[3], ListSortDirection.Descending);
                 for (int i = 0; i < dataGridView2.Rows.Count; i++)
                     if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
-                        dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                        dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
                 return;
             }
             else
@@ -677,7 +677,7 @@ namespace SCM
                         dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                     else
                         if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
-                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                            dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
                         else
                             if (dataGridView2.Rows[i].Cells[5].Value.ToString() == "Si")
                                 dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkGreen;
@@ -704,7 +704,7 @@ namespace SCM
                 dataGridView2.Sort(dataGridView2.Columns[3], ListSortDirection.Descending);
                 for (int i = 0; i < dataGridView2.Rows.Count; i++)
                     if (dataGridView2.Rows[i].Cells[7].Value.ToString() == "Si")
-                        dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkRed;
+                        dataGridView2.Rows[i].DefaultCellStyle.BackColor = Color.DarkSalmon;
                 return;
             }
             else
@@ -885,14 +885,14 @@ namespace SCM
             //envia correo    
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient();
-            SmtpServer.Credentials = new System.Net.NetworkCredential("enrique.19m@gmail.com", "elkike_9");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("fallascentrocomputoitnl@gmail.com", "FallasITNL14");
             SmtpServer.Port = 587;
             SmtpServer.Host = "smtp.gmail.com";
             SmtpServer.EnableSsl = true;
 
             try
             {
-                mail.From = new MailAddress("enrique.19m@gmail.com", "SCRF - Actualizacion de falla: " + numFallaTextBox.Text, System.Text.Encoding.UTF8);
+                mail.From = new MailAddress("fallascentrocomputoitnl@gmail.com", "SCRF - Actualizacion de falla: " + numFallaTextBox.Text, System.Text.Encoding.UTF8);
                 mail.To.Add("enrique_90m@hotmail.com");
                 mail.Subject = "Notificacion de actualizacion de falla";
                 mail.Body = " <div align=\"center\" style=\"border:2px solid blue\"><h2>Actualizacion de falla en el sistema</h2></div></br></br>";
@@ -1098,6 +1098,11 @@ namespace SCM
             char [] arreglo =  new char[numEquipoTextBox.Text.Length];
             arreglo = numEquipoTextBox.Text.ToCharArray();
             salaTextBox.Text = arreglo[(numEquipoTextBox.Text.Length - 1)].ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
